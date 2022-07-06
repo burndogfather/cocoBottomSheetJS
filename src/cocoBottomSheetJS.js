@@ -77,7 +77,6 @@ class cocoButtomSheetJS{
 	
 	//터치를 시작하는 순간 시작좌표를 수집
 	touchstart(event){
-		this.translatePOS = this.min;
 		let wh = window.innerHeight;
 		if(event.type === 'touchstart'){
 			if(event.touches[0].pageY < 0){
@@ -131,7 +130,6 @@ class cocoButtomSheetJS{
 			return null;	
 		}
 		
-		console.log(this.translatePOS);
 		//최초터치좌표와 이동중인 좌표의 차이를 구하여 이동한 만큼의 좌표구하기
 		if(this.starttouchY > pageY){
 			console.log('up');
