@@ -98,7 +98,7 @@ class cocoButtomSheetJS{
 	//Bottomsheet를 출력
 	show(){
 		let style = this.BSElement.getAttribute('style');
-		this.BSElement.setAttribute('style',style+"transform:translate(0px, -"+this.min+"px);");
+		this.BSElement.setAttribute('style',style + "transform:translate(0px, -"+this.min+"px);");
 
 		if(!this.is_show){
 			document.querySelector('body').prepend(this.BSElement);
