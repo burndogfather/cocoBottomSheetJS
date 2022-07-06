@@ -143,7 +143,6 @@ class cocoButtomSheetJS{
 		}else{
 			
 		}
-		
 	};
 	
 	
