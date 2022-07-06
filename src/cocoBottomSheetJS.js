@@ -8,7 +8,7 @@ class cocoButtomSheetJS{
 		max
 	}){
 		//초기설정
-		this.is_show = false;
+		this.is_show = false; //바텀시트가 열림감지
 		this.code = htmlcode;
 		this.overlayer = overlayer;
 		this.min = min;
@@ -81,7 +81,7 @@ class cocoButtomSheetJS{
 		this.BSElement.innerHTML = this.BSElement.innerHTML + this.code;
 	};
 	
-	//버튼시트 스타일재정의
+	//바텀시트 스타일재정의
 	setcss(cssObject){
 		let stylecssString = '';
 		for(let key in cssObject){
@@ -95,7 +95,7 @@ class cocoButtomSheetJS{
 		return this.code;
 	};
 	
-	//Bottomsheet를 출력
+	//바텀시트를 출력
 	show(){
 		let style = this.BSElement.getAttribute('style');
 		this.BSElement.setAttribute('style',style + "transform:translate(0px, -"+this.min+"px);");
@@ -109,7 +109,7 @@ class cocoButtomSheetJS{
 		}
 	};
 	
-	//Bottomsheet를 없애기
+	//바텀시트를 없애기
 	hide(){
 		if(this.is_show){
 			document.body.removeChild(this.BSElement);
