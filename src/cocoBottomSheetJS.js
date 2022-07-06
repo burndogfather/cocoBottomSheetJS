@@ -12,13 +12,14 @@ class cocoButtomSheetJS{
 		this.code = htmlcode;
 		this.overlayer = overlayer;
 		if(min.indexOf('%') !== -1){
-			this.min = parseInt(min.replace('%','')) * document.body.scrollHeight;
-			console.log(parseInt(min.replace('%','')/100));
+			this.min = parseInt(min.replace('%',''))/100 * document.body.scrollHeight;
+			console.log(document.body.scrollHeight);
+			console.log(parseInt(min.replace('%',''))/100);
 		}else{
 			this.min = min;
 		}
 		if(max.indexOf('%') !== -1){
-			this.max = parseInt(max.replace('%','')) * document.body.scrollHeight;
+			this.max = parseInt(max.replace('%',''))/100 * document.body.scrollHeight;
 		}else{
 			this.max = max;
 		}
