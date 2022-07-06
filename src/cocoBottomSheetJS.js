@@ -21,7 +21,7 @@ class cocoButtomSheetJS{
 		}else{
 			this.max = max;
 		}
-		console.log(min);
+		
 		if(overlayer){
 			//오버레이어 구성
 			this.BSoverElement = document.createElement('article');
@@ -57,6 +57,8 @@ class cocoButtomSheetJS{
 	
 	//Bottomsheet를 출력
 	show(){
+		console.log(document.body.scrollHeight);
+		console.log(this.min);
 		if(!this.is_show){
 			document.querySelector('body').prepend(this.BSElement);
 			if(this.overlayer){
