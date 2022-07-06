@@ -93,7 +93,10 @@ class cocoButtomSheetJS{
 			}else{
 				this.starttouchY = event.pageY;
 			}
+		}else{
+			return null;
 		}
+		
 		if(/(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS)/i.test(window.navigator.userAgent)){
 			document.body.addEventListener('touchmove', this.touchmoving);
 		}else{
@@ -104,6 +107,8 @@ class cocoButtomSheetJS{
 	//터치드래그 진행중
 	touchmoving(event){
 		let wh = window.innerHeight;
+		let pageY;
+		let moveY;
 		if(event.type === 'touchmove' && is_mobile()){
 			if(event.touches[0].pageY < 0){
 				pageY = 0;
