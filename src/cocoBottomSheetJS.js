@@ -153,6 +153,7 @@ class cocoButtomSheetJS{
 	
 	//터치드래그 끝남
 	touchend(event){
+		console.log(this.style.transform);
 		console.log(event);	
 	};
 	
