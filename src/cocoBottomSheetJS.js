@@ -122,7 +122,11 @@ class cocoButtomSheetJS{
 		
 		//handle이벤트
 		if(/(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS)/i.test(window.navigator.userAgent)){
-			this.BSElement.addEventListener('touchmove', this.touchmoving);
+			//this.BSElement.addEventListener('touchmove', this.touchmoving);
+			this.BSElement.addEventListener('touchmove', (e)=>{
+				//클릭시 닫음
+				this.touchmoving(e);
+			});
 			this.BSElement.addEventListener('touchend', this.touchend);
 		}else{
 			this.BSElement.addEventListener('mousemove', this.touchmoving);
@@ -133,7 +137,7 @@ class cocoButtomSheetJS{
 	
 	//터치드래그 진행중
 	touchmoving(event){
-		console.log(this);
+		console.log(this.translatePOS);
 		let wh = window.innerHeight;
 		let pageY;
 		let moveY;
@@ -161,16 +165,15 @@ class cocoButtomSheetJS{
 		
 		//최초터치좌표와 이동중인 좌표의 차이를 구하여 이동한 만큼의 좌표구하기
 		if(this.starttouchY > pageY){
-			console.log(this.translatePOS);
 			moveY = this.starttouchY - pageY;
 			let calc = this.translatePOS-moveY;
 			let maxcalc = parseFloat('-'+wh);
 			if(maxcalc <= calc){
-				this.BSElement.style.transform = 'translate(0, ' + calc + 'px)';
+				this.style.transform = 'translate(0, ' + calc + 'px)';
 			}
 			
 		}else if(this.starttouchY < pageY){
-			this.BSElement.style.transform = 'translate3d(0, calc(-100% + ' + pageY + 'px), 0)';
+			this.style.transform = 'translate3d(0, calc(-100% + ' + pageY + 'px), 0)';
 		}else{
 			
 		}
