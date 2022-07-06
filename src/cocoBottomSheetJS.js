@@ -99,7 +99,9 @@ class cocoButtomSheetJS{
 			return null;
 		}
 		this.style.transition = 'none';
-		console.log(this.style.transform);
+		
+		let test = this.style.transform.match(/\(.*\)/gi)[0];
+		console.log(test);
 		console.log('touchstart!!!');
 	};
 	
