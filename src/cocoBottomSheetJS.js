@@ -129,7 +129,11 @@ class cocoButtomSheetJS{
 			});
 			this.BSElement.addEventListener('touchend', this.touchend);
 		}else{
-			this.BSElement.addEventListener('mousemove', this.touchmoving);
+			//this.BSElement.addEventListener('mousemove', this.touchmoving);
+			this.BSElement.addEventListener('mousemove', (e)=>{
+				//클릭시 닫음
+				this.touchmoving(e);
+			});
 			this.BSElement.addEventListener('mouseup', this.touchend);
 		}
 		
@@ -169,11 +173,11 @@ class cocoButtomSheetJS{
 			let calc = this.translatePOS-moveY;
 			let maxcalc = parseFloat('-'+wh);
 			if(maxcalc <= calc){
-				this.style.transform = 'translate(0, ' + calc + 'px)';
+				this.BSElement.style.transform = 'translate(0, ' + calc + 'px)';
 			}
 			
 		}else if(this.starttouchY < pageY){
-			this.style.transform = 'translate3d(0, calc(-100% + ' + pageY + 'px), 0)';
+			this.BSElement.style.transform = 'translate3d(0, calc(-100% + ' + pageY + 'px), 0)';
 		}else{
 			
 		}
