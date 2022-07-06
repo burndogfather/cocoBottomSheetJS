@@ -11,7 +11,9 @@ class cocoButtomSheetJS{
 		this.is_show = false;
 		this.code = htmlcode;
 		this.overlayer = overlayer;
-		if(){
+		if(min.indexOf('%') !== -1){
+			
+		}else{
 			
 		}
 		this.max = max;
