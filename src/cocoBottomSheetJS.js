@@ -29,7 +29,36 @@ class cocoButtomSheetJS{
 		this.init();
 	}
 	init(){
-		console.log('start!');
+		
+		
+		if(/^[0-9]+$/.test(this.min)){
+			this.min = parseInt(this.min);
+		}else{
+			if(this.min.indexOf('%') !== -1){
+				this.min = parseInt(this.min.replace('%',''))/100 * document.body.scrollHeight;
+				console.log(this.min);
+			}else if(this.min.indexOf('vh') !== -1){
+				this.min = parseInt(this.min.replace('vh',''))/100 * document.documentElement.clientHeight;
+			}else if(this.min.indexOf('vw') !== -1){
+				this.min = parseInt(this.min.replace('vw',''))/100 * document.documentElement.clientWidth;
+			}else{
+				this.min = parseInt(this.min);
+			}
+		}
+		
+		if(/^[0-9]+$/.test(this.max)){
+			this.max = parseInt(this.max);
+		}else{
+			if(this.max.indexOf('%') !== -1){
+				this.max = parseInt(this.max.replace('%',''))/100 * document.body.scrollHeight;
+			}else if(this.max.indexOf('vh') !== -1){
+				this.max = parseInt(this.max.replace('vh',''))/100 * document.documentElement.clientHeight;
+			}else if(this.max.indexOf('vw') !== -1){
+				this.max = parseInt(this.max.replace('vw',''))/100 * document.documentElement.clientWidth;
+			}else{
+				this.max = parseInt(this.max);
+			}
+		}
 	}
 	//htmlcode를 재정의
 	sethtml(htmlcode){
