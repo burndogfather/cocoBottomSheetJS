@@ -24,9 +24,11 @@ class cocoButtomSheetJS{
 	}
 	setcss(cssObject){
 		console.log(cssObject);
-		for(var key in cssObject){
-			console.log(key);
+		let stylecssString = '';
+		for(let key in cssObject){
+			stylecssString += key+':'+cssObject[key];
 		}
+		this.BSElement.setAttribute('style',stylecssString);
 	}
 	//htmlcode내용을 확인
 	gethtml(){
