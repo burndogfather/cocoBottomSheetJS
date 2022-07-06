@@ -139,12 +139,11 @@ class cocoButtomSheetJS{
 		
 		//최초터치좌표와 이동중인 좌표의 차이를 구하여 이동한 만큼의 좌표구하기
 		if(this.starttouchY > pageY){
+			console.log(this.translatePOS);
 			moveY = this.starttouchY - pageY;
 			let calc = this.translatePOS-moveY;
-			console.log(wh);
 			let maxcalc = parseFloat('-'+wh);
-			console.log(maxcalc);
-			if(calc <= maxcalc){
+			if(maxcalc <= calc){
 				this.style.transform = 'translate(0, ' + calc + 'px)';
 			}
 			
