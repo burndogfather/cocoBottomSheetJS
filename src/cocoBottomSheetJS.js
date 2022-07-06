@@ -14,6 +14,7 @@ class cocoButtomSheetJS{
 		this.min = min; //바텀시트의 최소높이값 (최소높이값보다 낮으면 꺼짐)
 		this.max = max; //바텀시트의 최대높이값 (최대높이값보다 높으면 채워짐)
 		
+		this.translatePOS = 0; //바텀시트위치좌표
 		this.starttouchY = 0; //마우스최초좌표
 		
 		if(this.overlayer){
@@ -40,7 +41,6 @@ class cocoButtomSheetJS{
 		}else{
 			if(this.min.indexOf('%') !== -1){
 				this.min = parseInt(this.min.replace('%',''))/100 * document.body.scrollHeight;
-				console.log(this.min);
 			}else if(this.min.indexOf('vh') !== -1){
 				this.min = parseInt(this.min.replace('vh',''))/100 * document.documentElement.clientHeight;
 			}else if(this.min.indexOf('vw') !== -1){
@@ -100,7 +100,6 @@ class cocoButtomSheetJS{
 		}
 		this.style.transition = 'none';
 		console.log('touchstart!!!');
-		console.log(this.style.transform);
 	};
 	
 	//터치드래그 진행중
@@ -131,6 +130,7 @@ class cocoButtomSheetJS{
 			return null;	
 		}
 		
+		console.log(this.translatePOS);
 		//최초터치좌표와 이동중인 좌표의 차이를 구하여 이동한 만큼의 좌표구하기
 		if(this.starttouchY > pageY){
 			console.log('up');
@@ -172,7 +172,8 @@ class cocoButtomSheetJS{
 	show(){
 		let style = this.BSElement.getAttribute('style');
 		this.BSElement.setAttribute('style',style + "transform:translate(0px, -"+this.min+"px);");
-
+		this.translatePOS = this.min;
+		
 		if(!this.is_show){
 			document.querySelector('body').prepend(this.BSElement);
 			if(this.overlayer){
