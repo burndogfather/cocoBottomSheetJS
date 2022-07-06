@@ -68,12 +68,8 @@ class cocoButtomSheetJS{
 		//handle이벤트
 		if(/(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS)/i.test(window.navigator.userAgent)){
 			this.BSElement.addEventListener('touchstart', this.touchstart);
-			this.BSElement.addEventListener('touchmove', this.touchmoving);
-			this.BSElement.addEventListener('touchend', this.touchend);
 		}else{
 			this.BSElement.addEventListener('mousedown', this.touchstart);
-			this.BSElement.addEventListener('mousemove', this.touchmoving);
-			this.BSElement.addEventListener('mouseup', this.touchend);
 		}
 	};
 	
@@ -113,6 +109,17 @@ class cocoButtomSheetJS{
 			translate3d = translate3d.split(',')[1];
 			translate3d = translate3d.replace(/[^0-9|\-|.]/g,'');
 			this.translatePOS = parseFloat(translate3d);
+		}
+		
+		console.log(this.touchmoving);
+		
+		//handle이벤트
+		if(/(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS)/i.test(window.navigator.userAgent)){
+			this.addEventListener('touchmove', this.touchmoving);
+			this.addEventListener('touchend', this.touchend);
+		}else{
+			this.addEventListener('mousemove', this.touchmoving);
+			this.addEventListener('mouseup', this.touchend);
 		}
 		
 	};
