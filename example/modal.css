@@ -1,3 +1,8 @@
+ul{
+	list-style:none;
+	margin:0;
+	padding:0;
+}
 #apt {
 	display: flex;
 	padding: 10px 0;
@@ -34,25 +39,20 @@ p{
 	position: relative;
 	color: #c2c2c2;
 }
-	li {
-		
-		&[active='true'] {
-			border: 1px solid #333;
-			color: #333;
-		}
-		//선택되었을때 content:"\e9c7"; , 선택되지 않았을때 content: "\e9c6"; 가 쓰여야 한다.(두개 아이콘이 다름)
-		&[active='true']:after{
-			font-family: xeicon!important;
-			content: "\e9c7";
-			color: #333;
-		}
-		&:after{
-			font-family: xeicon!important;
-			content: "\e9c6";
-			font-size: 16px;
-			position: absolute;
-			right: 15px;
-			color: #ddd;
-		}
-	}
+.check_box > li[active='true']{
+	border: 1px solid #333;
+	color: #333;
+}
+.check_box > li[active='true']:after{
+	font-family: xeicon!important;
+	content: "\e9c7";
+	color: #333;
+}
+.check_box > li:after{
+	font-family: xeicon!important;
+	content: "\e9c6";
+	font-size: 16px;
+	position: absolute;
+	right: 15px;
+	color: #ddd;
 }
