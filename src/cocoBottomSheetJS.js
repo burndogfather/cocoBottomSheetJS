@@ -98,14 +98,16 @@ class cocoButtomSheetJS{
 		}
 		
 		if(/(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS)/i.test(window.navigator.userAgent)){
-			document.body.addEventListener('touchmove', this.touchmoving);
+			this.BSElement.addEventListener('touchmove', this.touchmoving);
 		}else{
-			document.body.addEventListener('mousemove', this.touchmoving);
+			this.BSElement.addEventListener('mousemove', this.touchmoving);
 		}
+		console.log('touchstart');
 	};
 	
 	//터치드래그 진행중
 	touchmoving(event){
+		console.log('touchmoving');
 		let wh = window.innerHeight;
 		let pageY;
 		let moveY;
