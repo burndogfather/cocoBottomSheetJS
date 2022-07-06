@@ -4,13 +4,16 @@ class cocoButtomSheetJS{
 		htmlcode,
 		overlayer
 	}){
-		this.BSElement = document.createElement('article');
-		this.BSElement.classList.add('cocoButtomSheet');
-		this.BSElement.addEventListener('click', function(){
-			this.hide;
-		});
-		console.log('constructor');
+		this.overlayer = overlayer;
+		if(overlayer){
+			this.BSoverElement = document.createElement('article');
+			this.BSoverElement.classList.add('cocoButtomSheet');
+			this.BSoverElement.addEventListener('click', function(){
+				this.hide;
+			});
+		}
 		this.code = htmlcode;
+		
 	}
 	//htmlcode를 재정의
 	sethtml(htmlcode){
@@ -25,11 +28,10 @@ class cocoButtomSheetJS{
 	}
 	//Bottomsheet를 출력
 	show(){
-		document.querySelector('body').prepend(this.BSElement);
+		document.querySelector('body').prepend(this.BSoverElement);
 	}
 	//Bottomsheet를 없애기
 	hide(){
-		document.body.removeChild(this.BSElement);
-		return null;
+		document.body.removeChild(this.BSoverElement);
 	}
 };
