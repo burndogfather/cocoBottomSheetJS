@@ -1,6 +1,7 @@
 'use strict';
 class cocoButtomSheetJS{
 	constructor(code) {
+		this.BSElement = document.createElement('article');
 		console.log('constructor');
 		this.code = code;
 	}
