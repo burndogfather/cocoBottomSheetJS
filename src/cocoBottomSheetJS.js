@@ -1,10 +1,8 @@
 'use strict';
 class cocoButtomSheetJS{
-	constructor(name,age, city) {
-		console.log('construtor');
-		this.name = name;
-		this.age = age;
-		this.city = city;
+	constructor(code) {
+		console.log('constructor');
+		this.code = code;
 	}
 	
 	gethtmlcode(code){
