@@ -1,7 +1,7 @@
 'use strict';
 class cocoButtomSheetJS{
 	html(htmlcode){
-		this.htmlcode = htmlcode;
+		this.sethtml = htmlcode;
 	}
 	get test(){
 		return 1;
