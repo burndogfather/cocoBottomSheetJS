@@ -17,17 +17,19 @@ class cocoButtomSheetJS{
 			this.BSoverElement = document.createElement('article');
 			this.BSoverElement.classList.add('cocoButtomSheet_overlayer');
 			this.BSoverElement.addEventListener('click', function(){
-				hide;
+				this.hide();
 			});
 		}
 		this.BSElement = document.createElement('article');
 		this.BSElement.classList.add('cocoButtomSheet');
 		this.BSElement.innerHTML = '<button class="cocoButtomSheet_handle"></button>';
 	}
+	
 	//htmlcode를 재정의
 	sethtml(htmlcode){
 		this.code = htmlcode;
 	}
+	
 	//버튼시트 스타일재정의
 	setcss(cssObject){
 		let stylecssString = '';
@@ -36,10 +38,12 @@ class cocoButtomSheetJS{
 		}
 		this.BSElement.setAttribute('style',stylecssString);
 	}
+	
 	//htmlcode내용을 확인
 	gethtml(){
 		return this.code;
 	}
+	
 	//Bottomsheet를 출력
 	show(){
 		if(!this.is_show){
@@ -50,6 +54,7 @@ class cocoButtomSheetJS{
 			this.is_show = true;
 		}
 	}
+	
 	//Bottomsheet를 없애기
 	hide(){
 		if(this.is_show){
