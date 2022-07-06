@@ -25,7 +25,7 @@ class cocoButtomSheetJS{
 		}
 		this.BSElement = document.createElement('article');
 		this.BSElement.classList.add('cocoButtomSheet');
-		this.BSElement.innerHTML = '<button class="cocoButtomSheet_handle"></button><div class="body></div>";
+		this.BSElement.innerHTML = '<button class="cocoButtomSheet_handle"></button>';
 		this.init();
 	};
 	
@@ -96,7 +96,7 @@ class cocoButtomSheetJS{
 	
 	//Bottomsheet를 출력
 	show(){
-		
+		console.log(this.BSElement.innerHTML);
 		this.BSElement.setAttribute('style',"transform:translate(0px, -"+this.min+"px);");
 		this.BSElement.innerHTML = this.code;
 		
