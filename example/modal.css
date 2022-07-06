@@ -16,3 +16,43 @@ p{
 	font-size: 11px;
 	padding: 5px 0;
 }
+
+.check_box{
+	min-width: 100%;
+	margin: 0 auto;
+}
+.check_box > li{
+	width: 100%;
+	height: 50px;
+	border: 1px solid #c2c2c2;
+	font-size: 13px;
+	padding: 0 15px;
+	box-sizing: border-box;
+	border-radius: 5px;
+	line-height: 50px;
+	margin-bottom: 10px;
+	position: relative;
+	color: #c2c2c2;
+}
+	li {
+		
+		&[active='true'] {
+			border: 1px solid #333;
+			color: #333;
+		}
+		//선택되었을때 content:"\e9c7"; , 선택되지 않았을때 content: "\e9c6"; 가 쓰여야 한다.(두개 아이콘이 다름)
+		&[active='true']:after{
+			font-family: xeicon!important;
+			content: "\e9c7";
+			color: #333;
+		}
+		&:after{
+			font-family: xeicon!important;
+			content: "\e9c6";
+			font-size: 16px;
+			position: absolute;
+			right: 15px;
+			color: #ddd;
+		}
+	}
+}
