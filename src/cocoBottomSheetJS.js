@@ -14,7 +14,7 @@ class cocoButtomSheetJS{
 		this.min = min; //바텀시트의 최소높이값 (최소높이값보다 낮으면 꺼짐)
 		this.max = max; //바텀시트의 최대높이값 (최대높이값보다 높으면 채워짐)
 		
-		this.touchY = 0; //마우스이동좌표
+		this.starttouchY = 0; //마우스최초좌표
 		
 		if(this.overlayer){
 			//오버레이어 구성
@@ -75,25 +75,25 @@ class cocoButtomSheetJS{
 	
 	touchstart(event){
 		let wh = window.innerHeight;
-		let pageY;
-		if(event.type === 'touchstart' && is_mobile()){
+		if(event.type === 'touchstart'){
 			if(event.touches[0].pageY < 0){
-				pageY = 0;
+				this.touchY = 0;
 			}else if(event.touches[0].pageY > wh){
-				pageY = wh;
+				this.touchY = wh;
 			}else{
-				pageY = event.touches[0].pageY;
+				this.touchY = event.touches[0].pageY;
 			}
 			
-		}else if(event.type === 'mousedown' && !is_mobile()){
+		}else if(event.type === 'mousedown'){
 			if(event.pageY < 0){
-				pageY = 0;
+				this.touchY = 0;
 			}else if(event.pageY > wh){
-				pageY = wh;
+				this.touchY = wh;
 			}else{
-				pageY = event.pageY;
+				this.touchY = event.pageY;
 			}
 		}
+		console.log(this.touchY);
 	}
 	
 	//htmlcode를 재정의
