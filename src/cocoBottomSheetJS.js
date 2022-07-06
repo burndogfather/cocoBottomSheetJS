@@ -105,7 +105,7 @@ class cocoButtomSheetJS{
 		if(translate3d.indexOf('calc') !== -1){
 			
 		}
-		translate3d.replace(/[^0-9|.]/g,'');
+		translate3d = translate3d.replace(/[^0-9|\-|.]/g,'');
 		console.log(translate3d);
 		console.log('touchstart!!!');
 	};
