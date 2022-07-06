@@ -1,4 +1,4 @@
-(function(){
+;(function($){
 	"use strict";
 	let pluginName = 'cocoBottomSheetJS',
 	page = 1,
@@ -445,4 +445,4 @@
 			}
 		});
 	};
-})();
+})(jQuery);
