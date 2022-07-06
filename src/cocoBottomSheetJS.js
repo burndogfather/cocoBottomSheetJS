@@ -135,11 +135,12 @@ class cocoButtomSheetJS{
 			return null;	
 		}
 		
-		console.log(this.translatePOS);
+		//console.log(this.translatePOS);
 		//최초터치좌표와 이동중인 좌표의 차이를 구하여 이동한 만큼의 좌표구하기
 		if(this.starttouchY > pageY){
 			console.log('up');
 			moveY = this.starttouchY - pageY;
+			console.log(moveY);
 			this.style.transform = 'translate3d(0, ' + moveY + 'px)';
 		}else if(this.starttouchY < pageY){
 			console.log('down');
