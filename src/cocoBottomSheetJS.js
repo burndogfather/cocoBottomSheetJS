@@ -98,7 +98,7 @@ class cocoButtomSheetJS{
 	show(){
 		
 		this.BSElement.setAttribute('style',"transform:translate(0px, -"+this.min+"px);");
-		this.BSElement.innerHTML(this.code);
+		this.BSElement.innerHTML = this.code;
 		
 		if(!this.is_show){
 			document.querySelector('body').prepend(this.BSElement);
