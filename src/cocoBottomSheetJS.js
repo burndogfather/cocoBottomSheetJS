@@ -94,10 +94,13 @@ class cocoButtomSheetJS{
 				this.starttouchY = event.pageY;
 			}
 		}
-		console.log(this.touchY);
-	}
+	};
 	
-	//터치드래그중 마우스좌표를 수집
+	//터치드래그 진행중
+	touchmoving(event){
+		
+	};
+	
 	
 	//htmlcode를 재정의
 	sethtml(htmlcode){
