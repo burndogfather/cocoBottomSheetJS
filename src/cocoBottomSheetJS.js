@@ -12,7 +12,7 @@ class cocoButtomSheetJS{
 		console.log('initdom');
 		document.body.innerHTML = 'test';
 	}
-	set show(){
-		return 
+	show(){
+		console.log('show');
 	}
 };
