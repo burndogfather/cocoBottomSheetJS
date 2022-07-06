@@ -99,7 +99,7 @@ class cocoButtomSheetJS{
 			return null;
 		}
 		this.style.transition = 'none';
-		console.log(this.style);
+		console.log(this.style.transform);
 		console.log('touchstart!!!');
 	};
 	
