@@ -3,10 +3,15 @@ class cocoButtomSheetJS{
 	constructor({
 		//입력데이터
 		htmlcode,
-		overlayer
+		overlayer,
+		min,
+		max
 	}){
 		//초기설정
+		this.min = min;
+		this.max = max;
 		this.overlayer = overlayer;
+		this.code = htmlcode;
 		if(overlayer){
 			this.BSoverElement = document.createElement('article');
 			this.BSoverElement.classList.add('cocoButtomSheet_overlayer');
@@ -17,14 +22,13 @@ class cocoButtomSheetJS{
 		this.BSElement = document.createElement('article');
 		this.BSElement.classList.add('cocoButtomSheet');
 		this.BSElement.innerHTML = '<button class="cocoButtomSheet_handle"></button>';
-		this.code = htmlcode;
-		
+
 	}
 	//htmlcode를 재정의
 	sethtml(htmlcode){
 		this.code = htmlcode;
 	}
-	//
+	//버튼시트 스타일재정의
 	setcss(cssObject){
 		let stylecssString = '';
 		for(let key in cssObject){
