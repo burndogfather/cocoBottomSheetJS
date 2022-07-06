@@ -102,10 +102,18 @@ class cocoButtomSheetJS{
 		}
 		this.style.transition = 'none';
 		
-		let translate3d = this.style.transform.match(/\(.*\)/gi)[0];
-		translate3d = translate3d.split(',')[1];
-		translate3d = translate3d.replace(/[^0-9|\-|.]/g,'');
-		this.translatePOS = parseFloat(translate3d);
+		if(this.style.transform.indexOf('translate3d') !== -1){
+			let translate3d = this.style.transform.match(/\(.*\)/gi)[0];
+			translate3d = translate3d.split(',')[1];
+			translate3d = translate3d.split('+')[1];
+			translate3d = translate3d.replace(/[^0-9|\-|.]/g,'');
+			this.translatePOS = parseFloat(translate3d);
+		}else{
+			let translate3d = this.style.transform.match(/\(.*\)/gi)[0];
+			translate3d = translate3d.split(',')[1];
+			translate3d = translate3d.replace(/[^0-9|\-|.]/g,'');
+			this.translatePOS = parseFloat(translate3d);
+		}
 		
 	};
 	
@@ -157,13 +165,11 @@ class cocoButtomSheetJS{
 	//터치드래그 끝남
 	touchend(event){
 		console.log(this.style.transform);
-		
 		if(this.style.transform.indexOf('translate3d') !== -1){
 			let translate3d = this.style.transform.match(/\(.*\)/gi)[0];
 			translate3d = translate3d.split(',')[1];
 			translate3d = translate3d.split('+')[1];
 			translate3d = translate3d.replace(/[^0-9|\-|.]/g,'');
-			console.log(translate3d);
 			this.translatePOS = parseFloat(translate3d);
 		}else{
 			let translate3d = this.style.transform.match(/\(.*\)/gi)[0];
