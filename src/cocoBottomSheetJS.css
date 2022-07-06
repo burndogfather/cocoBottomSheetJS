@@ -1,6 +1,9 @@
 @charset "UTF-8";
 .cocoButtomSheet{
 	width:100%;
+	position: fixed;
+	background-color:#fff;
+	height:300px;
 }
 .cocoButtomSheet_overlayer{
 	width:100%;
@@ -13,6 +16,6 @@
 
 @media(min-width: 768px){
 	.cocoButtomSheet{
-		width:100%;
+		width:300px;
 	}
 }
