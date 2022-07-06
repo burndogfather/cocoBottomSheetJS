@@ -100,6 +100,7 @@ class cocoButtomSheetJS{
 		}
 		this.style.transition = 'none';
 		console.log('touchstart!!!');
+		console.log(this.style.transform);
 	};
 	
 	//터치드래그 진행중
