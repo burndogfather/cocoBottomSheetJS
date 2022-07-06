@@ -5,20 +5,23 @@
 		<link rel='stylesheet' href='https://git.coco.sqs.kr/cocoBottomSheetJS/src/cocoBottomSheetJS.css'>
 		<script src='https://git.coco.sqs.kr/cocoBottomSheetJS/src/cocoBottomSheetJS.js'></script>
 		<style type='text/css'>
-			button{-webkit-appearance:none;-webkit-border-radius: 0;width:200px;height:32px;padding:8px 3px;border-radius: 5px;background-color:#31408E;color:#fff;margin:5px;border:0px;}
-			button:hover{cursor:pointer;background-color:#384baa;}
+			button{-webkit-appearance:none;-webkit-border-radius: 0;width:200px;height:32px;padding:8px 3px;border-radius: 5px;background-color:#31408E;color:#fff;margin:5px;border:0px;}button:hover{cursor:pointer;background-color:#384baa;}section{clear:both; padding-top:10px;}
 		</style>
 	</head>
 	<body>
+		
 		<script type='text/javascript'>
+			let buttomsheet = new cocoButtomSheetJS();
 			function open_bs(){
-				let open = new cocoButtomSheetJS();
-				console.log(open.hello());
+				console.log(buttomsheet.hello());
 			}
 		</script>
+		
 		<button onclick='open_bs();'>open buttom sheet 🤗</button>
 		<button onclick='close_bs();'>close buttom sheet 🫠</button>
+		
 		<div style='clear:both; padding-top:10px;'></div>
+		
 		Example of HTML document to be included in the bottom sheet : 
 		<iframe src='modal.html' style='width:100%; height:500px;'></iframe>
 	</body>
