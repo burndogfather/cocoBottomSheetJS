@@ -1,13 +1,10 @@
 'use strict';
 class cocoButtomSheetJS{
-	html(htmlcode){
-		this.sethtml = htmlcode;
+	set sethtml(code){
+		this.code = code;
 	}
-	get test(){
-		return 1;
-	};
-	hello(){
-		let ho = this.test;
-		return ho;
-	};
+	get initdom(){
+		
+	}
+	
 };
