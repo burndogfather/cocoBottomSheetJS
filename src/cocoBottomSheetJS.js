@@ -195,7 +195,6 @@ class cocoButtomSheetJS{
 	//터치드래그 끝남
 	touchend(event){
 		console.log('touchend!');
-		console.log(this.touchmoving);
 		if(this.BSElement.style.transform.indexOf('translate3d') !== -1){
 			let translate3d = this.BSElement.style.transform.match(/\(.*\)/gi)[0];
 			translate3d = translate3d.split(',')[1];
@@ -208,8 +207,8 @@ class cocoButtomSheetJS{
 			translate3d = translate3d.replace(/[^0-9|\-|.]/g,'');
 			this.translatePOS = parseFloat(translate3d);
 		}
-		this.removeEventListener('touchmove',this.touchmoving(e));
-		this.removeEventListener('mousemove',this.touchmoving(e));		
+		this.BSElement.removeEventListener('touchmove',this.touchmoving);
+		this.BSElement.removeEventListener('mousemove',this.touchmoving);		
 	};
 	
 	
