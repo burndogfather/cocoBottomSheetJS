@@ -111,7 +111,6 @@ class cocoButtomSheetJS{
 	
 	//터치드래그 진행중
 	touchmoving(event){
-		console.log('touchmoving');
 		let wh = window.innerHeight;
 		let pageY;
 		let moveY;
@@ -158,6 +157,15 @@ class cocoButtomSheetJS{
 	//터치드래그 끝남
 	touchend(event){
 		console.log(this.style.transform);
+		
+		if(this.style.transform.indexOf('translate3d') !== -1){
+			
+		}else{
+			let translate3d = this.style.transform.match(/\(.*\)/gi)[0];
+			translate3d = translate3d.split(',')[1];
+			translate3d = translate3d.replace(/[^0-9|\-|.]/g,'');
+			this.translatePOS = parseFloat(translate3d);
+		}
 	};
 	
 	
