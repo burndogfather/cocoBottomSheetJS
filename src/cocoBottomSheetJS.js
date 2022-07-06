@@ -24,6 +24,9 @@ class cocoButtomSheetJS{
 	}
 	setcss(cssObject){
 		console.log(cssObject);
+		for(var key in cssObject){
+			console.log(key);
+		}
 	}
 	//htmlcode내용을 확인
 	gethtml(){
