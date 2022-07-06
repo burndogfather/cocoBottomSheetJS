@@ -8,6 +8,7 @@ class cocoButtomSheetJS{
 		max
 	}){
 		//초기설정
+		this.is_show = false;
 		this.code = htmlcode;
 		this.overlayer = overlayer;
 		this.max = max;
@@ -42,18 +43,22 @@ class cocoButtomSheetJS{
 	}
 	//Bottomsheet를 출력
 	show(){
-		document.querySelector('body').prepend(this.BSElement);
-		if(this.overlayer){
-			document.querySelector('body').prepend(this.BSoverElement);
+		if(!this.is_show){
+			document.querySelector('body').prepend(this.BSElement);
+			if(this.overlayer){
+				document.querySelector('body').prepend(this.BSoverElement);
+			}
+			this.is_show = true;
 		}
-		
 	}
 	//Bottomsheet를 없애기
 	hide(){
-		document.body.removeChild(this.BSElement);
-		if(this.overlayer){
-			document.body.removeChild(this.BSoverElement);
+		if(this.is_show){
+			document.body.removeChild(this.BSElement);
+			if(this.overlayer){
+				document.body.removeChild(this.BSoverElement);
+			}
+			this.is_show = false;
 		}
-		
 	}
 };
