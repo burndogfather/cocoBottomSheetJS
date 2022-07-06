@@ -194,7 +194,7 @@ class cocoButtomSheetJS{
 				this.BSElement.style.transform = 'translate3d(0, calc(-100% + ' + pageY + 'px), 0)';
 			}
 		}else{
-			return null;
+			this.BSElement.setAttribute('style',style + "transform:translate(0px, -"+pageY+"px);");
 		}
 	};
 	
