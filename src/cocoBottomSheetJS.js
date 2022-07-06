@@ -16,7 +16,7 @@ class cocoButtomSheetJS{
 		this.BSElement.classList.add('cocoButtomSheet');
 		this.BSElement.innerHTML = '<button class="cocoButtomSheet_handle"></button>';
 		this.code = htmlcode;
-		sethtml(this.code);
+		
 	}
 	//htmlcode를 재정의
 	sethtml(htmlcode){
@@ -39,6 +39,7 @@ class cocoButtomSheetJS{
 	}
 	//Bottomsheet를 없애기
 	hide(){
+		document.body.removeChild(this.BSElement);
 		if(this.overlayer){
 			document.body.removeChild(this.BSoverElement);
 		}
