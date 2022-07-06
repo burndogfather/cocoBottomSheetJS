@@ -12,12 +12,15 @@ class cocoButtomSheetJS{
 		this.code = htmlcode;
 		this.overlayer = overlayer;
 		if(min.indexOf('%') !== -1){
-			
+			this.min = min;
 		}else{
-			
+			this.min = min;
 		}
-		this.max = max;
-		this.min = min;
+		if(max.indexOf('%') !== -1){
+			this.max = max;
+		}else{
+			this.max = max;
+		}
 		if(overlayer){
 			//오버레이어 구성
 			this.BSoverElement = document.createElement('article');
