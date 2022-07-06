@@ -31,10 +31,11 @@ class cocoButtomSheetJS{
 	}
 	//Bottomsheet를 출력
 	show(){
+		document.querySelector('body').prepend(this.BSElement);
 		if(this.overlayer){
 			document.querySelector('body').prepend(this.BSoverElement);
 		}
-		document.querySelector('body').prepend(this.BSElement);
+		
 	}
 	//Bottomsheet를 없애기
 	hide(){
