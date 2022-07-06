@@ -4,7 +4,7 @@ class cocoButtomSheetJS{
 		this.BSElement = document.createElement('article');
 		this.BSElement.classList.add('cocoButtomSheet');
 		this.BSElement.addEventListener('click', function(){
-			this.hide();
+			this.hide;
 		});
 		console.log('constructor');
 		this.code = code;
@@ -21,11 +21,11 @@ class cocoButtomSheetJS{
 		return this.code;
 	}
 	//Bottomsheet를 출력
-	show(){
+	get show(){
 		document.querySelector('body').prepend(this.BSElement);
 	}
 	//Bottomsheet를 없애기
-	hide(){
+	get hide(){
 		document.body.removeChild(this.BSElement);
 	}
 };
