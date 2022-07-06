@@ -140,7 +140,7 @@ class cocoButtomSheetJS{
 			console.log('down');
 			moveY = pageY - this.starttouchY;
 			console.log(moveY);
-			this.style.transform = 'translate3d(0,' + moveY + 'px, 0)';
+			this.style.transform = 'translate3d(0, calc(-100% + ' + moveY + 'px), 0)';
 		}else{
 			
 		}
