@@ -51,21 +51,15 @@ class cocoButtomSheetJS{
 	show(){
 		let minHeight = 0;
 		let maxHeight = 0;
-		if(/^[0-9]+$/.test(str)){
-			
+		if(/^[0-9]+$/.test(this.min)){
+			minHeight = parseInt(this.min);
 		}else{
-			
-		}
-		if(this.min.indexOf('%') !== -1){
-			minHeight = parseInt(this.min.replace('%',''))/100 * document.body.scrollHeight;
-			console.log(minHeight);
-		}else{
-			minHeight = min;
-		}
-		if(this.max.indexOf('%') !== -1){
-			maxHeight = parseInt(this.max.replace('%',''))/100 * document.body.scrollHeight;
-		}else{
-			maxHeight = max;
+			if(this.min.indexOf('%') !== -1){
+				minHeight = parseInt(this.min.replace('%',''))/100 * document.body.scrollHeight;
+				console.log(minHeight);
+			}else if(this.min.indexOf('vh') !== -1){
+				minHeight = min;
+			}
 		}
 		
 		if(!this.is_show){
