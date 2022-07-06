@@ -109,7 +109,7 @@ class cocoButtomSheetJS{
 		let wh = window.innerHeight;
 		let pageY;
 		let moveY;
-		if(event.type === 'touchmove' && is_mobile()){
+		if(event.type === 'touchmove'){
 			if(event.touches[0].pageY < 0){
 				pageY = 0;
 			}else if(event.touches[0].pageY > wh){
@@ -117,8 +117,7 @@ class cocoButtomSheetJS{
 			}else{
 				pageY = event.touches[0].pageY;
 			}
-			
-		}else if(event.type === 'mousemove' && !is_mobile()){
+		}else if(event.type === 'mousemove'){
 			if(event.pageY < 0){
 				pageY = 0;
 			}else if(event.pageY > wh){
@@ -129,6 +128,19 @@ class cocoButtomSheetJS{
 		}else{
 			return null;	
 		}
+		
+		if(this.starttouchY > pageY){
+			console.log('up');
+			moveY = this.starttouchY - pageY;
+			console.log(moveY);
+		}else if(this.starttouchY < pageY){
+			console.log('down');
+			moveY = pageY - this.starttouchY;
+			console.log(moveY);
+		}else{
+			
+		}
+		
 	};
 	
 	
