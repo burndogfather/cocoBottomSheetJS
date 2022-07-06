@@ -1,7 +1,10 @@
 'use strict';
 class cocoButtomSheetJS{
+	get test(){
+		return 1;
+	};
 	hello(){
 		let ho = this.test;
-		console.log('hello!');
+		return ho;
 	};
 };
