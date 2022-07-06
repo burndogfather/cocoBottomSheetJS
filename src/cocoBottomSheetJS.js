@@ -10,6 +10,9 @@ class cocoButtomSheetJS{
 	sethtml(code){
 		this.code = code;
 	}
+	setcss(cssObect){
+		console.log();
+	}
 	//htmlcode내용을 확인
 	gethtml(){
 		return this.code;
