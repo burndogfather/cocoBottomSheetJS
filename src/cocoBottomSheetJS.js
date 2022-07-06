@@ -100,7 +100,7 @@ class cocoButtomSheetJS{
 		}
 		this.style.transition = 'none';
 		
-		let translate3d = this.style.transform.match(/\(.*\)/gi)[0].replace(new Array('(',')'),'');
+		let translate3d = this.style.transform.match(/\(.*\)/gi)[0];
 		console.log(translate3d.split(','));
 		console.log('touchstart!!!');
 	};
