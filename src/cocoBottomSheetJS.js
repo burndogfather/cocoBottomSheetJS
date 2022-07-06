@@ -26,6 +26,6 @@ class cocoButtomSheetJS{
 	}
 	//Bottomsheet를 없애기
 	hide(){
-		
+		document.body.removeChild(this.BSElement);
 	}
 };
