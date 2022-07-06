@@ -1,9 +1,9 @@
 'use strict';
 class cocoButtomSheetJS{
-	sethtml(code){
-		this.code = code;
+	set sethtml(code){
+		this._code = code;
 	}
 	get initdom(){
-		document.body.innerHTML = code;
+		document.body.innerHTML = this._code;
 	}
 };
