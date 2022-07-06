@@ -177,17 +177,18 @@ class cocoButtomSheetJS{
 		
 		//최초터치좌표와 이동중인 좌표의 차이를 구하여 이동한 만큼의 좌표구하기
 		if(this.starttouchY > pageY){
+			//up
 			moveY = this.starttouchY - pageY;
 			let calc = this.translatePOS-moveY;
 			let maxcalc = parseFloat('-'+wh);
 			if(maxcalc <= calc){
 				this.BSElement.style.transform = 'translate(0, ' + calc + 'px)';
 			}
-			
 		}else if(this.starttouchY < pageY){
+			//down
 			this.BSElement.style.transform = 'translate3d(0, calc(-100% + ' + pageY + 'px), 0)';
 		}else{
-			
+			return null;
 		}
 	};
 	
