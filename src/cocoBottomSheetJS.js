@@ -119,7 +119,6 @@ class cocoButtomSheetJS{
 			this.translatePOS = parseFloat(translate3d);
 		}
 		
-		console.log(this.touchmoving);
 		
 		//handle이벤트
 		if(/(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS)/i.test(window.navigator.userAgent)){
@@ -134,6 +133,7 @@ class cocoButtomSheetJS{
 	
 	//터치드래그 진행중
 	touchmoving(event){
+		console.log(this);
 		let wh = window.innerHeight;
 		let pageY;
 		let moveY;
@@ -166,11 +166,11 @@ class cocoButtomSheetJS{
 			let calc = this.translatePOS-moveY;
 			let maxcalc = parseFloat('-'+wh);
 			if(maxcalc <= calc){
-				this.style.transform = 'translate(0, ' + calc + 'px)';
+				this.BSElement.style.transform = 'translate(0, ' + calc + 'px)';
 			}
 			
 		}else if(this.starttouchY < pageY){
-			this.style.transform = 'translate3d(0, calc(-100% + ' + pageY + 'px), 0)';
+			this.BSElement.style.transform = 'translate3d(0, calc(-100% + ' + pageY + 'px), 0)';
 		}else{
 			
 		}
