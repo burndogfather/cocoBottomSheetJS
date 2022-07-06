@@ -159,7 +159,12 @@ class cocoButtomSheetJS{
 		console.log(this.style.transform);
 		
 		if(this.style.transform.indexOf('translate3d') !== -1){
-			
+			let translate3d = this.style.transform.match(/\(.*\)/gi)[0];
+			translate3d = translate3d.split(',')[1];
+			translate3d = translate3d.split('+')[1];
+			translate3d = translate3d.replace(/[^0-9|\-|.]/g,'');
+			console.log(translate3d);
+			this.translatePOS = parseFloat(translate3d);
 		}else{
 			let translate3d = this.style.transform.match(/\(.*\)/gi)[0];
 			translate3d = translate3d.split(',')[1];
