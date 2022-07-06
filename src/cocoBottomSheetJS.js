@@ -64,9 +64,15 @@ class cocoButtomSheetJS{
 		}
 		
 		//handle이벤트
-		
+		this.BSElement.addEventListener('touchstart mousedown', (e)=>{
+			console.log('test');
+		});
 		
 	};
+	
+	touchstart(){
+		
+	}
 	
 	//htmlcode를 재정의
 	sethtml(htmlcode){
