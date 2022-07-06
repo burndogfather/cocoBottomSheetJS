@@ -109,6 +109,8 @@ class cocoButtomSheetJS{
 		let wh = window.innerHeight;
 		let pageY;
 		let moveY;
+		
+		//터치드래그중인 상태에서의 마우스좌표구하기
 		if(event.type === 'touchmove'){
 			if(event.touches[0].pageY < 0){
 				pageY = 0;
@@ -129,6 +131,7 @@ class cocoButtomSheetJS{
 			return null;	
 		}
 		
+		//최초터치좌표와 이동중인 좌표의 차이를 구하여 이동한 만큼의 좌표구하기
 		if(this.starttouchY > pageY){
 			console.log('up');
 			moveY = this.starttouchY - pageY;
