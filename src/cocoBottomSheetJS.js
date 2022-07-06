@@ -16,7 +16,7 @@ class cocoButtomSheetJS{
 		if(overlayer){
 			this.BSoverElement = document.createElement('article');
 			this.BSoverElement.classList.add('cocoButtomSheet_overlayer');
-			this.BSoverElement.addEventListener('click', function(){
+			this.BSoverElement.addEventListener('click', (e)=>{
 				this.hide();
 			});
 		}
