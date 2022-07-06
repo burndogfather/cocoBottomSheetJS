@@ -27,7 +27,7 @@ class cocoButtomSheetJS{
 		this.BSElement.classList.add('cocoButtomSheet');
 		this.BSElement.innerHTML = '<button class="cocoButtomSheet_handle"></button>';
 		this.init();
-	}
+	};
 	
 	//클래스 선언시 자동실행
 	init(){
@@ -63,11 +63,12 @@ class cocoButtomSheetJS{
 			}
 		}
 		
-	}
+	};
+	
 	//htmlcode를 재정의
 	sethtml(htmlcode){
 		this.code = htmlcode;
-	}
+	};
 	
 	//버튼시트 스타일재정의
 	setcss(cssObject){
@@ -76,12 +77,12 @@ class cocoButtomSheetJS{
 			stylecssString += key+':'+cssObject[key];
 		}
 		this.BSElement.setAttribute('style',stylecssString);
-	}
+	};
 	
 	//htmlcode내용을 확인
 	gethtml(){
 		return this.code;
-	}
+	};
 	
 	//Bottomsheet를 출력
 	show(){
@@ -95,7 +96,7 @@ class cocoButtomSheetJS{
 			}
 			this.is_show = true;
 		}
-	}
+	};
 	
 	//Bottomsheet를 없애기
 	hide(){
@@ -106,5 +107,5 @@ class cocoButtomSheetJS{
 			}
 			this.is_show = false;
 		}
-	}
+	};
 };
