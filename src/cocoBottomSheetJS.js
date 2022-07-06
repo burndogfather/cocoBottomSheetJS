@@ -2,6 +2,7 @@
 class cocoButtomSheetJS{
 	constructor(code) {
 		this.BSElement = document.createElement('article');
+		this.BSElement.classList.add('cocoButtomSheet');
 		console.log('constructor');
 		this.code = code;
 	}
