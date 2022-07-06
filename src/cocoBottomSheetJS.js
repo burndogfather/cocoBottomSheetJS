@@ -9,10 +9,10 @@ class cocoButtomSheetJS{
 	}){
 		//초기설정
 		this.is_show = false; //바텀시트가 열림감지
-		this.code = htmlcode;
-		this.overlayer = overlayer;
-		this.min = min;
-		this.max = max;
+		this.code = htmlcode; //바텀시트에 들어갈 데이터
+		this.overlayer = overlayer; //바텀시트 뒷배경을 넣을것인지
+		this.min = min; //바텀시트의 최소높이값 (최소높이값보다 낮으면 꺼짐)
+		this.max = max; //바텀시트의 최대높이값 (최대높이값보다 높으면 채워짐)
 		
 		if(this.overlayer){
 			//오버레이어 구성
