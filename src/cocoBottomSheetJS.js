@@ -186,6 +186,7 @@ class cocoButtomSheetJS{
 			}
 		}else if(this.starttouchY < pageY){
 			//down
+			console.log(down):
 			if(this.max < pageY){
 				this.BSElement.style.transform = 'translate3d(0, calc(-100% + ' + pageY + 'px), 0)';
 			}
@@ -199,7 +200,6 @@ class cocoButtomSheetJS{
 	touchend(event){
 		console.log('touchend!');
 		let wh = window.innerHeight;
-		let pageY;
 		
 		if(this.BSElement.style.transform.indexOf('translate3d') !== -1){
 			let translate3d = this.BSElement.style.transform.match(/\(.*\)/gi)[0];
@@ -218,19 +218,19 @@ class cocoButtomSheetJS{
 		//터치드래그중인 상태에서의 마우스좌표구하기
 		if(event.type === 'touchmove'){
 			if(event.touches[0].pageY < 0){
-				pageY = 0;
+				this.starttouchY = 0;
 			}else if(event.touches[0].pageY > wh){
-				pageY = wh;
+				this.starttouchY = wh;
 			}else{
-				pageY = event.touches[0].pageY;
+				this.starttouchY = event.touches[0].pageY;
 			}
 		}else if(event.type === 'mousemove'){
 			if(event.pageY < 0){
-				pageY = 0;
+				this.starttouchY = 0;
 			}else if(event.pageY > wh){
-				pageY = wh;
+				this.starttouchY = wh;
 			}else{
-				pageY = event.pageY;
+				this.starttouchY = event.pageY;
 			}
 		}else{
 			return null;	
