@@ -21,11 +21,14 @@ class cocoButtomSheetJS{
 		return this.code;
 	}
 	//Bottomsheet를 출력
-	get show(){
+	show(){
 		document.querySelector('body').prepend(this.BSElement);
 	}
 	//Bottomsheet를 없애기
-	get hide(){
+	set hide(){
+		document.body.removeChild(this.BSElement);
+	}
+	hide(){
 		document.body.removeChild(this.BSElement);
 	}
 };
