@@ -187,12 +187,14 @@ class cocoButtomSheetJS{
 			let maxcalc = parseFloat('-'+wh);
 			if(maxcalc <= calc){
 				this.BSElement.style.transform = 'translate(0, ' + calc + 'px)';
+				this.BSElement.style.transition = 'all 0.1s ease-out';
 			}
 		}else if(this.starttouchY < pageY){
 			//down
 			console.log('down');
 			if(wh > pageY){
 				this.BSElement.style.transform = 'translate3d(0, calc(-100% + ' + pageY + 'px), 0)';
+				this.BSElement.style.transition = 'all 0.1s ease-out';
 			}
 		}else{
 			this.BSElement.setAttribute('style',style + "transform:translate(0px, -"+pageY+"px);");
