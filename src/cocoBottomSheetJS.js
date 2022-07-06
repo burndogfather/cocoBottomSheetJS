@@ -200,7 +200,8 @@ class cocoButtomSheetJS{
 			translate3d = translate3d.replace(/[^0-9|\-|.]/g,'');
 			this.translatePOS = parseFloat(translate3d);
 		}
-		
+		this.removeEventListener('touchmove');
+		this.removeEventListener('mousemove');		
 	};
 	
 	
