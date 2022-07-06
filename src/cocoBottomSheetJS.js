@@ -186,7 +186,9 @@ class cocoButtomSheetJS{
 			}
 		}else if(this.starttouchY < pageY){
 			//down
-			this.BSElement.style.transform = 'translate3d(0, calc(-100% + ' + pageY + 'px), 0)';
+			if(this.max < pageY){
+				this.BSElement.style.transform = 'translate3d(0, calc(-100% + ' + pageY + 'px), 0)';
+			}
 		}else{
 			return null;
 		}
