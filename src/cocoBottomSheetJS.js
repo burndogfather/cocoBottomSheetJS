@@ -77,6 +77,7 @@ class cocoButtomSheetJS{
 	
 	//터치를 시작하는 순간 시작좌표를 수집
 	touchstart(event){
+		this.translatePOS = this.min;
 		let wh = window.innerHeight;
 		if(event.type === 'touchstart'){
 			if(event.touches[0].pageY < 0){
@@ -172,7 +173,6 @@ class cocoButtomSheetJS{
 	show(){
 		let style = this.BSElement.getAttribute('style');
 		this.BSElement.setAttribute('style',style + "transform:translate(0px, -"+this.min+"px);");
-		this.translatePOS = this.min;
 		
 		if(!this.is_show){
 			document.querySelector('body').prepend(this.BSElement);
