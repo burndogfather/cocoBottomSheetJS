@@ -6,5 +6,4 @@ class cocoButtomSheetJS{
 	get initdom(){
 		document.body.innerHTML = this.code;
 	}
-	
 };
