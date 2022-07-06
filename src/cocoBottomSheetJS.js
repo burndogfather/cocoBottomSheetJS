@@ -2,10 +2,10 @@
 class cocoButtomSheetJS{
 	constructor({
 		//입력데이터
-		htmlcode,
-		overlayer,
-		min,
-		max
+		htmlcode=null,
+		overlayer=null,
+		min=null,
+		max=null
 	}){
 		//초기설정
 		this.is_show = false;

@@ -13,7 +13,14 @@
 		
 		<script type='text/javascript'>
 		
-			let buttomsheet = new cocoButtomSheetJS();
+			let buttomsheet = new cocoButtomSheetJS({
+				htmlcode:'test',
+				overlayer:true,
+				min:'300px',
+				max:'500px'
+			});
+			
+			//let buttomsheet = new cocoButtomSheetJS();
 			
 			buttomsheet.setcss({'background-color':'#000'});
 			
