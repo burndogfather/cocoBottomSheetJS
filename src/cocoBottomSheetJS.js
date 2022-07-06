@@ -14,7 +14,7 @@ class cocoButtomSheetJS{
 		this.min = min;
 		this.max = max;
 		
-		if(overlayer){
+		if(this.overlayer){
 			//오버레이어 구성
 			this.BSoverElement = document.createElement('article');
 			this.BSoverElement.classList.add('cocoButtomSheet_overlayer');
