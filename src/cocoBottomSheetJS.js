@@ -102,11 +102,8 @@ class cocoButtomSheetJS{
 		
 		let translate3d = this.style.transform.match(/\(.*\)/gi)[0];
 		translate3d = translate3d.split(',')[1];
-		if(translate3d.indexOf('calc') !== -1){
-			
-		}
 		translate3d = translate3d.replace(/[^0-9|\-|.]/g,'');
-		this.translatePOS = translate3d;
+		this.translatePOS = parseFloat(translate3d);
 		console.log('touchstart!!!');
 	};
 	
@@ -138,6 +135,7 @@ class cocoButtomSheetJS{
 			return null;	
 		}
 		
+		console.log(this.translatePOS);
 		//최초터치좌표와 이동중인 좌표의 차이를 구하여 이동한 만큼의 좌표구하기
 		if(this.starttouchY > pageY){
 			console.log('up');
