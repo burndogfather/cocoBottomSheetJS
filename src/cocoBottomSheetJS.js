@@ -4,11 +4,6 @@ class cocoButtomSheetJS{
 		console.log('constructor');
 		this.code = code;
 	}
-	
-	gethtmlcode(code){
-		console.log('gethtmlcode');
-		this.sethtml = code;
-	}
 	set sethtml(code){
 		console.log('sethtml');
 		document.body.innerHTML = code;
@@ -18,6 +13,6 @@ class cocoButtomSheetJS{
 		document.body.innerHTML = 'test';
 	}
 	show(){
-		console.log('show');
+		console.log(this.code);
 	}
 };
