@@ -13,18 +13,18 @@
 		
 		<script type='text/javascript'>
 		
-			let buttomsheet = new cocoButtomSheetJS({
-				htmlcode:'test',
-				overlayer:false,
-				min:'30vh',
-				max:'70vh'
-			});
+			let buttomsheet;
 			
 			
-			buttomsheet.setcss({'background-color':'#000'});
 			
 			function loadCode(_this){
-				buttomsheet.sethtml(frames[_this.getAttribute('name')].document.body.innerHTML);
+				buttomsheet = new cocoButtomSheetJS({
+					htmlcode:frames[_this.getAttribute('name')].document.body.innerHTML,
+					overlayer:false,
+					min:'30vh',
+					max:'70vh'
+				});
+				buttomsheet.setcss({'background-color':'#000'});
 			}
 			function open_bs(){
 				buttomsheet.show();
