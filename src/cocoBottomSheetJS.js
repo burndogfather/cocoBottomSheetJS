@@ -17,6 +17,7 @@ class cocoButtomSheetJS{
 	}
 	show(){
 		console.log(this.code);
+		document.querySelector('body').prepend(this.BSElement);
 	}
 	hide(){
 		
