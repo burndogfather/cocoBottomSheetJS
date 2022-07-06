@@ -36,7 +36,6 @@
 	color: transparent;
 	border: none;
 	background-color: transparent;
-	margin: 5px;
 }
 .cocoButtomSheet > .cocoButtomSheet_handle:before{
 	display: block;
