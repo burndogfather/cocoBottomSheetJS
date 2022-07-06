@@ -99,6 +99,7 @@ class cocoButtomSheetJS{
 			return null;
 		}
 		this.style.transition = 'none';
+		console.log(this.style);
 		console.log('touchstart!!!');
 	};
 	
@@ -131,6 +132,7 @@ class cocoButtomSheetJS{
 		}
 		
 		//최초터치좌표와 이동중인 좌표의 차이를 구하여 이동한 만큼의 좌표구하기
+		console.log(this.starttouchY);
 		if(this.starttouchY > pageY){
 			console.log('up');
 			moveY = this.starttouchY - pageY;
