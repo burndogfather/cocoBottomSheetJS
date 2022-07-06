@@ -69,9 +69,11 @@ class cocoButtomSheetJS{
 		if(/(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS)/i.test(window.navigator.userAgent)){
 			this.BSElement.addEventListener('touchstart', this.touchstart);
 			this.BSElement.addEventListener('touchmove', this.touchmoving);
+			this.BSElement.addEventListener('touchend', this.touchend);
 		}else{
 			this.BSElement.addEventListener('mousedown', this.touchstart);
 			this.BSElement.addEventListener('mousemove', this.touchmoving);
+			this.BSElement.addEventListener('mouseup', this.touchend);
 		}
 	};
 	
@@ -135,18 +137,13 @@ class cocoButtomSheetJS{
 			return null;	
 		}
 		
-		console.log(this.translatePOS);
 		//최초터치좌표와 이동중인 좌표의 차이를 구하여 이동한 만큼의 좌표구하기
 		if(this.starttouchY > pageY){
-			console.log('up');
 			moveY = this.starttouchY - pageY;
-			console.log(this.translatePOS-moveY);
 			let calc = this.translatePOS-moveY;
-			this.style.transform = 'translate3d(0, ' + calc + 'px)';
+			this.style.transform = 'translate(0, ' + calc + 'px)';
 		}else if(this.starttouchY < pageY){
-			console.log('down');
 			moveY = pageY - this.starttouchY;
-			console.log(moveY);
 			this.style.transform = 'translate3d(0, calc(-100% + ' + moveY + 'px), 0)';
 		}else{
 			
