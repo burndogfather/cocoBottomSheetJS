@@ -11,7 +11,10 @@
 	<body>
 		
 		<script type='text/javascript'>
-			let buttomsheet = new cocoButtomSheetJS('test');
+			let buttomsheet = new cocoButtomSheetJS({
+				htmlcode:'test',
+				overlayer:true
+			});
 			buttomsheet.setcss({'background-color':'#000'});
 			function open_bs(){
 				buttomsheet.sethtml('11111');
