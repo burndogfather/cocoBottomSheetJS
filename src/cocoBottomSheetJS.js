@@ -85,7 +85,7 @@ class cocoButtomSheetJS{
 	setcss(cssObject){
 		let stylecssString = '';
 		for(let key in cssObject){
-			stylecssString += key+':'+cssObject[key];
+			stylecssString += key+':'+cssObject[key]+';';
 		}
 		this.BSElement.setAttribute('style',stylecssString);
 	};
@@ -97,7 +97,8 @@ class cocoButtomSheetJS{
 	
 	//Bottomsheet를 출력
 	show(){
-		this.BSElement.setAttribute('style',"transform:translate(0px, -"+this.min+"px);");
+		let style = this.BSElement.getAttribute('style');
+		this.BSElement.setAttribute('style',style+"transform:translate(0px, -"+this.min+"px);");
 
 		if(!this.is_show){
 			document.querySelector('body').prepend(this.BSElement);
