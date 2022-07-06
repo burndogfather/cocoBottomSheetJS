@@ -28,9 +28,11 @@ class cocoButtomSheetJS{
 		this.BSElement.innerHTML = '<button class="cocoButtomSheet_handle"></button>';
 		this.init();
 	}
+	
+	//클래스 선언시 자동실행
 	init(){
 		
-		
+		//min 사이즈 재정의
 		if(/^[0-9]+$/.test(this.min)){
 			this.min = parseInt(this.min);
 		}else{
@@ -46,6 +48,7 @@ class cocoButtomSheetJS{
 			}
 		}
 		
+		//max 사이즈 재정의
 		if(/^[0-9]+$/.test(this.max)){
 			this.max = parseInt(this.max);
 		}else{
@@ -59,6 +62,7 @@ class cocoButtomSheetJS{
 				this.max = parseInt(this.max);
 			}
 		}
+		
 	}
 	//htmlcode를 재정의
 	sethtml(htmlcode){
@@ -81,37 +85,8 @@ class cocoButtomSheetJS{
 	
 	//Bottomsheet를 출력
 	show(){
-		let minHeight = 0;
-		let maxHeight = 0;
-		if(/^[0-9]+$/.test(this.min)){
-			minHeight = parseInt(this.min);
-		}else{
-			if(this.min.indexOf('%') !== -1){
-				minHeight = parseInt(this.min.replace('%',''))/100 * document.body.scrollHeight;
-				console.log(minHeight);
-			}else if(this.min.indexOf('vh') !== -1){
-				minHeight = parseInt(this.min.replace('vh',''))/100 * document.documentElement.clientHeight;
-			}else if(this.min.indexOf('vw') !== -1){
-				minHeight = parseInt(this.min.replace('vw',''))/100 * document.documentElement.clientWidth;
-			}else{
-				minHeight = parseInt(this.min);
-			}
-		}
-		this.BSElement.setAttribute('style',"transform:translate(0px, -"+minHeight+"px);");
 		
-		if(/^[0-9]+$/.test(this.max)){
-			maxHeight = parseInt(this.max);
-		}else{
-			if(this.max.indexOf('%') !== -1){
-				maxHeight = parseInt(this.max.replace('%',''))/100 * document.body.scrollHeight;
-			}else if(this.max.indexOf('vh') !== -1){
-				maxHeight = parseInt(this.max.replace('vh',''))/100 * document.documentElement.clientHeight;
-			}else if(this.max.indexOf('vw') !== -1){
-				maxHeight = parseInt(this.max.replace('vw',''))/100 * document.documentElement.clientWidth;
-			}else{
-				maxHeight = parseInt(this.max);
-			}
-		}
+		this.BSElement.setAttribute('style',"transform:translate(0px, -"+this.min+"px);");
 		
 		if(!this.is_show){
 			document.querySelector('body').prepend(this.BSElement);
