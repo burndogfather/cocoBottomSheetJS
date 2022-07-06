@@ -69,8 +69,6 @@ class cocoButtomSheetJS{
 		}else{
 			this.BSElement.addEventListener('mousedown', this.touchstart);
 		}
-		
-		console.log('init!');
 	};
 	
 	touchstart(event){
