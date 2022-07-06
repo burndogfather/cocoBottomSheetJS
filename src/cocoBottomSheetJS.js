@@ -1,17 +1,20 @@
 'use strict';
 class cocoButtomSheetJS{
-	constructor(code) {
+	constructor({
+		htmlcode,
+		overlayer
+	}){
 		this.BSElement = document.createElement('article');
 		this.BSElement.classList.add('cocoButtomSheet');
 		this.BSElement.addEventListener('click', function(){
 			this.hide;
 		});
 		console.log('constructor');
-		this.code = code;
+		this.code = htmlcode;
 	}
 	//htmlcode를 재정의
-	sethtml(code){
-		this.code = code;
+	sethtml(htmlcode){
+		this.code = htmlcode;
 	}
 	setcss(cssObject){
 		console.log(cssObject);
