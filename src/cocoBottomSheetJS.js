@@ -15,9 +15,8 @@ class cocoButtomSheetJS{
 		this.BSElement = document.createElement('article');
 		this.BSElement.classList.add('cocoButtomSheet');
 		this.BSElement.innerHTML = '<button class="cocoButtomSheet_handle"></button>';
-		
 		this.code = htmlcode;
-		
+		sethtml(this.code);
 	}
 	//htmlcode를 재정의
 	sethtml(htmlcode){
