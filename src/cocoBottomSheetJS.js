@@ -141,7 +141,8 @@ class cocoButtomSheetJS{
 			console.log('up');
 			moveY = this.starttouchY - pageY;
 			console.log(this.translatePOS-moveY);
-			this.style.transform = 'translate3d(0, ' + moveY + 'px)';
+			let calc = this.translatePOS-moveY;
+			this.style.transform = 'translate3d(0, ' + calc + 'px)';
 		}else if(this.starttouchY < pageY){
 			console.log('down');
 			moveY = pageY - this.starttouchY;
