@@ -65,7 +65,7 @@ class cocoButtomSheetJS{
 				minHeight = parseInt(this.min);
 			}
 		}
-		console.log(minHeight);
+		this.BSElement.setAttribute('style','min-height='+minHeight);
 		
 		if(/^[0-9]+$/.test(this.max)){
 			maxHeight = parseInt(this.max);
