@@ -17,12 +17,15 @@ class cocoButtomSheetJS{
 			this.BSoverElement = document.createElement('article');
 			this.BSoverElement.classList.add('cocoButtomSheet_overlayer');
 			this.BSoverElement.addEventListener('click', function(){
-				this.hide;
+				this.hide();
 			});
 		}
 		this.BSElement = document.createElement('article');
 		this.BSElement.classList.add('cocoButtomSheet');
 		this.BSElement.innerHTML = '<button class="cocoButtomSheet_handle"></button>';
+		this.hide(){
+			console.log('test');
+		}
 
 	}
 	//htmlcode를 재정의
