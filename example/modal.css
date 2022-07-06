@@ -29,7 +29,7 @@ p{
 .check_box > li{
 	width: 100%;
 	height: 50px;
-	border: 1px solid #c2c2c2;
+	
 	font-size: 13px;
 	padding: 0 15px;
 	box-sizing: border-box;
@@ -37,16 +37,17 @@ p{
 	line-height: 50px;
 	margin-bottom: 10px;
 	position: relative;
-	color: #c2c2c2;
-}
-.check_box > li[active='true']{
 	border: 1px solid #333;
 	color: #333;
+}
+.check_box > li[active='true']{
+	color: #c2c2c2;
+	border: 1px solid #c2c2c2;
 }
 .check_box > li[active='true']:after{
 	font-family: xeicon!important;
 	content: "\e9c7";
-	color: #333;
+	color: #ddd;
 }
 .check_box > li:after{
 	font-family: xeicon!important;
@@ -54,5 +55,5 @@ p{
 	font-size: 16px;
 	position: absolute;
 	right: 15px;
-	color: #ddd;
+	color: #333;
 }
