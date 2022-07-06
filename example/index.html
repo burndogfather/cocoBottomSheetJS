@@ -23,6 +23,9 @@
 			
 			buttomsheet.setcss({'background-color':'#000'});
 			
+			function loadCode(_this){
+				
+			}
 			function open_bs(){
 				buttomsheet.sethtml('11111');
 				buttomsheet.show();
@@ -38,6 +41,6 @@
 		<section></section>
 		
 		Example of HTML document to be included in the bottom sheet (It's easy to use if you use Ajax) : 
-		<iframe src='modal.html'></iframe>
+		<iframe src='modal.html' onload='loadCode(this);'></iframe>
 	</body>
 </html>
