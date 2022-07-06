@@ -151,6 +151,12 @@ class cocoButtomSheetJS{
 	};
 	
 	
+	//터치드래그 끝남
+	touchend(event){
+		console.log(event);	
+	};
+	
+	
 	//htmlcode를 재정의
 	sethtml(htmlcode){
 		this.code = htmlcode;
