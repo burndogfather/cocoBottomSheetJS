@@ -3,6 +3,7 @@ class cocoButtomSheetJS{
 	constructor(code) {
 		this.BSElement = document.createElement('article');
 		this.BSElement.classList.add('cocoButtomSheet');
+		
 		console.log('constructor');
 		this.code = code;
 	}
@@ -10,8 +11,8 @@ class cocoButtomSheetJS{
 	sethtml(code){
 		this.code = code;
 	}
-	setcss(cssObect){
-		console.log();
+	setcss(cssObject){
+		console.log(cssObject);
 	}
 	//htmlcode내용을 확인
 	gethtml(){
