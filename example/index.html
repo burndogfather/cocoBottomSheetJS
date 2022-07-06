@@ -24,8 +24,8 @@
 			buttomsheet.setcss({'background-color':'#000'});
 			
 			function loadCode(_this){
-				console.log(_this);
-				console.log(frames.document.body.innerHTML);
+				console.log(_this.getAttribute('id'));
+				console.log(frames[_this.getAttribute('id')]);
 			}
 			function open_bs(){
 				buttomsheet.sethtml('11111');
