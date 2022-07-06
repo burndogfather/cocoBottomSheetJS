@@ -127,14 +127,22 @@ class cocoButtomSheetJS{
 				//클릭시 닫음
 				this.touchmoving(e);
 			});
-			this.BSElement.addEventListener('touchend', this.touchend);
+			//this.BSElement.addEventListener('touchend', this.touchend);
+			this.BSElement.addEventListener('touchend', (e)=>{
+				//클릭시 닫음
+				this.touchend(e);
+			});
 		}else{
 			//this.BSElement.addEventListener('mousemove', this.touchmoving);
 			this.BSElement.addEventListener('mousemove', (e)=>{
 				//클릭시 닫음
 				this.touchmoving(e);
 			});
-			this.BSElement.addEventListener('mouseup', this.touchend);
+			//this.BSElement.addEventListener('mouseup', this.touchend);
+			this.BSElement.addEventListener('mouseup', (e)=>{
+				//클릭시 닫음
+				this.touchend(e);
+			});
 		}
 		
 	};
@@ -187,7 +195,7 @@ class cocoButtomSheetJS{
 	//터치드래그 끝남
 	touchend(event){
 		console.log('touchend!');
-		console.log(this.event);
+		console.log(this.touchmoving);
 		if(this.style.transform.indexOf('translate3d') !== -1){
 			let translate3d = this.style.transform.match(/\(.*\)/gi)[0];
 			translate3d = translate3d.split(',')[1];
@@ -200,8 +208,8 @@ class cocoButtomSheetJS{
 			translate3d = translate3d.replace(/[^0-9|\-|.]/g,'');
 			this.translatePOS = parseFloat(translate3d);
 		}
-		this.removeEventListener('touchmove');
-		this.removeEventListener('mousemove');		
+		this.removeEventListener('touchmove',this.touchmoving);
+		this.removeEventListener('mousemove',this.touchmoving);		
 	};
 	
 	
