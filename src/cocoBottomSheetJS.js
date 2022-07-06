@@ -106,7 +106,7 @@ class cocoButtomSheetJS{
 			
 		}
 		translate3d = translate3d.replace(/[^0-9|\-|.]/g,'');
-		console.log(translate3d);
+		this.translatePOS = translate3d;
 		console.log('touchstart!!!');
 	};
 	
