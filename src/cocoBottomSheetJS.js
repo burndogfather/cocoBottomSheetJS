@@ -4,7 +4,7 @@ class cocoButtomSheetJS{
 		this.code = code;
 	}
 	get initdom(){
-		document.body
+		document.body.innerHTML = this.code;
 	}
 	
 };
