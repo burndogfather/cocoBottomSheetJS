@@ -49,16 +49,23 @@ class cocoButtomSheetJS{
 	
 	//Bottomsheet를 출력
 	show(){
+		let minHeight = 0;
+		let maxHeight = 0;
+		if(/^[0-9]+$/.test(str)){
+			
+		}else{
+			
+		}
 		if(this.min.indexOf('%') !== -1){
-			let minHeight = parseInt(this.min.replace('%',''))/100 * document.body.scrollHeight;
+			minHeight = parseInt(this.min.replace('%',''))/100 * document.body.scrollHeight;
 			console.log(minHeight);
 		}else{
-			this.min = min;
+			minHeight = min;
 		}
 		if(this.max.indexOf('%') !== -1){
-			let maxHeight = parseInt(this.max.replace('%',''))/100 * document.body.scrollHeight;
+			maxHeight = parseInt(this.max.replace('%',''))/100 * document.body.scrollHeight;
 		}else{
-			this.max = max;
+			maxHeight = max;
 		}
 		
 		if(!this.is_show){
