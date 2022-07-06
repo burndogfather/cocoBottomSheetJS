@@ -1,9 +1,11 @@
 'use strict';
 class cocoButtomSheetJS{
 	constructor({
+		//입력데이터
 		htmlcode,
 		overlayer
 	}){
+		//초기설정
 		this.overlayer = overlayer;
 		if(overlayer){
 			this.BSoverElement = document.createElement('article');
@@ -22,8 +24,8 @@ class cocoButtomSheetJS{
 	sethtml(htmlcode){
 		this.code = htmlcode;
 	}
+	//
 	setcss(cssObject){
-		console.log(cssObject);
 		let stylecssString = '';
 		for(let key in cssObject){
 			stylecssString += key+':'+cssObject[key];

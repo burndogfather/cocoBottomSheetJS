@@ -58,7 +58,7 @@
 
 @media(min-width: 768px){
 	.cocoButtomSheet{
-		width:300px;
+		width:3rem;
 		right:10px;
 	}
 }
