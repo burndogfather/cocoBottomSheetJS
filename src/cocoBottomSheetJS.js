@@ -94,11 +94,36 @@ class cocoButtomSheetJS{
 				this.starttouchY = event.pageY;
 			}
 		}
+		if(/(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS)/i.test(window.navigator.userAgent)){
+			document.body.addEventListener('touchmove', this.touchmoving);
+		}else{
+			document.body.addEventListener('mousemove', this.touchmoving);
+		}
 	};
 	
 	//터치드래그 진행중
 	touchmoving(event){
-		
+		let wh = window.innerHeight;
+		if(event.type === 'touchmove' && is_mobile()){
+			if(event.touches[0].pageY < 0){
+				pageY = 0;
+			}else if(event.touches[0].pageY > wh){
+				pageY = wh;
+			}else{
+				pageY = event.touches[0].pageY;
+			}
+			
+		}else if(event.type === 'mousemove' && !is_mobile()){
+			if(event.pageY < 0){
+				pageY = 0;
+			}else if(event.pageY > wh){
+				pageY = wh;
+			}else{
+				pageY = event.pageY;
+			}
+		}else{
+			return null;	
+		}
 	};
 	
 	
