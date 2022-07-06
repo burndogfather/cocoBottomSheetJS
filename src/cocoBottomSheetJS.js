@@ -268,6 +268,7 @@ class cocoButtomSheetJS{
 	//바텀시트를 출력
 	show(){
 		document.body.style.position = 'fixed';
+		document.body.style.overflow = 'hidden';
 		let style = this.BSElement.getAttribute('style');
 		this.BSElement.setAttribute('style',style + "transform:translate(0px, -"+this.min+"px);");
 		
@@ -282,6 +283,8 @@ class cocoButtomSheetJS{
 	
 	//바텀시트를 없애기
 	hide(){
+		document.body.style.position = 'unset';
+		document.body.style.overflow = 'unset';
 		if(this.is_show){
 			document.body.removeChild(this.BSElement);
 			if(this.overlayer){
