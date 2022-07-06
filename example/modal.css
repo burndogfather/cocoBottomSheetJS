@@ -1,0 +1,18 @@
+#apt {
+	display: flex;
+	padding: 10px 0;
+}
+img{
+	border-radius: 5px;
+	margin-right: 10px;
+}
+em{
+	font-size: 14px;
+	font-weight: bold;
+	font-style: normal;
+	margin-bottom: 5px;
+}
+p{
+	font-size: 11px;
+	padding: 5px 0;
+}
