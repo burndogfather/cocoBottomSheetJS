@@ -73,28 +73,31 @@ class cocoButtomSheetJS{
 		}
 	};
 	
+	//터치를 시작하는 순간 시작좌표를 수집
 	touchstart(event){
 		let wh = window.innerHeight;
 		if(event.type === 'touchstart'){
 			if(event.touches[0].pageY < 0){
-				this.touchY = 0;
+				this.starttouchY = 0;
 			}else if(event.touches[0].pageY > wh){
-				this.touchY = wh;
+				this.starttouchY = wh;
 			}else{
-				this.touchY = event.touches[0].pageY;
+				this.starttouchY = event.touches[0].pageY;
 			}
 			
 		}else if(event.type === 'mousedown'){
 			if(event.pageY < 0){
-				this.touchY = 0;
+				this.starttouchY = 0;
 			}else if(event.pageY > wh){
-				this.touchY = wh;
+				this.starttouchY = wh;
 			}else{
-				this.touchY = event.pageY;
+				this.starttouchY = event.pageY;
 			}
 		}
 		console.log(this.touchY);
 	}
+	
+	//터치드래그중 마우스좌표를 수집
 	
 	//htmlcode를 재정의
 	sethtml(htmlcode){
