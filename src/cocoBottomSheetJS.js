@@ -63,6 +63,9 @@ class cocoButtomSheetJS{
 			}
 		}
 		
+		//handle이벤트
+		
+		
 	};
 	
 	//htmlcode를 재정의
