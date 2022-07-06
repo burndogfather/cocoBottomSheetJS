@@ -14,7 +14,7 @@ class cocoButtomSheetJS{
 		}
 		this.BSElement = document.createElement('article');
 		this.BSElement.classList.add('cocoButtomSheet');
-		this.BSElement.innerHTML = 'testtest';
+		this.BSElement.innerHTML = '<button class="cocoButtomSheet_handle"></button>';
 		
 		this.code = htmlcode;
 		
