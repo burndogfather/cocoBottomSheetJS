@@ -2,7 +2,6 @@
 <html lang='ko'>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
 		<link rel='stylesheet' href='https://git.coco.sqs.kr/cocoBottomSheetJS/src/cocoBottomSheetJS.css'>
 		<script src='https://git.coco.sqs.kr/cocoBottomSheetJS/src/cocoBottomSheetJS.js'></script>
 		<style type='text/css'>
@@ -11,6 +10,12 @@
 		</style>
 	</head>
 	<body>
+		<script type='text/javascript'>
+			function open(){
+				let open = new cocoButtomSheetJS();
+				send_data_api = encryption.encrypt(send_data_api, secret_key());
+			}
+		</script>
 		<button onclick='open();'>open buttom sheet 🤗</button>
 		<br />
 		<button onclick='close();'>close buttom sheet 🫠</button>
