@@ -11,18 +11,8 @@ class cocoButtomSheetJS{
 		this.is_show = false;
 		this.code = htmlcode;
 		this.overlayer = overlayer;
-		if(min.indexOf('%') !== -1){
-			this.min = parseInt(min.replace('%',''))/100 * document.body.scrollHeight;
-			console.log(document.body.scrollHeight);
-			console.log(parseInt(min.replace('%',''))/100);
-		}else{
-			this.min = min;
-		}
-		if(max.indexOf('%') !== -1){
-			this.max = parseInt(max.replace('%',''))/100 * document.body.scrollHeight;
-		}else{
-			this.max = max;
-		}
+		this.min = min;
+		this.max = max;
 		
 		if(overlayer){
 			//오버레이어 구성
@@ -59,8 +49,19 @@ class cocoButtomSheetJS{
 	
 	//Bottomsheet를 출력
 	show(){
-		console.log(document.body.scrollHeight);
-		console.log(this.min);
+		if(min.indexOf('%') !== -1){
+			let minHeight = parseInt(this.min.replace('%',''))/100 * document.body.scrollHeight;
+			console.log(document.body.scrollHeight);
+			console.log(parseInt(min.replace('%',''))/100);
+		}else{
+			this.min = min;
+		}
+		if(max.indexOf('%') !== -1){
+			this.max = parseInt(max.replace('%',''))/100 * document.body.scrollHeight;
+		}else{
+			this.max = max;
+		}
+		
 		if(!this.is_show){
 			document.querySelector('body').prepend(this.BSElement);
 			if(this.overlayer){
