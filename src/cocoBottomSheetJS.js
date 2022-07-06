@@ -26,8 +26,11 @@ class cocoButtomSheetJS{
 		this.BSElement = document.createElement('article');
 		this.BSElement.classList.add('cocoButtomSheet');
 		this.BSElement.innerHTML = '<button class="cocoButtomSheet_handle"></button>';
+		this.init();
 	}
-	
+	init(){
+		console.log('start!');
+	}
 	//htmlcode를 재정의
 	sethtml(htmlcode){
 		this.code = htmlcode;
@@ -66,7 +69,6 @@ class cocoButtomSheetJS{
 			}
 		}
 		this.BSElement.setAttribute('style',"transform:translate(0px, -"+minHeight+"px);");
-		this.BSElement.style.transform = 'translate(0px, -'+minHeight+'px);';
 		
 		if(/^[0-9]+$/.test(this.max)){
 			maxHeight = parseInt(this.max);
