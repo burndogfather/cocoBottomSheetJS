@@ -3,7 +3,7 @@
 	width:100%;
 	height:300px;
 	position: fixed;
-	bottom:0;
+	top: 100%;
 	right:0;
 	background-color:#fff;
 	padding: 3rem 2rem 2rem;
