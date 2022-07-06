@@ -4,9 +4,8 @@ class cocoButtomSheetJS{
 		console.log('constructor');
 		this.code = code;
 	}
-	set sethtml(code){
-		console.log('sethtml');
-		document.body.innerHTML = code;
+	sethtml(code){
+		this.code = code;
 	}
 	get initdom(){
 		console.log('initdom');
