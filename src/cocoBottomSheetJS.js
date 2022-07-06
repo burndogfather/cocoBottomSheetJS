@@ -104,16 +104,16 @@ class cocoButtomSheetJS{
 		}else{
 			return null;
 		}
-		this.style.transition = 'none';
+		this.BSElement.style.transition = 'none';
 		
-		if(this.style.transform.indexOf('translate3d') !== -1){
-			let translate3d = this.style.transform.match(/\(.*\)/gi)[0];
+		if(this.BSElement.style.transform.indexOf('translate3d') !== -1){
+			let translate3d = this.BSElement.style.transform.match(/\(.*\)/gi)[0];
 			translate3d = translate3d.split(',')[1];
 			translate3d = translate3d.split('+')[1];
 			translate3d = translate3d.replace(/[^0-9|\-|.]/g,'');
 			this.translatePOS = parseFloat(translate3d);
 		}else{
-			let translate3d = this.style.transform.match(/\(.*\)/gi)[0];
+			let translate3d = this.BSElement.style.transform.match(/\(.*\)/gi)[0];
 			translate3d = translate3d.split(',')[1];
 			translate3d = translate3d.replace(/[^0-9|\-|.]/g,'');
 			this.translatePOS = parseFloat(translate3d);
@@ -123,11 +123,11 @@ class cocoButtomSheetJS{
 		
 		//handle이벤트
 		if(/(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS)/i.test(window.navigator.userAgent)){
-			this.addEventListener('touchmove', this.touchmoving);
-			this.addEventListener('touchend', this.touchend);
+			this.BSElement.addEventListener('touchmove', this.touchmoving);
+			this.BSElement.addEventListener('touchend', this.touchend);
 		}else{
-			this.addEventListener('mousemove', this.touchmoving);
-			this.addEventListener('mouseup', this.touchend);
+			this.BSElement.addEventListener('mousemove', this.touchmoving);
+			this.BSElement.addEventListener('mouseup', this.touchend);
 		}
 		
 	};
