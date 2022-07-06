@@ -144,8 +144,8 @@ class cocoButtomSheetJS{
 			this.style.transform = 'translate(0, ' + calc + 'px)';
 		}else if(this.starttouchY < pageY){
 			moveY = pageY - this.starttouchY;
-			let calc = this.translatePOS-moveY;
-			this.style.transform = 'translate3d(0, calc(-100% + ' + calc + 'px), 0)';
+			let calc = moveY - this.translatePOS;
+			this.style.transform = 'translate3d(0, calc(-100% + ' + pageY + 'px), 0)';
 		}else{
 			
 		}
@@ -155,7 +155,6 @@ class cocoButtomSheetJS{
 	//터치드래그 끝남
 	touchend(event){
 		console.log(this.style.transform);
-		console.log(event);	
 	};
 	
 	
