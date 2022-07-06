@@ -68,8 +68,10 @@ class cocoButtomSheetJS{
 		//handle이벤트
 		if(/(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS)/i.test(window.navigator.userAgent)){
 			this.BSElement.addEventListener('touchstart', this.touchstart);
+			this.BSElement.addEventListener('touchmove', this.touchmoving);
 		}else{
 			this.BSElement.addEventListener('mousedown', this.touchstart);
+			this.BSElement.addEventListener('mousemove', this.touchmoving);
 		}
 	};
 	
@@ -96,13 +98,7 @@ class cocoButtomSheetJS{
 		}else{
 			return null;
 		}
-		console.log('touchstart');
-		if(/(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS)/i.test(window.navigator.userAgent)){
-			this.BSElement.addEventListener('touchmove', this.touchmoving);
-		}else{
-			this.BSElement.addEventListener('mousemove', this.touchmoving);
-		}
-		
+		console.log('touchstart!!!');
 	};
 	
 	//터치드래그 진행중
