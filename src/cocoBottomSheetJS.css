@@ -13,6 +13,7 @@
 	transition: all 300ms;
 	border-radius: 1.2rem 1.2rem 0 0;
 	box-shadow: 0 -0.2rem 1.2rem rgb(0 0 0 / 10%);
+	box-sizing: border-box;
 }
 .cocoButtomSheet_overlayer{
 	width:100%;
