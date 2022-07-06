@@ -98,6 +98,7 @@ class cocoButtomSheetJS{
 		}else{
 			return null;
 		}
+		console.log(this.style);
 		console.log('touchstart!!!');
 	};
 	
