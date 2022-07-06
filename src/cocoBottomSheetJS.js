@@ -7,11 +7,14 @@ class cocoButtomSheetJS{
 		this.overlayer = overlayer;
 		if(overlayer){
 			this.BSoverElement = document.createElement('article');
-			this.BSoverElement.classList.add('cocoButtomSheet');
+			this.BSoverElement.classList.add('cocoButtomSheet_overlayer');
 			this.BSoverElement.addEventListener('click', function(){
 				this.hide;
 			});
 		}
+		this.BSElement = document.createElement('article');
+		this.BSElement.classList.add('cocoButtomSheet');
+		
 		this.code = htmlcode;
 		
 	}
@@ -31,6 +34,7 @@ class cocoButtomSheetJS{
 		if(this.overlayer){
 			document.querySelector('body').prepend(this.BSoverElement);
 		}
+		document.querySelector('body').prepend(this.BSElement);
 	}
 	//Bottomsheet를 없애기
 	hide(){
