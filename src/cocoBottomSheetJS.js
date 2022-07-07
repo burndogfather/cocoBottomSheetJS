@@ -264,15 +264,16 @@ class cocoButtomSheetJS{
 	show(){
 		if(!this.is_show){
 			this.is_show = true;
+			this.BSoverElement.classList.add('cocoButtonSheet_fadein');
+			document.body.classList.add('cocoButtomSheetforbounse');
 			if(this.ismobile){
-				this.BSoverElement.classList.add('cocoButtonSheet_fadein');
-				document.body.classList.add('cocoButtomSheetforbounse');
+				
 				this.BSElement.style.transform = 'translate(0px, -'+this.min+'px)';
 				this.jsData();
 			}else{
 				this.BSoverElement.classList.add('cocoButtonSheet_fadein');
 				document.body.classList.add('cocoButtomSheetforbounse');
-				this.BSElement.style.transform = 'translate(-100%, -100%)';
+				this.BSElement.style.transform = 'translate(0px, -100%)';
 				this.jsData();
 				
 			}
