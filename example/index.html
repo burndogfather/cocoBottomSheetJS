@@ -25,16 +25,14 @@
 					'background-color':'#111',
 					'color':'#f1f1f1'
 				});
-				let jscode = function(){
+				buttomsheet.setjs(function(){
 					let delay = setTimeout(function(){
 						clearTimeout(delay);
 						delay = null;
 						document.querySelector('.check_box').scrollTop = 0;
 						console.log(document.querySelector('.check_box'));
 					},100);
-					
-				};
-				buttomsheet.setjs(jscode);
+				});
 			}
 			function open_bs(){
 				buttomsheet.show();
