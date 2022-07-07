@@ -43,9 +43,9 @@ let buttomsheet; //Declare Library Variables
 function loadCode(_this){
 	buttomsheet = new cocoButtomSheetJS({
 		htmlcode:frames[_this.getAttribute('name')].document.body.innerHTML, //HTML code
-		overlayer:true, //
-		min:'30vh',
-		max:'85vh'
+		overlayer:true, //Set whether the background is enabled when the bottom sheet is turned on
+		min:'30vh', //Minimum height of the bottom sheet. If it is less than this height, it will close automatically.
+		max:'85vh' //
 	});
 	
 	
