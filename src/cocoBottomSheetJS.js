@@ -152,6 +152,10 @@ class cocoButtomSheetJS{
 				pageY = event.touches[0].pageY;
 			}
 			
+			//up / down 구분
+			if(this.newlytouchY > pageY){
+				
+			}
 			console.log(this.newlytouchY +' / '+pageY);
 			moveY = this.starttouchY - pageY;
 			let calc = Math.round(this.translatePOS - moveY);
@@ -177,26 +181,14 @@ class cocoButtomSheetJS{
 	
 	//터치드래그 끝남
 	touchend(event){
-		console.log(event.touches);
 		if(this.moving){
 			this.moving = false;
-			let wh = window.innerHeight;
 			
 			let translate3d = this.BSElement.style.transform.match(/\(.*\)/gi)[0];
 			translate3d = translate3d.split(',')[1];
 			translate3d = translate3d.replace(/[^0-9|\-|.]/g,'');
 			this.translatePOS = parseFloat(translate3d);
 			
-			//터치드래그중인 상태에서의 마우스좌표구하기
-			if(event.touches[0].pageY <= 0){
-				this.starttouchY = 0;
-			}else if(event.touches[0].pageY >= wh){
-				this.starttouchY = wh;
-			}else{
-				this.starttouchY = event.touches[0].pageY;
-			}
-			
-			this.newlytouchY = this.starttouchY;
 		}
 		
 	};
