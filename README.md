@@ -1,8 +1,8 @@
 # cocoBottomSheetJS
 Similar to the bottom sheet of iOS, it can be implemented with JavaScript🔥
    
-[NOTICE] This component is written in VanillaJS!
-[Reference] This component supports reactive UI!
+This component is written in VanillaJS!  
+This component supports reactive UI!  
    
    
 <img src="https://user-images.githubusercontent.com/101985768/177700975-3a01a5f5-7a1c-45f6-8ebc-aeba68f301de.gif"  width="300"/>
@@ -37,8 +37,9 @@ Example of desktop
 
 ### 2. Write a javascript using the following code example
 ```javascript
-let buttomsheet;
+let buttomsheet; //Declare Library Variables
 function loadCode(_this){
+	//
 	buttomsheet = new cocoButtomSheetJS({
 		htmlcode:frames[_this.getAttribute('name')].document.body.innerHTML,
 		overlayer:true,
