@@ -282,26 +282,23 @@ class cocoButtomSheetJS{
 	
 	//바텀시트를 출력
 	show(){
-		this.BSoverElement.classList.add('cocoButtonSheet_fadein');
-		document.body.classList.add('cocoButtomSheetforbounse');
-		let style = this.BSElement.getAttribute('style');
-		this.BSElement.setAttribute('style',style + "transform:translate(0px, -"+this.min+"px);");
-		
 		if(!this.is_show){
-			
 			this.is_show = true;
+			this.BSoverElement.classList.add('cocoButtonSheet_fadein');
+			document.body.classList.add('cocoButtomSheetforbounse');
+			let style = this.BSElement.getAttribute('style');
+			this.BSElement.setAttribute('style',style + "transform:translate(0px, -"+this.min+"px);");
 		}
 	};
 	
 	//바텀시트를 없애기
 	hide(){
-		this.BSoverElement.classList.remove('cocoButtonSheet_fadein');
-		document.body.classList.remove('cocoButtomSheetforbounse');
-		let style = this.BSElement.getAttribute('style');
-		this.BSElement.setAttribute('style',style + "transform:translate(0px, -0px);");
 		if(this.is_show){
-			
 			this.is_show = false;
+			this.BSoverElement.classList.remove('cocoButtonSheet_fadein');
+			document.body.classList.remove('cocoButtomSheetforbounse');
+			let style = this.BSElement.getAttribute('style');
+			this.BSElement.setAttribute('style',style + "transform:translate(0px, -0px);");
 		}
 	};
 };
