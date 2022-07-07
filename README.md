@@ -52,8 +52,9 @@ function loadCode(_this){
 		overlayer:true, //Set whether the background is enabled when the bottom sheet is turned on
 		
 		//You can use px, %, vw, and vh units
-		min:'30vh', //Minimum height of the bottom sheet. If it is less than this height, it will close automatically.
-		max:'85vh' //Bottom sheet의 최대높이. 이 높이보다 더 올라갈 수 없도록 제한됩니다.
+		min:'30vh', //Minimal height of the bottom sheet. If it is less than this height, it will close automatically.
+		max:'85vh', //Maximum height of the bottom sheet. Restricted to no higher than this height.
+		autofilloffset:100
 	});
 	
 	//You can modify the style of the bottom sheet on the spot.
