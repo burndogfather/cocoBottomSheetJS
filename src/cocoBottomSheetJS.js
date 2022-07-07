@@ -298,7 +298,7 @@ class cocoButtomSheetJS{
 			if(this.ismobile){
 				this.BSElement.style.transform = 'translate(0px, -0px)';
 			}else{
-				this.BSElement.style.transform = 'translate(100%, -100%)';
+				this.BSElement.style.transform = 'translate(150%, -100%)';
 			}
 			
 			this.BSElement.style.transition = 'all 0.1s ease-out';

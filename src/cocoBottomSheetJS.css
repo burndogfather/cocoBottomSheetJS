@@ -79,7 +79,7 @@
 		right:0;
 		padding: 2rem;
 		border-radius:0;
-		-webkit-transform: translate(100%, -100%);
-		transform: translate(100%, -100%);
+		-webkit-transform: translate(150%, -100%);
+		transform: translate(150%, -100%);
 	}
 }
