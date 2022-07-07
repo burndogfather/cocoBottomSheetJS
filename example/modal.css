@@ -28,6 +28,8 @@ p{
 	height:55vh;
 	min-width: 100%;
 	margin: 0 auto;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
 }
 .chech_box::-webkit-scrollbar{
 	display: none;
