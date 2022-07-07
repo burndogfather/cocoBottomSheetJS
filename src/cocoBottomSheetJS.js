@@ -20,6 +20,7 @@ class cocoButtomSheetJS{
 		this.overlayer = overlayer; //바텀시트 뒷배경을 넣을것인지
 		this.min = min; //바텀시트의 최소높이값 (최소높이값보다 낮으면 꺼짐)
 		this.max = max; //바텀시트의 최대높이값 (최대높이값보다 높으면 채워짐)
+		this.autofilloffset = autofilloffset; //바텀시트 자동제어 오프셋크기
 		
 		this.translatePOS = 0; //바텀시트위치좌표
 		this.starttouchY = 0; //마우스최초좌표
@@ -170,11 +171,11 @@ class cocoButtomSheetJS{
 			if(whcalc <= calc && maxcalc <= calc){
 				this.BSElement.style.transform = 'translate(0, ' + calc + 'px)';
 			}
-			if(mincalc-100 < calc && !up){
+			if(mincalc-this.autofilloffset < calc && !up){
 				this.moving = false;
 				this.hide();
 			}
-			if(maxcalc+100 > calc && up){
+			if(maxcalc+this.autofilloffset > calc && up){
 				this.BSElement.style.transform = 'translate(0, ' + maxcalc + 'px)';
 			}
 			
