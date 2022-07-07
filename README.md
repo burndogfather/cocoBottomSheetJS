@@ -23,18 +23,14 @@ Example of desktop
   
 # Getting Start (1~4단계)  
   
-### 1. ```<head>``` 태그안에 아래의 코드를 붙입니다.
+### 1. Attach the following code inside the ```<head>```tag.
 ```html
 
-<!-- UTF-8언어셋 지정 -->
+<!-- Specify UTF-8 language set -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  
-<!-- 종속 라이브러리 -->
-<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css'>
-<script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
 
-<!-- cocoAjaxMultiSelect 라이브러리 -->
-<link rel='stylesheet' href='https://git.coco.sqs.kr/cocoAjaxMultiSelect/src/cocoAjaxMultiSelect.css'>
-<script src='https://git.coco.sqs.kr/cocoAjaxMultiSelect/src/cocoAjaxMultiSelect.js'></script>
+<!-- cocoBottomSheetJS library -->
+<link rel='stylesheet' href='https://git.coco.sqs.kr/cocoBottomSheetJS/src/cocoBottomSheetJS.css'>
+<script src='https://git.coco.sqs.kr/cocoBottomSheetJS/src/cocoBottomSheetJS.js'></script>
 
 ```
