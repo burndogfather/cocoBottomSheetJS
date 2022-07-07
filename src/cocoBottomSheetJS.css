@@ -19,10 +19,9 @@
 	-moz-user-select:none;
 	-ms-user-select:none;
 	user-select:none;
-	overflow-y:scroll;
 }
 .cocoButtomSheet_body{
-	height:100%;
+	overflow-y:scroll;
 }
 .cocoButtomSheetforbounse{
 	position:fixed;
