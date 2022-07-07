@@ -74,28 +74,36 @@ class cocoButtomSheetJS{
 		//handle이벤트
 		if(this.ismobile){
 			this.BSElement.addEventListener('touchstart', (e)=>{
-				//클릭시 닫음
+				//클릭시작
 				this.touchstart(e);
 			});
 			this.BSElement.addEventListener('touchmove', (e)=>{
-				//클릭시 닫음
+				//클릭움직임
 				this.touchmoving(e);
 			});
 			this.BSElement.addEventListener('touchend', (e)=>{
-				//클릭시 닫음
+				//클릭끝남
+				this.touchend(e);
+			});
+			this.BSElement.addEventListener('touchcancel', (e)=>{
+				//클릭끝남
 				this.touchend(e);
 			});
 		}else{
 			this.BSElement.addEventListener('mousedown', (e)=>{
-				//클릭시 닫음
+				//클릭시작
 				this.touchstart(e);
 			});
 			this.BSElement.addEventListener('mousemove', (e)=>{
-				//클릭시 닫음
+				//클릭움직임
 				this.touchmoving(e);
 			});
 			this.BSElement.addEventListener('mouseup', (e)=>{
-				//클릭시 닫음
+				//클릭끝남
+				this.touchend(e);
+			});
+			this.BSElement.addEventListener('mouseleave', (e)=>{
+				//클릭끝남
 				this.touchend(e);
 			});
 		}
