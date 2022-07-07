@@ -264,7 +264,8 @@ class cocoButtomSheetJS{
 			this.BSoverElement.classList.add('cocoButtonSheet_fadein');
 			document.body.classList.add('cocoButtomSheetforbounse');
 			this.BSElement.style.transform = 'translate(0px, -'+this.min+'px)';
-			window.scrollTo(0,0);
+			this.BSElement.prepend('<script>window.scrollTo(0,0);</script>');
+			
 		}
 	};
 	
