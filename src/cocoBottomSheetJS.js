@@ -68,16 +68,30 @@ class cocoButtomSheetJS{
 		
 		//handle이벤트
 		if(/(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS)/i.test(window.navigator.userAgent)){
-			//this.BSElement.addEventListener('touchstart', this.touchstart);
 			this.BSElement.addEventListener('touchstart', (e)=>{
 				//클릭시 닫음
 				this.touchstart(e);
 			});
+			this.BSElement.addEventListener('touchmove', (e)=>{
+				//클릭시 닫음
+				this.touchmoving(e);
+			});
+			this.BSElement.addEventListener('touchend', (e)=>{
+				//클릭시 닫음
+				this.touchend(e);
+			});
 		}else{
-			//this.BSElement.addEventListener('mousedown', this.touchstart);
 			this.BSElement.addEventListener('mousedown', (e)=>{
 				//클릭시 닫음
 				this.touchstart(e);
+			});
+			this.BSElement.addEventListener('mousemove', (e)=>{
+				//클릭시 닫음
+				this.touchmoving(e);
+			});
+			this.BSElement.addEventListener('mouseup', (e)=>{
+				//클릭시 닫음
+				this.touchend(e);
 			});
 		}
 	};
@@ -122,27 +136,6 @@ class cocoButtomSheetJS{
 				this.translatePOS = parseFloat(translate3d);
 			}
 			
-			
-			//handle이벤트
-			if(/(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS)/i.test(window.navigator.userAgent)){
-				this.BSElement.addEventListener('touchmove', (e)=>{
-					//클릭시 닫음
-					this.touchmoving(e);
-				});
-				this.BSElement.addEventListener('touchend', (e)=>{
-					//클릭시 닫음
-					this.touchend(e);
-				});
-			}else{
-				this.BSElement.addEventListener('mousemove', (e)=>{
-					//클릭시 닫음
-					this.touchmoving(e);
-				});
-				this.BSElement.addEventListener('mouseup', (e)=>{
-					//클릭시 닫음
-					this.touchend(e);
-				});
-			}
 		}
 		
 	};
