@@ -83,32 +83,32 @@ class cocoButtomSheetJS{
 				//클릭시작
 				this.touchstart(e);
 			});
-			this.BSElement.addEventListener('touchmove', (e)=>{
+			this.BSElement.querySelector('.cocoButtomSheet_handle').addEventListener('touchmove', (e)=>{
 				//클릭움직임
 				this.touchmoving(e);
 			});
-			this.BSElement.addEventListener('touchend', (e)=>{
+			this.BSElement.querySelector('.cocoButtomSheet_handle').addEventListener('touchend', (e)=>{
 				//클릭끝남
 				this.touchend(e);
 			});
-			this.BSElement.addEventListener('touchcancel', (e)=>{
+			this.BSElement.querySelector('.cocoButtomSheet_handle').addEventListener('touchcancel', (e)=>{
 				//클릭끝남
 				this.touchend(e);
 			});
 		}else{
-			this.BSElement.addEventListener('mousedown', (e)=>{
+			this.BSElement.querySelector('.cocoButtomSheet_handle').addEventListener('mousedown', (e)=>{
 				//클릭시작
 				this.touchstart(e);
 			});
-			this.BSElement.addEventListener('mousemove', (e)=>{
+			this.BSElement.querySelector('.cocoButtomSheet_handle').addEventListener('mousemove', (e)=>{
 				//클릭움직임
 				this.touchmoving(e);
 			});
-			this.BSElement.addEventListener('mouseup', (e)=>{
+			this.BSElement.querySelector('.cocoButtomSheet_handle').addEventListener('mouseup', (e)=>{
 				//클릭끝남
 				this.touchend(e);
 			});
-			this.BSElement.addEventListener('mouseleave', (e)=>{
+			this.BSElement.querySelector('.cocoButtomSheet_handle').addEventListener('mouseleave', (e)=>{
 				//클릭끝남
 				this.touchend(e);
 			});
