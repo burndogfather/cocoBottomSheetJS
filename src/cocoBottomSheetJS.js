@@ -253,6 +253,16 @@ class cocoButtomSheetJS{
 		}
 	};
 	
+	//바텀시트 콜백스크립트추가
+	setcallback(callback){
+		if(typeof jsdata === 'function'){
+			this.callback = jsdata;
+		}
+		if(typeof jsdata === 'string'){
+			this.callback = (new Function('return ' + jsdata))();
+		}
+	};
+	
 	//htmlcode내용을 확인
 	gethtml(){
 		return this.code;
