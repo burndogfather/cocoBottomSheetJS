@@ -283,6 +283,7 @@ class cocoButtomSheetJS{
 	
 	//바텀시트를 없애기
 	hide(){
+		this.moving = false;
 		document.body.style.position = 'unset';
 		document.body.style.overflow = 'unset';
 		if(this.is_show){
