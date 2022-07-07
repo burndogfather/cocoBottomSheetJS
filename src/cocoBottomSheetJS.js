@@ -198,6 +198,9 @@ class cocoButtomSheetJS{
 				this.moving = false;
 				this.hide();
 			}
+			if(!this.ismobile){
+				
+			}
 			
 		}
 	};
@@ -279,6 +282,11 @@ class cocoButtomSheetJS{
 			this.BSElement.style.transform = 'translate(0px, -'+this.min+'px)';
 			this.jsData();
 		}
+	};
+	
+	//바텀시트를 최대크기로 출력
+	showmax(){
+		this.BSElement.style.transform = 'translate(0px, -'+this.max+'px)';
 	};
 	
 	//바텀시트를 없애기
