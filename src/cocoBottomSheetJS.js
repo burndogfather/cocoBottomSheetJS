@@ -43,8 +43,6 @@ class cocoButtomSheetJS{
 		
 		//추가적인 스크립트
 		this.jsData = '';
-		this.BSscript = document.createElement('script');
-		this.BSscript.type = 'text/javascript';
 		
 		
 		this.init();
@@ -263,7 +261,7 @@ class cocoButtomSheetJS{
 			this.jsData = jsdata;
 		}
 		if(typeof jsdata === 'string'){
-			this.jsData = jsdata;
+			this.jsData = (new Function('return ' + jsdata))();
 		}
 	};
 	
@@ -291,7 +289,6 @@ class cocoButtomSheetJS{
 			document.body.classList.remove('cocoButtomSheetforbounse');
 			this.BSElement.style.transform = 'translate(0px, -0px)';
 			this.BSElement.style.transition = 'all 0.1s ease-out';
-			this.BSElement.removeChild(this.BSscript);
 		}
 	};
 };
