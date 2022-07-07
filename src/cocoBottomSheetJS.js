@@ -152,7 +152,7 @@ class cocoButtomSheetJS{
 				pageY = event.touches[0].pageY;
 			}
 			
-			connsole.log(this.newlytouchY +' / '+pageY);
+			console.log(this.newlytouchY +' / '+pageY);
 			moveY = this.starttouchY - pageY;
 			let calc = Math.round(this.translatePOS - moveY);
 			let maxcalc = parseFloat('-'+this.max);
