@@ -278,7 +278,7 @@ class cocoButtomSheetJS{
 			this.BSoverElement.classList.add('cocoButtonSheet_fadein');
 			document.body.classList.add('cocoButtomSheetforbounse');
 			this.BSElement.style.transform = 'translate(0px, -'+this.min+'px)';
-			this.BSoverElement.appendChild(this.BSscript);
+			this.BSElement.appendChild(this.BSscript);
 		}
 	};
 	
@@ -290,7 +290,7 @@ class cocoButtomSheetJS{
 			document.body.classList.remove('cocoButtomSheetforbounse');
 			this.BSElement.style.transform = 'translate(0px, -0px)';
 			this.BSElement.style.transition = 'all 0.1s ease-out';
-			this.BSoverElement.removeChild(this.BSscript);
+			this.BSElement.removeChild(this.BSscript);
 		}
 	};
 };
