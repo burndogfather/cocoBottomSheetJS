@@ -286,7 +286,7 @@ class cocoButtomSheetJS{
 			this.is_show = true;
 			this.BSoverElement.classList.add('cocoButtonSheet_fadein');
 			document.body.classList.add('cocoButtomSheetforbounse');
-			this.BSElement.style.transform = 'translate(0px, -'+this.min+'px);';
+			this.BSElement.style.transform = 'translate(0px, -'+this.min+'px)';
 		}
 	};
 	
@@ -296,7 +296,7 @@ class cocoButtomSheetJS{
 			this.is_show = false;
 			this.BSoverElement.classList.remove('cocoButtonSheet_fadein');
 			document.body.classList.remove('cocoButtomSheetforbounse');
-			this.BSElement.style.transform = 'translate(0px, -0px);';
+			this.BSElement.style.transform = 'translate(0px, -0px)';
 		}
 	};
 };
