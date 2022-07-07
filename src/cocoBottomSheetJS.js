@@ -194,11 +194,11 @@ class cocoButtomSheetJS{
 				let calc = this.translatePOS - moveY;
 				let maxcalc = parseFloat('-'+this.max);
 				let mincalc = parseFloat('-'+this.min);
-				console.log('max : '+maxcalc+'/min : '+mincalc);
 				let whcalc = parseFloat('-'+wh);
+				console.log('mincalc : '+mincalc+'/calc : '+calc);
 				if(whcalc <= calc && maxcalc <= calc){
-					if(mincalc > calc){
-						
+					if(mincalc < calc){
+						this.hide();
 					}
 					this.BSElement.style.transform = 'translate(0, ' + calc + 'px)';
 					this.BSElement.style.transition = 'all 0.05s ease-out';
