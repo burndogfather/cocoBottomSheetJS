@@ -20,3 +20,21 @@ Example of desktop
 [BottomSheet with iframe](https://git.coco.sqs.kr/cocoBottomSheetJS/example/)  
   
 ------  
+  
+# Getting Start (1~4단계)  
+  
+### 1. ```<head>``` 태그안에 아래의 코드를 붙입니다.
+```html
+
+<!-- UTF-8언어셋 지정 -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+<!-- 종속 라이브러리 -->
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css'>
+<script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
+
+<!-- cocoAjaxMultiSelect 라이브러리 -->
+<link rel='stylesheet' href='https://git.coco.sqs.kr/cocoAjaxMultiSelect/src/cocoAjaxMultiSelect.css'>
+<script src='https://git.coco.sqs.kr/cocoAjaxMultiSelect/src/cocoAjaxMultiSelect.js'></script>
+
+```
