@@ -76,6 +76,7 @@
 @media(min-width: 768px){
 	.cocoButtomSheet{
 		width:25rem;
-		right:1rem;
+		right:0;
+		border-radius:0;
 	}
 }

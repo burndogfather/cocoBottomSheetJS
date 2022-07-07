@@ -100,23 +100,6 @@ class cocoButtomSheetJS{
 				//클릭끝남
 				this.touchend(e);
 			});
-		}else{
-			this.BSElement.querySelector('.cocoButtomSheet_handle').addEventListener('mousedown', (e)=>{
-				//클릭시작
-				this.touchstart(e);
-			});
-			this.BSElement.querySelector('.cocoButtomSheet_handle').addEventListener('mousemove', (e)=>{
-				//클릭움직임
-				this.touchmoving(e);
-			});
-			this.BSElement.querySelector('.cocoButtomSheet_handle').addEventListener('mouseup', (e)=>{
-				//클릭끝남
-				this.touchend(e);
-			});
-			this.BSElement.querySelector('.cocoButtomSheet_handle').addEventListener('mouseleave', (e)=>{
-				//클릭끝남
-				this.touchend(e);
-			});
 		}
 	};
 	
