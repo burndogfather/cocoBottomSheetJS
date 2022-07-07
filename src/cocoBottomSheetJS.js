@@ -35,8 +35,8 @@ class cocoButtomSheetJS{
 		this.BSElement = document.createElement('article');
 		this.BSElement.classList.add('cocoButtomSheet');
 		this.BSElement.innerHTML = '<button class="cocoButtomSheet_handle"></button>' + this.code;
-		this.BSElement.style.height = this.max +'px';
 		document.querySelector('body').prepend(this.BSElement);
+		
 		if(this.overlayer){
 			document.querySelector('body').prepend(this.BSoverElement);
 		}
@@ -75,6 +75,8 @@ class cocoButtomSheetJS{
 				this.max = parseInt(this.max);
 			}
 		}
+		
+		this.BSElement.style.height = this.max;
 		
 		//handle이벤트
 		if(this.ismobile){
