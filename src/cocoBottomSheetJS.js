@@ -139,18 +139,10 @@ class cocoButtomSheetJS{
 				return null;
 			}
 			
-			if(this.BSElement.style.transform.indexOf('translate3d') !== -1){
-				let translate3d = this.BSElement.style.transform.match(/\(.*\)/gi)[0];
-				translate3d = translate3d.split(',')[1];
-				translate3d = translate3d.split('+')[1];
-				translate3d = translate3d.replace(/[^0-9|\-|.]/g,'');
-				this.translatePOS = parseFloat('-'+translate3d);
-			}else{
-				let translate3d = this.BSElement.style.transform.match(/\(.*\)/gi)[0];
-				translate3d = translate3d.split(',')[1];
-				translate3d = translate3d.replace(/[^0-9|\-|.]/g,'');
-				this.translatePOS = parseFloat(translate3d);
-			}
+			let translate3d = this.BSElement.style.transform.match(/\(.*\)/gi)[0];
+			translate3d = translate3d.split(',')[1];
+			translate3d = translate3d.replace(/[^0-9|\-|.]/g,'');
+			this.translatePOS = parseFloat(translate3d);
 			
 		}
 		
@@ -209,19 +201,10 @@ class cocoButtomSheetJS{
 			console.log('touchend!');
 			let wh = window.innerHeight;
 			
-			if(this.BSElement.style.transform.indexOf('translate3d') !== -1){
-				let translate3d = this.BSElement.style.transform.match(/\(.*\)/gi)[0];
-				translate3d = translate3d.split(',')[1];
-				translate3d = translate3d.split('+')[1];
-				translate3d = translate3d.replace(/[^0-9|\-|.]/g,'');
-				this.translatePOS = parseFloat('-'+translate3d);
-			}else{
-				let translate3d = this.BSElement.style.transform.match(/\(.*\)/gi)[0];
-				translate3d = translate3d.split(',')[1];
-				translate3d = translate3d.replace(/[^0-9|\-|.]/g,'');
-				this.translatePOS = parseFloat(translate3d);
-			}
-			
+			let translate3d = this.BSElement.style.transform.match(/\(.*\)/gi)[0];
+			translate3d = translate3d.split(',')[1];
+			translate3d = translate3d.replace(/[^0-9|\-|.]/g,'');
+			this.translatePOS = parseFloat(translate3d);
 			
 			//터치드래그중인 상태에서의 마우스좌표구하기
 			if(event.type === 'touchmove'){
