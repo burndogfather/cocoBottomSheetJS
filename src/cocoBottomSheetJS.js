@@ -195,8 +195,7 @@ class cocoButtomSheetJS{
 					this.BSElement.style.transition = 'all 0.1s ease-out';
 				}
 			}else{
-				let style = this.BSElement.getAttribute('style');
-				this.BSElement.setAttribute('style',style + "transform:translate(0px, -"+pageY+"px);");
+				this.BSElement.style.transform = "translate(0px, -"+pageY+"px);";
 			}
 		}
 	};
