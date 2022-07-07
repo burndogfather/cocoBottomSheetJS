@@ -123,6 +123,7 @@ class cocoButtomSheetJS{
 			}else{
 				this.starttouchY = event.touches[0].pageY;
 			}
+			this.newlytouchY = this.starttouchY;
 			
 			//this.BSElement.style.transition = 'none';
 			
@@ -143,24 +144,12 @@ class cocoButtomSheetJS{
 			let moveY;
 			
 			//터치드래그중인 상태에서의 마우스좌표구하기
-			if(event.type === 'touchmove'){
-				if(event.touches[0].pageY < 0){
-					pageY = 0;
-				}else if(event.touches[0].pageY > wh){
-					pageY = wh;
-				}else{
-					pageY = event.touches[0].pageY;
-				}
-			}else if(event.type === 'mousemove'){
-				if(event.pageY < 0){
-					pageY = 0;
-				}else if(event.pageY > wh){
-					pageY = wh;
-				}else{
-					pageY = event.pageY;
-				}
+			if(event.touches[0].pageY < 0){
+				pageY = 0;
+			}else if(event.touches[0].pageY > wh){
+				pageY = wh;
 			}else{
-				return null;	
+				pageY = event.touches[0].pageY;
 			}
 			
 			
