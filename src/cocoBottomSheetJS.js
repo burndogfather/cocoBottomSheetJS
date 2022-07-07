@@ -47,8 +47,8 @@ class cocoButtomSheetJS{
 		}
 		
 		//추가적인 스크립트
-		this.jsData = '';
-		this.callback = '';
+		this.jsData = null;
+		this.callback = null;
 		
 		
 		this.init();
@@ -256,11 +256,11 @@ class cocoButtomSheetJS{
 	
 	//바텀시트 콜백스크립트추가
 	setcallback(callback){
-		if(typeof jsdata === 'function'){
-			this.callback = jsdata;
+		if(typeof callback === 'function'){
+			this.callback = callback;
 		}
-		if(typeof jsdata === 'string'){
-			this.callback = (new Function('return ' + jsdata))();
+		if(typeof callback === 'string'){
+			this.callback = (new Function('return ' + callback))();
 		}
 	};
 	
