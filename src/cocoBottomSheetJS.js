@@ -169,7 +169,7 @@ class cocoButtomSheetJS{
 			if(whcalc <= calc && maxcalc <= calc){
 				this.BSElement.style.transform = 'translate(0, ' + calc + 'px)';
 			}
-			if(mincalc+50 < calc){
+			if(mincalc+50 < calc && !up){
 				this.moving = false;
 				this.hide();
 			}
