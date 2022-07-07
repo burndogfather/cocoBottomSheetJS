@@ -19,11 +19,9 @@
 	-moz-user-select:none;
 	-ms-user-select:none;
 	user-select:none;
-	overflow-y:scroll;
-	height:300px;
 }
 .cocoButtomSheet_body{
-	
+	overflow-y:scroll;
 	width:100%;
 }
 .cocoButtomSheetforbounse{
