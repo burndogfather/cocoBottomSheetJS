@@ -66,8 +66,6 @@ class cocoButtomSheetJS{
 			}
 		}
 		
-		console.log(this.max);
-		
 		//handle이벤트
 		if(/(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS)/i.test(window.navigator.userAgent)){
 			this.BSElement.addEventListener('touchstart', (e)=>{
@@ -171,7 +169,6 @@ class cocoButtomSheetJS{
 				return null;	
 			}
 			
-			console.log(this.translatePOS);
 			
 			//최초터치좌표와 이동중인 좌표의 차이를 구하여 이동한 만큼의 좌표구하기
 			if(this.starttouchY > pageY){
@@ -267,7 +264,6 @@ class cocoButtomSheetJS{
 	
 	//바텀시트를 출력
 	show(){
-		console.log(this);
 		document.body.classList.add('cocoButtomSheetforbounse');
 		let style = this.BSElement.getAttribute('style');
 		this.BSElement.setAttribute('style',style + "transform:translate(0px, -"+this.min+"px);");
