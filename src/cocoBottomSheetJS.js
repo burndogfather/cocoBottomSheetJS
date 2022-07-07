@@ -191,6 +191,7 @@ class cocoButtomSheetJS{
 				//up
 				moveY = this.starttouchY - pageY;
 				let calc = Math.round(this.translatePOS - moveY);
+				console.log(this.max +' / '+this.min);
 				let maxcalc = parseFloat('-'+this.max);
 				let mincalc = parseFloat('-'+this.min);
 				let whcalc = parseFloat('-'+wh);
