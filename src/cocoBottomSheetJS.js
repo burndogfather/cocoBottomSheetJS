@@ -180,7 +180,6 @@ class cocoButtomSheetJS{
 			let maxcalc = parseFloat('-'+this.max);
 			let mincalc = parseFloat('-'+this.min);
 			let whcalc = parseFloat('-'+wh);
-			console.log(mincalc-100 +' / '+calc);
 			if(whcalc <= calc && maxcalc <= calc){
 				this.BSElement.style.transform = 'translate(0, ' + calc + 'px)';
 			}
@@ -277,7 +276,14 @@ class cocoButtomSheetJS{
 	
 	//바텀시트를 최대크기로 출력
 	showmax(){
-		this.BSElement.style.transform = 'translate(0px, -'+this.max+'px)';
+		this.BSoverElement.classList.add('cocoButtonSheet_fadein');
+		document.body.classList.add('cocoButtomSheetforbounse');
+		if(this.ismobile){
+			this.BSElement.style.transform = 'translate(0px, -'+this.max+'px)';
+		}else{
+			this.BSElement.style.transform = 'translate(0px, -100%)';
+		}
+		
 	};
 	
 	//바텀시트를 없애기
