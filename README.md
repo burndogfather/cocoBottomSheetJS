@@ -67,13 +67,13 @@ function loadCode(_this){
    
 ### 3. You can control the bottom sheet by using events, etc. in the HTML element.
 ```html
-//show() <- Expand the bottom sheet to the minimum height
+<!-- show() <- Expand the bottom sheet to the minimum height -->
 <button onclick='buttomsheet.show();'>show buttom sheet 🤗</button>
   
-//show max() <- Expand the bottom sheet to its maximum height
+<!-- show max() <- Expand the bottom sheet to its maximum height -->
 <button onclick='buttomsheet.showmax();'>showmax buttom sheet 👻</button>
   
-//hide() <- Close the bottom sheet
+<!-- hide() <- Close the bottom sheet -->
 <button onclick='buttomsheet.hide();'>hide buttom sheet 🫠</button>
   
 <script type='text/javascript'>
@@ -82,6 +82,8 @@ function loadCode(_this){
 	  
 	//setcs() <- Change the style of the bottom sheet.  
 	buttomsheet.setcss({'font-size','20px'});  
+	
+	//gethtml() <- You can check the HTML code currently stored in the bottom sheet.
 	let htmlstring = buttomsheet.gethtml();
 </script>
 ```
