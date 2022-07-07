@@ -157,9 +157,10 @@ class cocoButtomSheetJS{
 			if(this.newlytouchY > pageY){
 				up = true;
 			}else{
-				console.log('down');
+				up = false;
 			}
-			console.log(this.newlytouchY +' / '+pageY);
+			
+			
 			moveY = this.starttouchY - pageY;
 			let calc = Math.round(this.translatePOS - moveY);
 			let maxcalc = parseFloat('-'+this.max);
@@ -172,7 +173,7 @@ class cocoButtomSheetJS{
 				this.moving = false;
 				this.hide();
 			}
-			if(maxcalc+50 > calc){
+			if(maxcalc+50 > calc && up){
 				this.BSElement.style.transform = 'translate(0, ' + maxcalc + 'px)';
 			}
 			
