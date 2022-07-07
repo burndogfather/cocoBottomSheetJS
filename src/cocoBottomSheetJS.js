@@ -295,7 +295,7 @@ class cocoButtomSheetJS{
 			this.BSoverElement.classList.remove('cocoButtonSheet_fadein');
 			document.body.classList.remove('cocoButtomSheetforbounse');
 			this.BSElement.style.transform = 'translate(0px, -0px)';
-			this.BSElement.style.transition = 'all 0.3s ease-out';
+			this.BSElement.style.transition = 'all 0.1s ease-out';
 		}
 	};
 };
