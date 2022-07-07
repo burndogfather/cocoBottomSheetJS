@@ -28,6 +28,9 @@ p{
 	overflow-y:scroll;
 	margin: 0 auto;
 }
+.check_box::-webkit-scrollbar {
+	display: none;
+}
 .check_box > li{
 	width: 100%;
 	height: 50px;
