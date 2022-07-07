@@ -186,7 +186,7 @@ class cocoButtomSheetJS{
 			//if(this.starttouchY > pageY){
 				//up
 				console.log('up');
-				moveY = this.starttouchY - pageY + 100;
+				moveY = this.starttouchY - pageY;
 				let calc = this.translatePOS - moveY;
 				let maxcalc = parseFloat('-'+wh);
 				console.log(maxcalc +' <= '+ calc);
