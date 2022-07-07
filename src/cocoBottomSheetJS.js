@@ -200,11 +200,9 @@ class cocoButtomSheetJS{
 				this.moving = false;
 				this.hide();
 			}
-			/*
-			if(!this.ismobile && mincalc-200 < calc){
+			if(!this.ismobile && mincalc-30 > calc){
 				this.showmax();
 			}
-			*/
 			
 		}
 	};
