@@ -185,7 +185,7 @@ class cocoButtomSheetJS{
 				this.BSElement.style.transform = 'translate(0, ' + calc + 'px)';
 				this.BSElement.style.transition = 'all 0.05s ease-out';
 			}
-			if(mincalc < calc){
+			if(mincalc+50 < calc){
 				this.moving = false;
 				this.hide();
 			}
