@@ -153,8 +153,11 @@ class cocoButtomSheetJS{
 			}
 			
 			//up / down 구분
+			let up = false;
 			if(this.newlytouchY > pageY){
-				
+				up = true;
+			}else{
+				console.log('down');
 			}
 			console.log(this.newlytouchY +' / '+pageY);
 			moveY = this.starttouchY - pageY;
