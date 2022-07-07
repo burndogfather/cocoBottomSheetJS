@@ -177,6 +177,7 @@ class cocoButtomSheetJS{
 	
 	//터치드래그 끝남
 	touchend(event){
+		console.log(event.touches);
 		if(this.moving){
 			this.moving = false;
 			let wh = window.innerHeight;
