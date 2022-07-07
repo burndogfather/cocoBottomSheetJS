@@ -1,12 +1,12 @@
 @charset "UTF-8";
-@keyframes fadeInUp {
-	0% {
+@keyframes fadeIn {
+	from {
 		opacity: 0;
-		transform: translate3d(0, 100%, 0);
+		transform: translateY(20px);
 	}
 	to {
-		opacity: 1;
-		transform: translateZ(0);
+		opacity: 3;
+		transform: none;
 	}
 }
 .cocoButtomSheet{
@@ -25,6 +25,7 @@
 	-webkit-box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.4);
 	box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.4);
 	box-sizing: border-box;
+	animation: fadeIn 0.5s ease-in-out;
 }
 .cocoButtomSheetforbounse{
 	position:fixed;
