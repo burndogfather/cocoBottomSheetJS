@@ -194,7 +194,7 @@ class cocoButtomSheetJS{
 				let maxcalc = parseFloat('-'+this.max);
 				let mincalc = parseFloat('-'+this.min);
 				let whcalc = parseFloat('-'+wh);
-				console.log('mincalc : '+mincalc+'/calc : '+calc);
+				console.log('mincalc : '+mincalc+'/maxcalc : '+mincalc+'/calc : '+calc);
 				if(whcalc <= calc && maxcalc <= calc){
 					if(mincalc < calc){
 						this.hide();
