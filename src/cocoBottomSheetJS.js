@@ -185,7 +185,7 @@ class cocoButtomSheetJS{
 			let whcalc = parseFloat('-'+wh);
 			if(whcalc <= calc && maxcalc <= calc){
 				this.BSElement.style.transform = 'translate(0, ' + calc + 'px)';
-				this.BSElement.style.transition = 'all 0.05s ease-out';
+				this.BSElement.style.transition = 'none';
 			}
 			if(mincalc+50 < calc){
 				this.moving = false;
