@@ -295,6 +295,8 @@ class cocoButtomSheetJS{
 	hide(){
 		this.moving = false;
 		document.body.classList.remove('cocoButtomSheetforbounse');
+		let style = this.BSElement.getAttribute('style');
+		this.BSElement.setAttribute('style',style + "transform:translate(0px, -0px);");
 		if(this.is_show){
 			if(this.overlayer){
 				document.body.removeChild(this.BSoverElement);
