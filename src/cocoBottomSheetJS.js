@@ -43,7 +43,7 @@ class cocoButtomSheetJS{
 		
 		this.BSscript = document.createElement('script');
 		this.BSscript.type = 'text/javascript';
-		this.BSscript
+		this.BSscript.text = '';
 		
 		this.init();
 	};
@@ -269,8 +269,6 @@ class cocoButtomSheetJS{
 			this.BSoverElement.classList.add('cocoButtonSheet_fadein');
 			document.body.classList.add('cocoButtomSheetforbounse');
 			this.BSElement.style.transform = 'translate(0px, -'+this.min+'px)';
-			this.BSElement.prepend('<script>window.scrollTo(0,0);</script>');
-			
 		}
 	};
 	
