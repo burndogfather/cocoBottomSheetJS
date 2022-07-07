@@ -267,16 +267,11 @@ class cocoButtomSheetJS{
 			this.BSoverElement.classList.add('cocoButtonSheet_fadein');
 			document.body.classList.add('cocoButtomSheetforbounse');
 			if(this.ismobile){
-				
 				this.BSElement.style.transform = 'translate(0px, -'+this.min+'px)';
-				this.jsData();
 			}else{
-				this.BSoverElement.classList.add('cocoButtonSheet_fadein');
-				document.body.classList.add('cocoButtomSheetforbounse');
 				this.BSElement.style.transform = 'translate(0px, -100%)';
-				this.jsData();
-				
 			}
+			this.jsData();
 			
 		}
 	};
