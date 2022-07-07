@@ -29,7 +29,18 @@ p{
 	min-width: 100%;
 	margin: 0 auto;
 }
-
+.chech_box::-webkit-scrollbar-track{
+	border-radius:4px;
+	background-color:#e5e5e5;
+}
+.chech_box::-webkit-scrollbar{
+	width:5px;
+	height:4px;
+}
+.chech_box::-webkit-scrollbar-thumb{
+	border-radius:5px;
+	background-color:#333;
+}
 .check_box > li{
 	width: 100%;
 	height: 50px;
