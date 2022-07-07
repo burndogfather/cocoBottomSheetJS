@@ -90,10 +90,13 @@ function loadCode(_this){
 		console.log('open!!!');
 	});
 	
-	//
+	//The callback function that runs when the bottom sheet is closed.
 	buttomsheet.setcallback(function(){
 		alert('closed!');
 	});
+	
+	//You can detect if the bottom sheet is open.
+	console.log(buttomsheet.isvisible());
 	
 	//gethtml() <- You can check the HTML code currently stored in the bottom sheet.
 	let htmlstring = buttomsheet.gethtml();
