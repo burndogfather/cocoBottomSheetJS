@@ -8,6 +8,11 @@ class cocoButtomSheetJS{
 		max
 	}){
 		//초기설정
+		if(/(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS)/i.test(window.navigator.userAgent)){
+			this.ismobile = true;
+		}else{
+			this.ismobile = false;
+		}
 		this.moving = false; //드래그중인지 flag
 		this.is_show = false; //바텀시트가 열림감지
 		this.code = htmlcode; //바텀시트에 들어갈 데이터
@@ -67,7 +72,7 @@ class cocoButtomSheetJS{
 		}
 		
 		//handle이벤트
-		if(/(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS)/i.test(window.navigator.userAgent)){
+		if(this.ismobile){
 			this.BSElement.addEventListener('touchstart', (e)=>{
 				//클릭시 닫음
 				this.touchstart(e);
