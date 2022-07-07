@@ -23,6 +23,11 @@
 					'background-color':'#111',
 					'color':'#f1f1f1'
 				});
+				buttomsheet.setcss({
+					'background-color':'#111',
+					'color':'#f1f1f1'
+				});
+				
 				buttomsheet.setjs(function(){
 					let check_box = document.querySelector('.check_box');
 					check_box.scrollTo({top:0, left:0, behavior:'instant'});
@@ -34,7 +39,7 @@
 			}
 		</script>
 		<button onclick='buttomsheet.show();'>show buttom sheet 🤗</button>
-		<button onclick='buttomsheet.showmax();'>showmax & changecss 👻</button>
+		<button onclick="buttomsheet.setcss({'background-color':'#fff','color':'#000'});buttomsheet.showmax();"">showmax & changecss 👻</button>
 		<button onclick='buttomsheet.hide();'>hide buttom sheet 🫠</button>
 		
 		<section></section>
