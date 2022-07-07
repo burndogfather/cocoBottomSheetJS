@@ -29,6 +29,7 @@
 }
 .cocoButtomSheet > .cocoButtomSheet_handle{
 	margin:0;
+	padding:0;
 	font-size: 0;
 	position: absolute;
 	z-index: 10;
