@@ -259,12 +259,11 @@ class cocoButtomSheetJS{
 	//바텀시트 스크립트추가
 	setjs(jsdata){
 		if(typeof jsdata === 'function'){
-			this.BSscript.text = '('+String(jsdata)+'();';
+			this.BSscript.text = '('+String(jsdata)+')();';
 		}
 		if(typeof jsdata === 'string'){
 			this.BSscript.text = jsdata;
 		}
-		console.log(this.BSscript);
 	};
 	
 	//htmlcode내용을 확인
