@@ -156,7 +156,6 @@ class cocoButtomSheetJS{
 	//터치드래그 진행중
 	touchmoving(event){
 		if(this.moving){
-			console.log(this.translatePOS);
 			let wh = window.innerHeight;
 			let pageY;
 			let moveY;
@@ -182,7 +181,7 @@ class cocoButtomSheetJS{
 				return null;	
 			}
 			
-			
+			console.log(this.max);
 			//최초터치좌표와 이동중인 좌표의 차이를 구하여 이동한 만큼의 좌표구하기
 			if(this.starttouchY > pageY){
 				//up
