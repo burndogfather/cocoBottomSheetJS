@@ -77,9 +77,7 @@ class cocoButtomSheetJS{
 		}
 		
 		
-		console.log(this.max);
-		this.BSElement.style.height = this.max;
-		console.log(this.BSElement.style.height);
+		this.BSElement.style.height = Math.floor(this.max)+'px';
 		
 		//handle이벤트
 		if(this.ismobile){
