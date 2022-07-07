@@ -34,7 +34,8 @@ class cocoButtomSheetJS{
 		}
 		this.BSElement = document.createElement('article');
 		this.BSElement.classList.add('cocoButtomSheet');
-		
+		this.BSElement.innerHTML = '<button class="cocoButtomSheet_handle"></button>'+ this.code;
+		document.querySelector('body').prepend(this.BSElement);
 		
 		if(this.overlayer){
 			document.querySelector('body').prepend(this.BSoverElement);
@@ -260,13 +261,10 @@ class cocoButtomSheetJS{
 	show(){
 		if(!this.is_show){
 			this.is_show = true;
-			
 			this.BSoverElement.classList.add('cocoButtonSheet_fadein');
 			document.body.classList.add('cocoButtomSheetforbounse');
 			this.BSElement.style.transform = 'translate(0px, -'+this.min+'px)';
-			
-			this.BSElement.innerHTML = '<button class="cocoButtomSheet_handle"></button>'+ this.code;
-			document.querySelector('body').prepend(this.BSElement);
+			window.scrollTo(0,0);
 		}
 	};
 	
