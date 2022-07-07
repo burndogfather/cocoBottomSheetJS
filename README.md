@@ -78,6 +78,7 @@ function loadCode(_this){
 
 <script type='text/javascript'>
 	buttomsheet.sethtml('Hello World!');
+	buttomsheet.setcss({'font-size','20px'});
+	let htmlstring = buttomsheet.gethtml();
 </script>
-
 ```
