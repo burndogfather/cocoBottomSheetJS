@@ -34,11 +34,14 @@ p{
 	position: relative;
 	color: #222;
 	background-color:#c2c2c2;
-	border: 1px solid #c2c2c2;
+	border:0;
+}
+.close:hover{
+	background-color:#979797;
 }
 .check_box{
 	overflow-y:scroll;
-	height:65%;
+	height:60%;
 	min-width: 100%;
 	margin: 0 auto;
 	-ms-overflow-style: none;
