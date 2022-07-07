@@ -205,6 +205,7 @@ class cocoButtomSheetJS{
 			}else{
 				this.BSElement.style.transform = "translate(0px, -"+pageY+"px);";
 			}
+			
 		}
 	};
 	
