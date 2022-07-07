@@ -21,7 +21,7 @@ Example of desktop
   
 ------  
   
-# Getting Start (1~2 Step)  
+# Getting Start (1~3 Step)  
   
 ### 1. Attach the following code inside the ```<head>```tag.
 ```html
@@ -34,7 +34,7 @@ Example of desktop
 <script src='https://git.coco.sqs.kr/cocoBottomSheetJS/src/cocoBottomSheetJS.js'></script>
 
 ```
-
+   
 ### 2. Write a javascript using the following code example
 ```javascript
 let buttomsheet; //Declare Library Variables
@@ -63,4 +63,9 @@ function loadCode(_this){
 		console.log('open!!!');
 	});
 }
+```
+   
+### 3. Write a javascript using the following code example
+```html
+<button onclick='buttomsheet.show();'>show buttom sheet 🤗</button>
 ```
