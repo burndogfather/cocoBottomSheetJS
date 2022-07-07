@@ -116,25 +116,12 @@ class cocoButtomSheetJS{
 		if(!this.moving){
 			this.moving = true;
 			let wh = window.innerHeight;
-			if(event.type === 'touchstart'){
-				if(event.touches[0].pageY < 0){
-					this.starttouchY = 0;
-				}else if(event.touches[0].pageY > wh){
-					this.starttouchY = wh;
-				}else{
-					this.starttouchY = event.touches[0].pageY;
-				}
-				
-			}else if(event.type === 'mousedown'){
-				if(event.pageY < 0){
-					this.starttouchY = 0;
-				}else if(event.pageY > wh){
-					this.starttouchY = wh;
-				}else{
-					this.starttouchY = event.pageY;
-				}
+			if(event.touches[0].pageY < 0){
+				this.starttouchY = 0;
+			}else if(event.touches[0].pageY > wh){
+				this.starttouchY = wh;
 			}else{
-				return null;
+				this.starttouchY = event.touches[0].pageY;
 			}
 			
 			//this.BSElement.style.transition = 'none';
@@ -209,24 +196,12 @@ class cocoButtomSheetJS{
 			this.translatePOS = parseFloat(translate3d);
 			
 			//터치드래그중인 상태에서의 마우스좌표구하기
-			if(event.type === 'touchmove'){
-				if(event.touches[0].pageY < 0){
-					this.starttouchY = 0;
-				}else if(event.touches[0].pageY > wh){
-					this.starttouchY = wh;
-				}else{
-					this.starttouchY = event.touches[0].pageY;
-				}
-			}else if(event.type === 'mousemove'){
-				if(event.pageY < 0){
-					this.starttouchY = 0;
-				}else if(event.pageY > wh){
-					this.starttouchY = wh;
-				}else{
-					this.starttouchY = event.pageY;
-				}
+			if(event.touches[0].pageY < 0){
+				this.starttouchY = 0;
+			}else if(event.touches[0].pageY > wh){
+				this.starttouchY = wh;
 			}else{
-				return null;	
+				this.starttouchY = event.touches[0].pageY;
 			}
 		}
 		
