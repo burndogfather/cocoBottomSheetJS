@@ -193,7 +193,6 @@ class cocoButtomSheetJS{
 				moveY = this.starttouchY - pageY;
 				let calc = this.translatePOS - moveY;
 				let maxcalc = parseFloat('-'+wh);
-				console.log(maxcalc +' <= '+ calc);
 				if(maxcalc <= calc){
 					this.BSElement.style.transform = 'translate(0, ' + calc + 'px)';
 					this.BSElement.style.transition = 'all 0.05s ease-out';
