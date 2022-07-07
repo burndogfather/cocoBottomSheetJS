@@ -237,10 +237,10 @@ class cocoButtomSheetJS{
 		}else{
 			return null;	
 		}
-		
+		console.log(this.BSElement.hasEventListener('touchmove'));	
 		this.BSElement.removeEventListener('touchmove',this.touchmoving);
 		this.BSElement.removeEventListener('mousemove',this.touchmoving);
-		console.log(this.BSElement.hasEventListener('touchmove'));	
+		
 	};
 	
 	
