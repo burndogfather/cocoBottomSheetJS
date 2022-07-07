@@ -34,11 +34,7 @@ class cocoButtomSheetJS{
 		}
 		this.BSElement = document.createElement('article');
 		this.BSElement.classList.add('cocoButtomSheet');
-		this.BShandleElement = document.createElement('button');
-		this.BShandleElement.classList.add('cocoButtomSheet_handle');
-		this.BSElement.appendChild(this.BShandleElement);
-		console.log(this.BShandleElement);
-		this.BSElement.innerHTML = this.code;
+		this.BSElement.innerHTML = '<button class="cocoButtomSheet_handle"></button>'+ this.code;
 		document.querySelector('body').prepend(this.BSElement);
 		
 		if(this.overlayer){
@@ -83,7 +79,7 @@ class cocoButtomSheetJS{
 		
 		//handle이벤트
 		if(this.ismobile){
-			this.BSElement.addEventListener('touchstart', (e)=>{
+			this.BSElement.querySelector('.cocoButtomSheet_handle').addEventListener('touchstart', (e)=>{
 				//클릭시작
 				this.touchstart(e);
 			});
