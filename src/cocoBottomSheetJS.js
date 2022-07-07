@@ -197,7 +197,6 @@ class cocoButtomSheetJS{
 	touchend(event){
 		if(this.moving){
 			this.moving = false;
-			console.log('touchend!');
 			let wh = window.innerHeight;
 			
 			let translate3d = this.BSElement.style.transform.match(/\(.*\)/gi)[0];
