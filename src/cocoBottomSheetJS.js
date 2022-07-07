@@ -76,6 +76,7 @@ class cocoButtomSheetJS{
 			}
 		}
 		
+		console.log(this.max);
 		this.BSElement.style.height = this.max;
 		
 		//handle이벤트
