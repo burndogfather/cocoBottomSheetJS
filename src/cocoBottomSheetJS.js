@@ -134,7 +134,7 @@ class cocoButtomSheetJS{
 			}else{
 				return null;
 			}
-			this.BSElement.style.transition = 'none';
+			//this.BSElement.style.transition = 'none';
 			
 			if(this.BSElement.style.transform.indexOf('translate3d') !== -1){
 				let translate3d = this.BSElement.style.transform.match(/\(.*\)/gi)[0];
