@@ -8,6 +8,7 @@ class cocoButtomSheetJS{
 		max
 	}){
 		//초기설정
+		this.moving = false; //드래그중인지 flag
 		this.is_show = false; //바텀시트가 열림감지
 		this.code = htmlcode; //바텀시트에 들어갈 데이터
 		this.overlayer = overlayer; //바텀시트 뒷배경을 넣을것인지
