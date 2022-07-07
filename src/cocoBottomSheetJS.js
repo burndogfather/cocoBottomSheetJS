@@ -195,13 +195,13 @@ class cocoButtomSheetJS{
 				let maxcalc = parseFloat('-'+this.max);
 				let mincalc = parseFloat('-'+this.min);
 				let whcalc = parseFloat('-'+wh);
-				console.log('mincalc : '+mincalc+'/maxcalc : '+mincalc+'/calc : '+calc);
-				if(whcalc <= calc && maxcalc <= calc){
-					if(mincalc < calc){
-						this.hide();
-					}
+				console.log('mincalc : '+mincalc+'/maxcalc : '+maxcalc+'/calc : '+calc);
+				if(whcalc <= calc && maxcalc <= calc && mincalc >= calc){
+					
 					this.BSElement.style.transform = 'translate(0, ' + calc + 'px)';
 					this.BSElement.style.transition = 'all 0.05s ease-out';
+				}else{
+					this.hide();
 				}
 			/*
 			}else if(this.starttouchY < pageY){
