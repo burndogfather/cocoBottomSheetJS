@@ -21,7 +21,7 @@ Example of desktop
   
 ------  
   
-# Getting Start (1~4단계)  
+# Getting Start (1~2 Step)  
   
 ### 1. Attach the following code inside the ```<head>```tag.
 ```html
@@ -33,4 +33,26 @@ Example of desktop
 <link rel='stylesheet' href='https://git.coco.sqs.kr/cocoBottomSheetJS/src/cocoBottomSheetJS.css'>
 <script src='https://git.coco.sqs.kr/cocoBottomSheetJS/src/cocoBottomSheetJS.js'></script>
 
+```
+
+### 2. Write a javascript using the following code example
+```javascript
+let buttomsheet;
+function loadCode(_this){
+	buttomsheet = new cocoButtomSheetJS({
+		htmlcode:frames[_this.getAttribute('name')].document.body.innerHTML,
+		overlayer:true,
+		min:'30vh',
+		max:'85vh'
+	});
+	buttomsheet.setcss({
+		'background-color':'#111',
+		'color':'#f1f1f1'
+	});
+	buttomsheet.setjs(function(){
+		let check_box = document.querySelector('.check_box');
+		check_box.scrollTo({top:0, left:0, behavior:'instant'});
+		console.log('open!!!');
+	});
+}
 ```
