@@ -76,8 +76,7 @@ class cocoButtomSheetJS{
 			}
 		}
 		
-		console.log(this.BSElement.querySelector('.cocoButtomSheet_body'));
-		this.BSElement.querySelector('.cocoButtomSheet_body').style.height = Math.floor(this.max-100)+'px';
+		this.BSElement.querySelector('.cocoButtomSheet_body').style.height = Math.floor(this.max - ( parseFloat(getComputedStyle(document.documentElement).fontSize) * 3) )+'px'; 
 		
 		//handle이벤트
 		if(this.ismobile){

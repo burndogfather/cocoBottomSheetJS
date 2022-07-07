@@ -20,6 +20,9 @@
 	-ms-user-select:none;
 	user-select:none;
 }
+.check_box::-webkit-scrollbar {
+	display: none;
+}
 .cocoButtomSheet_body{
 	overflow-y:scroll;
 }

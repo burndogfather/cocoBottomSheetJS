@@ -29,9 +29,7 @@ p{
 	min-width: 100%;
 	margin: 0 auto;
 }
-.check_box::-webkit-scrollbar {
-	display: none;
-}
+
 .check_box > li{
 	width: 100%;
 	height: 50px;
