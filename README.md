@@ -62,12 +62,6 @@ function loadCode(_this){
 		'color':'#f1f1f1'
 	});
 	
-	//You can force javascript to run when the bottom sheet is unfolded. Same role as callback function
-	buttomsheet.setjs(function(){
-		let check_box = document.querySelector('.check_box');
-		check_box.scrollTo({top:0, left:0, behavior:'instant'});
-		console.log('open!!!');
-	});
 }
 ```
    
@@ -88,6 +82,18 @@ function loadCode(_this){
 	  
 	//setcs() <- Change the style of the bottom sheet.  
 	buttomsheet.setcss({'font-size','20px'});  
+	
+	//You can force javascript to run when the bottom sheet is unfolded. Same role as callback function
+	buttomsheet.setjs(function(){
+		let check_box = document.querySelector('.check_box');
+		check_box.scrollTo({top:0, left:0, behavior:'instant'});
+		console.log('open!!!');
+	});
+	
+	//
+	buttomsheet.setcallback(function(){
+		alert('closed!');
+	});
 	
 	//gethtml() <- You can check the HTML code currently stored in the bottom sheet.
 	let htmlstring = buttomsheet.gethtml();
