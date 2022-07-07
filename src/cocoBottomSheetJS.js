@@ -43,9 +43,9 @@ class cocoButtomSheetJS{
 			if(this.min.indexOf('%') !== -1){
 				this.min = parseInt(this.min.replace('%',''))/100 * document.body.scrollHeight;
 			}else if(this.min.indexOf('vh') !== -1){
-				this.min = parseInt(this.min.replace('vh',''))/100 * document.documentElement.clientHeight;
+				this.min = parseInt(this.min.replace('vh',''))/100 * window.innerHeight;
 			}else if(this.min.indexOf('vw') !== -1){
-				this.min = parseInt(this.min.replace('vw',''))/100 * document.documentElement.clientWidth;
+				this.min = parseInt(this.min.replace('vw',''))/100 * window.innerWidth;
 			}else{
 				this.min = parseInt(this.min);
 			}
@@ -58,9 +58,9 @@ class cocoButtomSheetJS{
 			if(this.max.indexOf('%') !== -1){
 				this.max = parseInt(this.max.replace('%',''))/100 * document.body.scrollHeight;
 			}else if(this.max.indexOf('vh') !== -1){
-				this.max = parseInt(this.max.replace('vh',''))/100 * document.documentElement.clientHeight;
+				this.max = parseInt(this.max.replace('vh',''))/100 * window.innerHeight;
 			}else if(this.max.indexOf('vw') !== -1){
-				this.max = parseInt(this.max.replace('vw',''))/100 * document.documentElement.clientWidth;
+				this.max = parseInt(this.max.replace('vw',''))/100 * window.innerWidth;
 			}else{
 				this.max = parseInt(this.max);
 			}
