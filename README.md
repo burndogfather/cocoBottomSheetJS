@@ -95,7 +95,7 @@ function loadCode(_this){
 		alert('closed!');
 	});
 	
-	//You can detect if the bottom sheet is open.
+	//You can detect if the bottom sheet is open. (true/false)
 	console.log(buttomsheet.isvisible());
 	
 	//gethtml() <- You can check the HTML code currently stored in the bottom sheet.
