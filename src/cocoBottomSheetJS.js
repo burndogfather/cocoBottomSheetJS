@@ -22,6 +22,7 @@ class cocoButtomSheetJS{
 		
 		this.translatePOS = 0; //바텀시트위치좌표
 		this.starttouchY = 0; //마우스최초좌표
+		this.newlytouchY = 0; //바로직전의 마우스좌표
 		
 		if(this.overlayer){
 			//오버레이어 구성
