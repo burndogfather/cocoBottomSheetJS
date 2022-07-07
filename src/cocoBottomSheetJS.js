@@ -276,14 +276,17 @@ class cocoButtomSheetJS{
 	
 	//바텀시트를 최대크기로 출력
 	showmax(){
-		this.BSoverElement.classList.add('cocoButtonSheet_fadein');
-		document.body.classList.add('cocoButtomSheetforbounse');
-		if(this.ismobile){
-			this.BSElement.style.transform = 'translate(0px, -'+this.max+'px)';
-		}else{
-			this.BSElement.style.transform = 'translate(0px, -100%)';
+		if(!this.is_show){
+			this.is_show = true;
+			this.BSoverElement.classList.add('cocoButtonSheet_fadein');
+			document.body.classList.add('cocoButtomSheetforbounse');
+			if(this.ismobile){
+				this.BSElement.style.transform = 'translate(0px, -'+this.max+'px)';
+			}else{
+				this.BSElement.style.transform = 'translate(0px, -100%)';
+			}
+			this.jsData();
 		}
-		
 	};
 	
 	//바텀시트를 없애기
