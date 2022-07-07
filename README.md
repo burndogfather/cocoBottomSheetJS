@@ -50,13 +50,13 @@ function loadCode(_this){
 		max:'85vh' //Bottom sheet의 최대높이. 이 높이보다 더 올라갈 수 없도록 제한됩니다.
 	});
 	
-	
+	//You can modify the style of the bottom sheet on the spot.
 	buttomsheet.setcss({
 		'background-color':'#111',
 		'color':'#f1f1f1'
 	});
 	
-	
+	//You can force javascript to run when the bottom sheet is unfolded. Same role as callback function
 	buttomsheet.setjs(function(){
 		let check_box = document.querySelector('.check_box');
 		check_box.scrollTo({top:0, left:0, behavior:'instant'});
