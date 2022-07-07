@@ -5,7 +5,8 @@ class cocoButtomSheetJS{
 		htmlcode,
 		overlayer,
 		min,
-		max
+		max,
+		autofilloffset
 	}){
 		//초기설정
 		if(/(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS)/i.test(window.navigator.userAgent)){
@@ -169,11 +170,11 @@ class cocoButtomSheetJS{
 			if(whcalc <= calc && maxcalc <= calc){
 				this.BSElement.style.transform = 'translate(0, ' + calc + 'px)';
 			}
-			if(mincalc-200 < calc && !up){
+			if(mincalc-100 < calc && !up){
 				this.moving = false;
 				this.hide();
 			}
-			if(maxcalc+200 > calc && up){
+			if(maxcalc+100 > calc && up){
 				this.BSElement.style.transform = 'translate(0, ' + maxcalc + 'px)';
 			}
 			
