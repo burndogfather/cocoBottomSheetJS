@@ -42,6 +42,7 @@ class cocoButtomSheetJS{
 		}
 		
 		//추가적인 스크립트
+		this.jsData = '';
 		this.BSscript = document.createElement('script');
 		this.BSscript.type = 'text/javascript';
 		
@@ -259,6 +260,9 @@ class cocoButtomSheetJS{
 	//바텀시트 스크립트추가
 	setjs(jsdata){
 		if(typeof jsdata === 'function'){
+			this.jsData = jsdata;
+			
+			console.log(this.jsData);
 			this.BSscript.innerHTML = '('+String(jsdata)+')();';
 		}
 		if(typeof jsdata === 'string'){
