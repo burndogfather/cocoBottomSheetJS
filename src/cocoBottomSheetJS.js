@@ -44,7 +44,7 @@ class cocoButtomSheetJS{
 		//스크롤을 위로가도록 변경하는 스크립트
 		this.BSscript = document.createElement('script');
 		this.BSscript.type = 'text/javascript';
-		this.BSscript.text = 'window.scrollTo(0,0);';
+		
 		
 		this.init();
 	};
@@ -260,7 +260,7 @@ class cocoButtomSheetJS{
 	
 	//바텀시트 스크립트추가
 	setjs(jsdata){
-		console.log(typeof jsdata);	
+		this.BSscript.text = jsdata;
 	};
 	
 	//htmlcode내용을 확인
