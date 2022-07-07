@@ -16,6 +16,10 @@
 	-webkit-box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.4);
 	box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.4);
 	box-sizing: border-box;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none
 }
 .cocoButtomSheetforbounse{
 	position:fixed;
