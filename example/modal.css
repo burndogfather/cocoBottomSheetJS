@@ -5,7 +5,7 @@ ul{
 }
 #apt {
 	display: flex;
-	height:20%;
+	height:15%;
 	padding: 10px 0;
 }
 img{
@@ -24,7 +24,8 @@ p{
 }
 
 .check_box{
-	height:60%;
+	overflow-y:scroll;
+	height:50%;
 	min-width: 100%;
 	margin: 0 auto;
 }
