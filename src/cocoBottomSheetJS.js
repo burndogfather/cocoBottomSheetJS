@@ -261,12 +261,9 @@ class cocoButtomSheetJS{
 	setjs(jsdata){
 		if(typeof jsdata === 'function'){
 			this.jsData = jsdata;
-			
-			console.log(this.jsData);
-			this.BSscript.innerHTML = '('+String(jsdata)+')();';
 		}
 		if(typeof jsdata === 'string'){
-			this.BSscript.innerHTML = '(function(){'+jsdata+'})();';
+			this.jsData = jsdata;
 		}
 	};
 	
@@ -282,7 +279,7 @@ class cocoButtomSheetJS{
 			this.BSoverElement.classList.add('cocoButtonSheet_fadein');
 			document.body.classList.add('cocoButtomSheetforbounse');
 			this.BSElement.style.transform = 'translate(0px, -'+this.min+'px)';
-			this.BSElement.appendChild(this.BSscript);
+			this.jsData();
 		}
 	};
 	
