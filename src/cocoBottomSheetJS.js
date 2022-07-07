@@ -272,7 +272,7 @@ class cocoButtomSheetJS{
 			}else{
 				this.BSoverElement.classList.add('cocoButtonSheet_fadein');
 				document.body.classList.add('cocoButtomSheetforbounse');
-				this.BSElement.style.transform = 'translate(-50%, -100%)';
+				this.BSElement.style.transform = 'translate(-100%, -0%)';
 				this.jsData();
 				
 			}
