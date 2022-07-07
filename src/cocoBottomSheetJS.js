@@ -267,6 +267,7 @@ class cocoButtomSheetJS{
 	
 	//바텀시트를 출력
 	show(){
+		console.log(this);
 		document.body.classList.add('cocoButtomSheetforbounse');
 		let style = this.BSElement.getAttribute('style');
 		this.BSElement.setAttribute('style',style + "transform:translate(0px, -"+this.min+"px);");
