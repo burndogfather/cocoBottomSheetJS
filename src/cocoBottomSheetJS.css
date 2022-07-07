@@ -22,7 +22,6 @@
 }
 .cocoButtomSheet_body{
 	overflow-y:scroll;
-	width:100%;
 }
 .cocoButtomSheetforbounse{
 	position:fixed;

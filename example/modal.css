@@ -42,8 +42,8 @@ p{
 	line-height: 50px;
 	margin-bottom: 10px;
 	position: relative;
-	border: 1px solid #333;
-	color: #333;
+	border: 1px solid #656565;
+	color: #656565;
 }
 .check_box > li[active='true']{
 	color: #c2c2c2;
@@ -60,5 +60,5 @@ p{
 	font-size: 16px;
 	position: absolute;
 	right: 15px;
-	color: #333;
+	color: #656565;
 }
