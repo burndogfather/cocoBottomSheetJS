@@ -38,14 +38,17 @@ Example of desktop
 ### 2. Write a javascript using the following code example
 ```javascript
 let buttomsheet; //Declare Library Variables
+
+//In addition to the iframe, you can also import Ajax or fetched HTML codes.
 function loadCode(_this){
-	//
 	buttomsheet = new cocoButtomSheetJS({
-		htmlcode:frames[_this.getAttribute('name')].document.body.innerHTML,
-		overlayer:true,
+		htmlcode:frames[_this.getAttribute('name')].document.body.innerHTML, //HTML code
+		overlayer:true, //
 		min:'30vh',
 		max:'85vh'
 	});
+	
+	
 	buttomsheet.setcss({
 		'background-color':'#111',
 		'color':'#f1f1f1'
