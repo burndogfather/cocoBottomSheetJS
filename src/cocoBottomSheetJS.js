@@ -84,62 +84,65 @@ class cocoButtomSheetJS{
 	
 	//터치를 시작하는 순간 시작좌표를 수집
 	touchstart(event){
-		let wh = window.innerHeight;
-		if(event.type === 'touchstart'){
-			if(event.touches[0].pageY < 0){
-				this.starttouchY = 0;
-			}else if(event.touches[0].pageY > wh){
-				this.starttouchY = wh;
+		if(!this.moving){
+			this.moving = true;
+			let wh = window.innerHeight;
+			if(event.type === 'touchstart'){
+				if(event.touches[0].pageY < 0){
+					this.starttouchY = 0;
+				}else if(event.touches[0].pageY > wh){
+					this.starttouchY = wh;
+				}else{
+					this.starttouchY = event.touches[0].pageY;
+				}
+				
+			}else if(event.type === 'mousedown'){
+				if(event.pageY < 0){
+					this.starttouchY = 0;
+				}else if(event.pageY > wh){
+					this.starttouchY = wh;
+				}else{
+					this.starttouchY = event.pageY;
+				}
 			}else{
-				this.starttouchY = event.touches[0].pageY;
+				return null;
+			}
+			this.BSElement.style.transition = 'none';
+			
+			if(this.BSElement.style.transform.indexOf('translate3d') !== -1){
+				let translate3d = this.BSElement.style.transform.match(/\(.*\)/gi)[0];
+				translate3d = translate3d.split(',')[1];
+				translate3d = translate3d.split('+')[1];
+				translate3d = translate3d.replace(/[^0-9|\-|.]/g,'');
+				this.translatePOS = parseFloat('-'+translate3d);
+			}else{
+				let translate3d = this.BSElement.style.transform.match(/\(.*\)/gi)[0];
+				translate3d = translate3d.split(',')[1];
+				translate3d = translate3d.replace(/[^0-9|\-|.]/g,'');
+				this.translatePOS = parseFloat(translate3d);
 			}
 			
-		}else if(event.type === 'mousedown'){
-			if(event.pageY < 0){
-				this.starttouchY = 0;
-			}else if(event.pageY > wh){
-				this.starttouchY = wh;
+			
+			//handle이벤트
+			if(/(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS)/i.test(window.navigator.userAgent)){
+				this.BSElement.addEventListener('touchmove', (e)=>{
+					//클릭시 닫음
+					this.touchmoving(e);
+				});
+				this.BSElement.addEventListener('touchend', (e)=>{
+					//클릭시 닫음
+					this.touchend(e);
+				});
 			}else{
-				this.starttouchY = event.pageY;
+				this.BSElement.addEventListener('mousemove', (e)=>{
+					//클릭시 닫음
+					this.touchmoving(e);
+				});
+				this.BSElement.addEventListener('mouseup', (e)=>{
+					//클릭시 닫음
+					this.touchend(e);
+				});
 			}
-		}else{
-			return null;
-		}
-		this.BSElement.style.transition = 'none';
-		
-		if(this.BSElement.style.transform.indexOf('translate3d') !== -1){
-			let translate3d = this.BSElement.style.transform.match(/\(.*\)/gi)[0];
-			translate3d = translate3d.split(',')[1];
-			translate3d = translate3d.split('+')[1];
-			translate3d = translate3d.replace(/[^0-9|\-|.]/g,'');
-			this.translatePOS = parseFloat('-'+translate3d);
-		}else{
-			let translate3d = this.BSElement.style.transform.match(/\(.*\)/gi)[0];
-			translate3d = translate3d.split(',')[1];
-			translate3d = translate3d.replace(/[^0-9|\-|.]/g,'');
-			this.translatePOS = parseFloat(translate3d);
-		}
-		
-		
-		//handle이벤트
-		if(/(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS)/i.test(window.navigator.userAgent)){
-			this.BSElement.addEventListener('touchmove', (e)=>{
-				//클릭시 닫음
-				this.touchmoving(e);
-			});
-			this.BSElement.addEventListener('touchend', (e)=>{
-				//클릭시 닫음
-				this.touchend(e);
-			});
-		}else{
-			this.BSElement.addEventListener('mousemove', (e)=>{
-				//클릭시 닫음
-				this.touchmoving(e);
-			});
-			this.BSElement.addEventListener('mouseup', (e)=>{
-				//클릭시 닫음
-				this.touchend(e);
-			});
 		}
 		
 	};
