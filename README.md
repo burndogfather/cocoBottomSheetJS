@@ -44,8 +44,10 @@ function loadCode(_this){
 	buttomsheet = new cocoButtomSheetJS({
 		htmlcode:frames[_this.getAttribute('name')].document.body.innerHTML, //HTML code
 		overlayer:true, //Set whether the background is enabled when the bottom sheet is turned on
+		
+		//You can use px, %, vw, and vh units
 		min:'30vh', //Minimum height of the bottom sheet. If it is less than this height, it will close automatically.
-		max:'85vh' //
+		max:'85vh' //Bottom sheet의 최대높이. 이 높이보다 더 올라갈 수 없도록 제한됩니다.
 	});
 	
 	
@@ -53,6 +55,8 @@ function loadCode(_this){
 		'background-color':'#111',
 		'color':'#f1f1f1'
 	});
+	
+	
 	buttomsheet.setjs(function(){
 		let check_box = document.querySelector('.check_box');
 		check_box.scrollTo({top:0, left:0, behavior:'instant'});
