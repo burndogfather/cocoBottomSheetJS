@@ -189,8 +189,7 @@ class cocoButtomSheetJS{
 				this.hide();
 			}
 			if(maxcalc+50 > calc){
-				this.moving = false;
-				this.showmax();
+				this.BSElement.style.transform = 'translate(0, ' + maxcalc + 'px)';
 			}
 			
 		}
