@@ -186,13 +186,13 @@ class cocoButtomSheetJS{
 			//if(this.starttouchY > pageY){
 				//up
 				console.log('up');
-				moveY = this.starttouchY - pageY;
+				moveY = this.starttouchY - pageY + 100;
 				let calc = this.translatePOS - moveY;
 				let maxcalc = parseFloat('-'+wh);
 				console.log(maxcalc +' <= '+ calc);
 				if(maxcalc <= calc){
 					this.BSElement.style.transform = 'translate(0, ' + calc + 'px)';
-					this.BSElement.style.transition = 'all 0.1s ease-out';
+					this.BSElement.style.transition = 'all 0.05s ease-out';
 				}
 			/*
 			}else if(this.starttouchY < pageY){
