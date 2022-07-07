@@ -138,7 +138,6 @@ class cocoButtomSheetJS{
 			}else{
 				return null;
 			}
-			//this.BSElement.style.transition = 'none';
 			
 			if(this.BSElement.style.transform.indexOf('translate3d') !== -1){
 				let translate3d = this.BSElement.style.transform.match(/\(.*\)/gi)[0];
@@ -185,40 +184,20 @@ class cocoButtomSheetJS{
 				return null;	
 			}
 			
-			
-			//최초터치좌표와 이동중인 좌표의 차이를 구하여 이동한 만큼의 좌표구하기
-			//if(this.starttouchY > pageY){
-				//up
-				moveY = this.starttouchY - pageY;
-				let calc = Math.round(this.translatePOS - moveY);
-				console.log(this.max +' / '+this.min);
-				let maxcalc = parseFloat('-'+this.max);
-				let mincalc = parseFloat('-'+this.min);
-				let whcalc = parseFloat('-'+wh);
-				console.log('mincalc : '+mincalc+'/maxcalc : '+maxcalc+'/calc : '+calc);
-				if(mincalc < calc){
-					console.log('close');
-					this.hide();
-				}else{
-					console.log('stay');
-				}
-				if(whcalc <= calc && maxcalc <= calc){
-					this.BSElement.style.transform = 'translate(0, ' + calc + 'px)';
-					this.BSElement.style.transition = 'all 0.05s ease-out';
-				}
-				
-			/*
-			}else if(this.starttouchY < pageY){
-				//down
-				console.log('down');
-				if(wh > pageY){
-					this.BSElement.style.transform = 'translate3d(0, calc(-100% + ' + pageY + 'px), 0)';
-					this.BSElement.style.transition = 'all 0.1s ease-out';
-				}
-			}else{
-				this.BSElement.style.transform = "translate(0px, -"+pageY+"px);";
+			moveY = this.starttouchY - pageY;
+			let calc = Math.round(this.translatePOS - moveY);
+			let maxcalc = parseFloat('-'+this.max);
+			let mincalc = parseFloat('-'+this.min);
+			let whcalc = parseFloat('-'+wh);
+			if(whcalc <= calc && maxcalc <= calc){
+				this.BSElement.style.transform = 'translate(0, ' + calc + 'px)';
+				this.BSElement.style.transition = 'all 0.05s ease-out';
 			}
-			*/
+			if(mincalc < calc){
+				this.moving = false;
+				this.hide();
+			}
+			
 		}
 	};
 	
