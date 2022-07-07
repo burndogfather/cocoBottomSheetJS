@@ -40,6 +40,11 @@ class cocoButtomSheetJS{
 		if(this.overlayer){
 			document.querySelector('body').prepend(this.BSoverElement);
 		}
+		
+		this.BSscript = document.createElement('script');
+		this.BSscript.type = 'text/javascript';
+		this.BSscript
+		
 		this.init();
 	};
 	
