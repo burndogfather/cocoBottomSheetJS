@@ -35,6 +35,7 @@ class cocoButtomSheetJS{
 		this.BSElement = document.createElement('article');
 		this.BSElement.classList.add('cocoButtomSheet');
 		this.BSElement.innerHTML = '<button class="cocoButtomSheet_handle"></button>' + this.code;
+		document.querySelector('body').prepend(this.BSElement);
 		this.init();
 	};
 	
@@ -283,7 +284,6 @@ class cocoButtomSheetJS{
 		this.BSElement.setAttribute('style',style + "transform:translate(0px, -"+this.min+"px);");
 		
 		if(!this.is_show){
-			document.querySelector('body').prepend(this.BSElement);
 			if(this.overlayer){
 				document.querySelector('body').prepend(this.BSoverElement);
 			}
@@ -296,7 +296,6 @@ class cocoButtomSheetJS{
 		this.moving = false;
 		document.body.classList.remove('cocoButtomSheetforbounse');
 		if(this.is_show){
-			document.body.removeChild(this.BSElement);
 			if(this.overlayer){
 				document.body.removeChild(this.BSoverElement);
 			}
