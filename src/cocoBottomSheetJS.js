@@ -185,15 +185,17 @@ class cocoButtomSheetJS{
 				return null;	
 			}
 			
-			console.log('max : '+this.max+'/min : '+this.min);
+			
 			//최초터치좌표와 이동중인 좌표의 차이를 구하여 이동한 만큼의 좌표구하기
 			//if(this.starttouchY > pageY){
 				//up
 				console.log('up');
 				moveY = this.starttouchY - pageY;
 				let calc = this.translatePOS - moveY;
-				let maxcalc = parseFloat('-'+wh);
-				if(maxcalc <= calc){
+				let maxcalc = parseFloat('-'+this.max);
+				console.log('max : '+maxcalc+'/min : '+this.min);
+				let whcalc = parseFloat('-'+wh);
+				if(whcalc <= calc){
 					this.BSElement.style.transform = 'translate(0, ' + calc + 'px)';
 					this.BSElement.style.transition = 'all 0.05s ease-out';
 				}
