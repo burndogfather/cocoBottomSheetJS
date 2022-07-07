@@ -204,46 +204,46 @@ class cocoButtomSheetJS{
 	
 	//터치드래그 끝남
 	touchend(event){
-		console.log('touchend!');
-		let wh = window.innerHeight;
-		
-		if(this.BSElement.style.transform.indexOf('translate3d') !== -1){
-			let translate3d = this.BSElement.style.transform.match(/\(.*\)/gi)[0];
-			translate3d = translate3d.split(',')[1];
-			translate3d = translate3d.split('+')[1];
-			translate3d = translate3d.replace(/[^0-9|\-|.]/g,'');
-			this.translatePOS = parseFloat('-'+translate3d);
-		}else{
-			let translate3d = this.BSElement.style.transform.match(/\(.*\)/gi)[0];
-			translate3d = translate3d.split(',')[1];
-			translate3d = translate3d.replace(/[^0-9|\-|.]/g,'');
-			this.translatePOS = parseFloat(translate3d);
-		}
-		
-		
-		//터치드래그중인 상태에서의 마우스좌표구하기
-		if(event.type === 'touchmove'){
-			if(event.touches[0].pageY < 0){
-				this.starttouchY = 0;
-			}else if(event.touches[0].pageY > wh){
-				this.starttouchY = wh;
+		if(this.moving){
+			this.moving = false;
+			console.log('touchend!');
+			let wh = window.innerHeight;
+			
+			if(this.BSElement.style.transform.indexOf('translate3d') !== -1){
+				let translate3d = this.BSElement.style.transform.match(/\(.*\)/gi)[0];
+				translate3d = translate3d.split(',')[1];
+				translate3d = translate3d.split('+')[1];
+				translate3d = translate3d.replace(/[^0-9|\-|.]/g,'');
+				this.translatePOS = parseFloat('-'+translate3d);
 			}else{
-				this.starttouchY = event.touches[0].pageY;
+				let translate3d = this.BSElement.style.transform.match(/\(.*\)/gi)[0];
+				translate3d = translate3d.split(',')[1];
+				translate3d = translate3d.replace(/[^0-9|\-|.]/g,'');
+				this.translatePOS = parseFloat(translate3d);
 			}
-		}else if(event.type === 'mousemove'){
-			if(event.pageY < 0){
-				this.starttouchY = 0;
-			}else if(event.pageY > wh){
-				this.starttouchY = wh;
+			
+			
+			//터치드래그중인 상태에서의 마우스좌표구하기
+			if(event.type === 'touchmove'){
+				if(event.touches[0].pageY < 0){
+					this.starttouchY = 0;
+				}else if(event.touches[0].pageY > wh){
+					this.starttouchY = wh;
+				}else{
+					this.starttouchY = event.touches[0].pageY;
+				}
+			}else if(event.type === 'mousemove'){
+				if(event.pageY < 0){
+					this.starttouchY = 0;
+				}else if(event.pageY > wh){
+					this.starttouchY = wh;
+				}else{
+					this.starttouchY = event.pageY;
+				}
 			}else{
-				this.starttouchY = event.pageY;
+				return null;	
 			}
-		}else{
-			return null;	
 		}
-		console.log(this.BSElement.hasEventListener('touchmove'));	
-		this.BSElement.removeEventListener('touchmove',this.touchmoving);
-		this.BSElement.removeEventListener('mousemove',this.touchmoving);
 		
 	};
 	
