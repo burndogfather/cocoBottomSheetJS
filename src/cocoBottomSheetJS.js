@@ -269,6 +269,11 @@ class cocoButtomSheetJS{
 		return this.code;
 	};
 	
+	//모달창열림감지
+	isvisible(){
+		return this.is_show;
+	}
+	
 	//바텀시트를 출력
 	show(){
 		if(!this.is_show){
