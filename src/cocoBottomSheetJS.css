@@ -22,6 +22,10 @@
 }
 .cocoButtomSheet_body{
 	overflow-y:scroll;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
 }
 .cocoButtomSheet_body::-webkit-scrollbar {
 	display: none;
