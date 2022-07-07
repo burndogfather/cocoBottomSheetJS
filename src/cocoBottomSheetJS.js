@@ -34,8 +34,8 @@ class cocoButtomSheetJS{
 		}
 		this.BSElement = document.createElement('article');
 		this.BSElement.classList.add('cocoButtomSheet');
-		this.BSElement.innerHTML = '<button class="cocoButtomSheet_handle"></button>'+ this.code;
-		document.querySelector('body').prepend(this.BSElement);
+		
+		
 		if(this.overlayer){
 			document.querySelector('body').prepend(this.BSoverElement);
 		}
@@ -116,6 +116,9 @@ class cocoButtomSheetJS{
 	
 	//터치를 시작하는 순간 시작좌표를 수집
 	touchstart(event){
+		
+		
+		
 		if(!this.moving){
 			this.moving = true;
 			let wh = window.innerHeight;
@@ -257,9 +260,13 @@ class cocoButtomSheetJS{
 	show(){
 		if(!this.is_show){
 			this.is_show = true;
+			
 			this.BSoverElement.classList.add('cocoButtonSheet_fadein');
 			document.body.classList.add('cocoButtomSheetforbounse');
 			this.BSElement.style.transform = 'translate(0px, -'+this.min+'px)';
+			
+			this.BSElement.innerHTML = '<button class="cocoButtomSheet_handle"></button>'+ this.code;
+			document.querySelector('body').prepend(this.BSElement);
 		}
 	};
 	
