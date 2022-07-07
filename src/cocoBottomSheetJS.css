@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 .cocoButtomSheet{
 	width:100%;
 	height:100%;
@@ -15,6 +16,10 @@
 	-webkit-box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.4);
 	box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.4);
 	box-sizing: border-box;
+}
+.cocoButtomSheetforbounse{
+	position:fixed;
+	overflow:hidden;
 }
 .cocoButtomSheet > .cocoButtomSheet_handle{
 	margin:0;
