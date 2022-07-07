@@ -258,6 +258,7 @@ class cocoButtomSheetJS{
 	
 	//바텀시트 스크립트추가
 	setjs(jsdata){
+		console.log(jsdata);
 		this.BSscript.text = jsdata;
 	};
 	
