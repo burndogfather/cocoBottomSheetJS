@@ -75,4 +75,9 @@ function loadCode(_this){
 
 //hide() <- Close the bottom sheet
 <button onclick='buttomsheet.hide();'>hide buttom sheet 🫠</button>
+
+<script type='text/javascript'>
+	buttomsheet.sethtml('Hello World!');
+</script>
+
 ```
