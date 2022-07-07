@@ -48,6 +48,7 @@ class cocoButtomSheetJS{
 		
 		//추가적인 스크립트
 		this.jsData = '';
+		this.callback = '';
 		
 		
 		this.init();
@@ -310,8 +311,8 @@ class cocoButtomSheetJS{
 			}else{
 				this.BSElement.style.transform = 'translate(150%, -100%)';
 			}
-			
 			this.BSElement.style.transition = 'all 0.1s ease-out';
+			this.callback();
 		}
 	};
 };
