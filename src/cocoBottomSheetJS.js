@@ -53,7 +53,7 @@ class cocoButtomSheetJS{
 		this.jsData = null;
 		this.callback = null;
 		
-		
+		console.log('test');
 		this.init();
 	};
 	
