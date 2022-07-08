@@ -92,7 +92,7 @@ class cocoButtomSheetJS{
 		//handle이벤트
 		if(this.ismobile){
 			this.BSElement.querySelector('.cocoButtomSheet_handle').addEventListener('touchstart', (e)=>{
-				alert('touchStart!');
+				console.log('test!!!');
 				e.stopImmediatePropagation();
 				e.stopPropagation();
 				//클릭시작
