@@ -167,6 +167,7 @@ class cocoButtomSheetJS{
 				console.log('up');
 			}else{
 				up = false;
+				console.log('down');
 			}
 			
 			
