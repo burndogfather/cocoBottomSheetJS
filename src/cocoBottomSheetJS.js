@@ -114,7 +114,7 @@ class cocoButtomSheetJS{
 	
 	//터치를 시작하는 순간 시작좌표를 수집
 	touchstart(event){
-		
+		console.log('touchStart!');
 		if(!this.moving){
 			this.moving = true;
 			let wh = window.innerHeight;
