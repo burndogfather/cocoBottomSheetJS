@@ -244,6 +244,7 @@ class cocoBottomSheetJS{
 	};
 	
 	anotherHandle(Element){
+		console.log(typeof Element);
 		//handle이벤트
 		if(this.ismobile){
 			Element.addEventListener('touchstart', (e)=>{
