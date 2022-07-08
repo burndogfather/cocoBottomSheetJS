@@ -261,7 +261,7 @@ class cocoBottomSheetJS{
 	show(){
 		if(!this.is_show){
 			this.is_show = true;
-			this.BSoverElement.classList.add('cocoButtonSheet_fadein');
+			this.BSoverElement.classList.add('cocoBottomSheet_fadein');
 			document.body.classList.add('cocoBottomSheetforbounse');
 			if(this.ismobile){
 				this.BSElement.style.transform = 'translate(0px, -'+this.min+'px)';
@@ -278,7 +278,7 @@ class cocoBottomSheetJS{
 	showmax(){
 		if(!this.is_show){
 			this.is_show = true;
-			this.BSoverElement.classList.add('cocoButtonSheet_fadein');
+			this.BSoverElement.classList.add('cocoBottomSheet_fadein');
 			document.body.classList.add('cocoBottomSheetforbounse');
 			if(this.ismobile){
 				this.BSElement.style.transform = 'translate(0px, -'+this.max+'px)';
@@ -294,7 +294,7 @@ class cocoBottomSheetJS{
 	hide(){
 		if(this.is_show){
 			this.is_show = false;
-			this.BSoverElement.classList.remove('cocoButtonSheet_fadein');
+			this.BSoverElement.classList.remove('cocoBottomSheet_fadein');
 			document.body.classList.remove('cocoBottomSheetforbounse');
 			if(this.ismobile){
 				this.BSElement.style.transform = 'translate(0px, -0px)';
