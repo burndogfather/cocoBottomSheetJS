@@ -270,6 +270,7 @@ class cocoButtomSheetJS{
 	
 	//바텀시트를 최대크기로 출력
 	showmax(){
+		console.log('max!');
 		if(!this.is_show){
 			this.is_show = true;
 			this.BSoverElement.classList.add('cocoButtonSheet_fadein');
