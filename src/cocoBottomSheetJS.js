@@ -243,6 +243,10 @@ class cocoBottomSheetJS{
 		}
 	};
 	
+	anotherHandle(Element){
+		
+	};
+	
 	//htmlcode내용을 확인
 	gethtml(){
 		return this.code;
