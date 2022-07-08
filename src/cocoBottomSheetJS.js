@@ -1,5 +1,5 @@
 'use strict';
-class cocoButtomSheetJS{
+class cocoBottomSheetJS{
 	constructor({
 		//입력데이터
 		htmlcode,
@@ -29,16 +29,16 @@ class cocoButtomSheetJS{
 		if(this.overlayer){
 			//오버레이어 구성
 			this.BSoverElement = document.createElement('article');
-			this.BSoverElement.classList.add('cocoButtomSheet_overlayer');
+			this.BSoverElement.classList.add('cocoBottomSheet_overlayer');
 			this.BSoverElement.addEventListener('click', (e)=>{
 				//클릭시 닫음
 				this.hide();
 			});
 		}
 		this.BSElement = document.createElement('article');
-		this.BSElement.classList.add('cocoButtomSheet');
+		this.BSElement.classList.add('cocoBottomSheet');
 		if(this.ismobile){
-			this.BSElement.innerHTML = '<button class="cocoButtomSheet_handledesign cocoButtomSheet_handle"></button>'+ this.code;
+			this.BSElement.innerHTML = '<button class="cocoBottomSheet_handledesign cocoBottomSheet_handle"></button>'+ this.code;
 		}else{
 			this.BSElement.innerHTML = this.code;
 		}
@@ -91,25 +91,25 @@ class cocoButtomSheetJS{
 		
 		//handle이벤트
 		if(this.ismobile){
-			this.BSElement.querySelector('.cocoButtomSheet_handle').addEventListener('touchstart', (e)=>{
+			this.BSElement.querySelector('.cocoBottomSheet_handle').addEventListener('touchstart', (e)=>{
 				e.stopImmediatePropagation();
 				e.stopPropagation();
 				//클릭시작
 				this.touchstart(e);
 			});
-			this.BSElement.querySelector('.cocoButtomSheet_handle').addEventListener('touchmove', (e)=>{
+			this.BSElement.querySelector('.cocoBottomSheet_handle').addEventListener('touchmove', (e)=>{
 				e.stopImmediatePropagation();
 				e.stopPropagation();
 				//클릭움직임
 				this.touchmoving(e);
 			});
-			this.BSElement.querySelector('.cocoButtomSheet_handle').addEventListener('touchend', (e)=>{
+			this.BSElement.querySelector('.cocoBottomSheet_handle').addEventListener('touchend', (e)=>{
 				e.stopImmediatePropagation();
 				e.stopPropagation();
 				//클릭끝남
 				this.touchend(e);
 			});
-			this.BSElement.querySelector('.cocoButtomSheet_handle').addEventListener('touchcancel', (e)=>{
+			this.BSElement.querySelector('.cocoBottomSheet_handle').addEventListener('touchcancel', (e)=>{
 				e.stopImmediatePropagation();
 				e.stopPropagation();
 				//클릭끝남
@@ -262,7 +262,7 @@ class cocoButtomSheetJS{
 		if(!this.is_show){
 			this.is_show = true;
 			this.BSoverElement.classList.add('cocoButtonSheet_fadein');
-			document.body.classList.add('cocoButtomSheetforbounse');
+			document.body.classList.add('cocoBottomSheetforbounse');
 			if(this.ismobile){
 				this.BSElement.style.transform = 'translate(0px, -'+this.min+'px)';
 			}else{
@@ -279,7 +279,7 @@ class cocoButtomSheetJS{
 		if(!this.is_show){
 			this.is_show = true;
 			this.BSoverElement.classList.add('cocoButtonSheet_fadein');
-			document.body.classList.add('cocoButtomSheetforbounse');
+			document.body.classList.add('cocoBottomSheetforbounse');
 			if(this.ismobile){
 				this.BSElement.style.transform = 'translate(0px, -'+this.max+'px)';
 			}else{
@@ -295,7 +295,7 @@ class cocoButtomSheetJS{
 		if(this.is_show){
 			this.is_show = false;
 			this.BSoverElement.classList.remove('cocoButtonSheet_fadein');
-			document.body.classList.remove('cocoButtomSheetforbounse');
+			document.body.classList.remove('cocoBottomSheetforbounse');
 			if(this.ismobile){
 				this.BSElement.style.transform = 'translate(0px, -0px)';
 			}else{

@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-.cocoButtomSheet{
+.cocoBottomSheet{
 	width:100%;
 	height:100%;
 	position: fixed;
@@ -21,11 +21,11 @@
 	-ms-user-select:none;
 	user-select:none;
 }
-.cocoButtomSheetforbounse{
+.cocoBottomSheetforbounse{
 	position:fixed;
 	overflow:hidden;
 }
-.cocoButtomSheet > .cocoButtomSheet_handledesign{
+.cocoBottomSheet > .cocoBottomSheet_handledesign{
 	margin:0;
 	padding:0;
 	font-size: 0;
@@ -49,7 +49,7 @@
 	border: none;
 	background-color: transparent;
 }
-.cocoButtomSheet > .cocoButtomSheet_handle:before{
+.cocoBottomSheet > .cocoBottomSheet_handle:before{
 	display: block;
 	width: 3.6rem;
 	height: 0.4rem;
@@ -58,7 +58,7 @@
 	border-radius: 0.4rem;
 	background-color: #e9e9e9;
 }
-.cocoButtomSheet_overlayer{
+.cocoBottomSheet_overlayer{
 	opacity: 0;
 	transition: 0.4s all;
 	display:none;
@@ -74,7 +74,7 @@
 	opacity: 1;
 }
 @media(min-width: 768px){
-	.cocoButtomSheet{
+	.cocoBottomSheet{
 		width:23rem;
 		right:0;
 		padding: 2rem;

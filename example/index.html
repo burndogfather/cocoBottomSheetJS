@@ -11,35 +11,37 @@
 	</head>
 	<body>
 		<script type='text/javascript'>
-			let buttomsheet;
+			let bottomsheet;
 			function loadCode(_this){
-				buttomsheet = new cocoButtomSheetJS({
+				bottomsheet = new cocoBottomSheetJS({
 					htmlcode:frames[_this.getAttribute('name')].document.body.innerHTML,
 					overlayer:true,
 					min:'30vh',
 					max:'85vh',
 					autofilloffset:100
 				});
-				buttomsheet.setcss({
+				bottomsheet.setcss({
 					'background-color':'#111',
 					'color':'#f1f1f1'
 				});
 				
-				buttomsheet.setjs(function(){
+				b
+				
+				bottomsheet.setjs(function(){
 					let check_box = document.querySelector('.check_box');
 					check_box.scrollTo({top:0, left:0, behavior:'instant'});
 					//alert('isvisible() : '+buttomsheet.isvisible());
 				});
 				
-				buttomsheet.setcallback(function(){
+				bottomsheet.setcallback(function(){
 					//alert('isvisible() : '+buttomsheet.isvisible());
 				});
 				
 			}
 		</script>
-		<button onclick="buttomsheet.setcss({'background-color':'#111','color':'#f1f1f1'});buttomsheet.show();">show buttom sheet 🤗</button>
-		<button onclick="buttomsheet.setcss({'background-color':'#fff','color':'#000'});buttomsheet.showmax();"">showmax & changecss 👻</button>
-		<button onclick='buttomsheet.hide();'>hide buttom sheet 👇</button>
+		<button onclick="bottomsheet.setcss({'background-color':'#111','color':'#f1f1f1'});bottomsheet.show();">show bottom sheet 🤗</button>
+		<button onclick="bottomsheet.setcss({'background-color':'#fff','color':'#000'});bottomsheet.showmax();"">showmax & changecss 👻</button>
+		<button onclick='bottomsheet.hide();'>hide bottom sheet 👇</button>
 		
 		<section></section>
 		
