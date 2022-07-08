@@ -59,7 +59,6 @@ class cocoButtomSheetJS{
 	
 	//클래스 선언시 자동실행
 	init(){
-		console.log('touchStart!');
 		//min 사이즈 재정의
 		if(/^[0-9]+$/.test(this.min)){
 			this.min = parseInt(this.min);
@@ -114,7 +113,8 @@ class cocoButtomSheetJS{
 	
 	//터치를 시작하는 순간 시작좌표를 수집
 	touchstart(event){
-		
+		event.stopImmediatePropagation();
+		event.stopPropagation();
 		if(!this.moving){
 			this.moving = true;
 			let wh = window.innerHeight;
@@ -140,6 +140,8 @@ class cocoButtomSheetJS{
 	
 	//터치드래그 진행중
 	touchmoving(event){
+		event.stopImmediatePropagation();
+		event.stopPropagation();
 		if(this.moving){
 			let wh = window.innerHeight;
 			let pageY;
@@ -187,6 +189,8 @@ class cocoButtomSheetJS{
 	
 	//터치드래그 끝남
 	touchend(event){
+		event.stopImmediatePropagation();
+		event.stopPropagation();
 		if(this.moving){
 			this.moving = false;
 			
