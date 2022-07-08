@@ -43,11 +43,11 @@ Example of desktop
    
 ### 2. Write a javascript using the following code example
 ```javascript
-let buttomsheet; //Declare Library Variables
+let bottomsheet; //Declare Library Variables
 
 //In addition to the iframe, you can also import Ajax or fetched HTML codes.
 function loadCode(_this){
-	buttomsheet = new cocoButtomSheetJS({
+	bottomsheet = new cocoBottomSheetJS({
 		htmlcode:frames[_this.getAttribute('name')].document.body.innerHTML, //HTML code
 		overlayer:true, //Set whether the background is enabled when the bottom sheet is turned on
 		
@@ -59,7 +59,7 @@ function loadCode(_this){
 	});
 	
 	//You can modify the style of the bottom sheet on the spot.
-	buttomsheet.setcss({
+	bottomsheet.setcss({
 		'background-color':'#111',
 		'color':'#f1f1f1'
 	});
@@ -70,37 +70,37 @@ function loadCode(_this){
 ### 3. You can control the bottom sheet by using events, etc. in the HTML element.
 ```html
 <!-- show() <- Expand the bottom sheet to the minimum height -->
-<button onclick='buttomsheet.show();'>show buttom sheet</button>
+<button onclick='bottomsheet.show();'>show bottom sheet</button>
   
 <!-- show max() <- Expand the bottom sheet to its maximum height -->
-<button onclick='buttomsheet.showmax();'>showmax buttom sheet</button>
+<button onclick='bottomsheet.showmax();'>showmax bottom sheet</button>
   
 <!-- hide() <- Close the bottom sheet -->
-<button onclick='buttomsheet.hide();'>hide buttom sheet</button>
+<button onclick='bottomsheet.hide();'>hide bottom sheet</button>
   
 <script type='text/javascript'>
 	//sethtml() <- You can change the html that will enter the bottom sheet later.  
-	buttomsheet.sethtml('Hello World!');
+	bottomsheet.sethtml('Hello World!');
 	  
 	//setcs() <- Change the style of the bottom sheet.  
-	buttomsheet.setcss({'font-size','20px'});  
+	bottomsheet.setcss({'font-size','20px'});  
 	
 	//You can force javascript to run when the bottom sheet is unfolded. Same role as callback function
-	buttomsheet.setjs(function(){
+	bottomsheet.setjs(function(){
 		let check_box = document.querySelector('.check_box');
 		check_box.scrollTo({top:0, left:0, behavior:'instant'});
 		console.log('open!!!');
 	});
 	
 	//The callback function that runs when the bottom sheet is closed.
-	buttomsheet.setcallback(function(){
+	bottomsheet.setcallback(function(){
 		alert('closed!');
 	});
 	
 	//You can detect if the bottom sheet is open. (true/false)
-	console.log(buttomsheet.isvisible());
+	console.log(bottomsheet.isvisible());
 	
 	//gethtml() <- You can check the HTML code currently stored in the bottom sheet.
-	let htmlstring = buttomsheet.gethtml();
+	let htmlstring = bottomsheet.gethtml();
 </script>
 ```
