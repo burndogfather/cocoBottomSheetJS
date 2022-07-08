@@ -133,7 +133,7 @@ class cocoButtomSheetJS{
 			}
 			this.newlytouchY = this.starttouchY;
 			
-			this.BSElement.style.transition = 'none';
+			
 			
 			let translate3d = this.BSElement.style.transform.match(/\(.*\)/gi)[0];
 			translate3d = translate3d.split(',')[1];
@@ -261,6 +261,7 @@ class cocoButtomSheetJS{
 			}else{
 				this.BSElement.style.transform = 'translate(0px, -100%)';
 			}
+			this.BSElement.style.transition = 'none';
 			this.jsData();
 			
 		}
@@ -277,6 +278,7 @@ class cocoButtomSheetJS{
 			}else{
 				this.BSElement.style.transform = 'translate(0px, -100%)';
 			}
+			this.BSElement.style.transition = 'none';
 			this.jsData();
 		}
 	};
