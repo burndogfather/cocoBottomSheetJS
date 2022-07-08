@@ -254,7 +254,7 @@ class cocoBottomSheetJS{
 	};
 	
 	anotherTouchElement(element){
-		
+		console.log('test');
 	};
 	
 	//바텀시트를 출력
