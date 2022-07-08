@@ -53,7 +53,6 @@ class cocoButtomSheetJS{
 		this.jsData = null;
 		this.callback = null;
 		
-		console.log('test');
 		this.init();
 	};
 	
@@ -140,7 +139,7 @@ class cocoButtomSheetJS{
 			translate3d = translate3d.split(',')[1];
 			translate3d = translate3d.replace(/[^0-9|\-|.]/g,'');
 			this.translatePOS = parseFloat(translate3d);
-			console.log(this.translatePOS);
+			alert(this.translatePOS);
 		}
 		
 	};
