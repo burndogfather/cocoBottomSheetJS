@@ -253,10 +253,6 @@ class cocoBottomSheetJS{
 		return this.is_show;
 	};
 	
-	anotherTouchElement(element){
-		console.log('test');
-	};
-	
 	//바텀시트를 출력
 	show(){
 		if(!this.is_show){
