@@ -253,6 +253,10 @@ class cocoButtomSheetJS{
 		return this.is_show;
 	};
 	
+	anotherTouchElement(element){
+		
+	};
+	
 	//바텀시트를 출력
 	show(){
 		if(!this.is_show){
