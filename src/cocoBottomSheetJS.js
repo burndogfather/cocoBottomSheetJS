@@ -92,7 +92,6 @@ class cocoButtomSheetJS{
 		//handle이벤트
 		if(this.ismobile){
 			this.BSElement.querySelector('.cocoButtomSheet_handle').addEventListener('touchstart', (e)=>{
-				console.log('test!!!');
 				e.stopImmediatePropagation();
 				e.stopPropagation();
 				//클릭시작
@@ -146,6 +145,7 @@ class cocoButtomSheetJS{
 	
 	//터치드래그 진행중
 	touchmoving(event){
+		
 		if(this.moving){
 			let wh = window.innerHeight;
 			let pageY;
@@ -164,6 +164,7 @@ class cocoButtomSheetJS{
 			let up = false;
 			if(this.newlytouchY > pageY){
 				up = true;
+				console.log('up');
 			}else{
 				up = false;
 			}
