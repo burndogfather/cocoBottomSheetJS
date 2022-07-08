@@ -244,8 +244,34 @@ class cocoBottomSheetJS{
 	};
 	
 	anotherHandle(Element){
-		Element.classList.add('cocoBottomSheet_handle');
-		return null;
+		//handle이벤트
+		if(this.ismobile){
+			Element.addEventListener('touchstart', (e)=>{
+				e.stopImmediatePropagation();
+				e.stopPropagation();
+				//클릭시작
+				this.touchstart(e);
+			});
+			Element.addEventListener('touchmove', (e)=>{
+				e.stopImmediatePropagation();
+				e.stopPropagation();
+				//클릭움직임
+				this.touchmoving(e);
+			});
+			Element.addEventListener('touchend', (e)=>{
+				e.stopImmediatePropagation();
+				e.stopPropagation();
+				//클릭끝남
+				this.touchend(e);
+			});
+			Element.addEventListener('touchcancel', (e)=>{
+				e.stopImmediatePropagation();
+				e.stopPropagation();
+				//클릭끝남
+				this.touchend(e);
+			});
+		}
+		
 	};
 	
 	//htmlcode내용을 확인
