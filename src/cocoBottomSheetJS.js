@@ -93,18 +93,26 @@ class cocoButtomSheetJS{
 		//handle이벤트
 		if(this.ismobile){
 			this.BSElement.querySelector('.cocoButtomSheet_handle').addEventListener('touchstart', (e)=>{
+				e.stopImmediatePropagation();
+				e.stopPropagation();
 				//클릭시작
 				this.touchstart(e);
 			});
 			this.BSElement.querySelector('.cocoButtomSheet_handle').addEventListener('touchmove', (e)=>{
+				e.stopImmediatePropagation();
+				e.stopPropagation();
 				//클릭움직임
 				this.touchmoving(e);
 			});
 			this.BSElement.querySelector('.cocoButtomSheet_handle').addEventListener('touchend', (e)=>{
+				e.stopImmediatePropagation();
+				e.stopPropagation();
 				//클릭끝남
 				this.touchend(e);
 			});
 			this.BSElement.querySelector('.cocoButtomSheet_handle').addEventListener('touchcancel', (e)=>{
+				e.stopImmediatePropagation();
+				e.stopPropagation();
 				//클릭끝남
 				this.touchend(e);
 			});
@@ -113,8 +121,7 @@ class cocoButtomSheetJS{
 	
 	//터치를 시작하는 순간 시작좌표를 수집
 	touchstart(event){
-		event.stopImmediatePropagation();
-		event.stopPropagation();
+		
 		if(!this.moving){
 			this.moving = true;
 			let wh = window.innerHeight;
@@ -140,8 +147,6 @@ class cocoButtomSheetJS{
 	
 	//터치드래그 진행중
 	touchmoving(event){
-		event.stopImmediatePropagation();
-		event.stopPropagation();
 		if(this.moving){
 			let wh = window.innerHeight;
 			let pageY;
@@ -189,8 +194,6 @@ class cocoButtomSheetJS{
 	
 	//터치드래그 끝남
 	touchend(event){
-		event.stopImmediatePropagation();
-		event.stopPropagation();
 		if(this.moving){
 			this.moving = false;
 			
