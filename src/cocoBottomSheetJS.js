@@ -244,7 +244,8 @@ class cocoBottomSheetJS{
 	};
 	
 	anotherHandle(Element){
-		
+		Element.classList.add('cocoBottomSheet_handle');
+		return null;
 	};
 	
 	//htmlcode내용을 확인
