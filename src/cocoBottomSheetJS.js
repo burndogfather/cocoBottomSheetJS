@@ -136,7 +136,12 @@ class cocoBottomSheetJS{
 				//클릭끝남
 				this.touchend(e);
 			});
-			observer.observe(target, { attributes : true, attributeFilter : ['style'] });
+			var observer = new MutationObserver(function(mutations) {
+				mutations.forEach(function(mutationRecord) {
+					console.log('style changed!');
+				});    
+			});
+			observer.observe(this.BSElement, {attributes:true, attributeFilter:['style']});
 		}
 	};
 	
