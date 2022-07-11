@@ -60,7 +60,10 @@ class cocoBottomSheetJS{
 	//클래스 선언시 자동실행
 	init(){
 		
-		
+		document.querySelector('body').prepend(this.BSElement);
+		if(this.overlayer){
+			document.querySelector('body').prepend(this.BSoverElement);
+		}
 		
 		//min 사이즈 재정의
 		if(/^[0-9]+$/.test(this.min)){
@@ -297,10 +300,7 @@ class cocoBottomSheetJS{
 		if(!this.is_show){
 			this.is_show = true;
 			
-			document.querySelector('body').prepend(this.BSElement);
-			if(this.overlayer){
-				document.querySelector('body').prepend(this.BSoverElement);
-			}
+			
 			
 			this.BSoverElement.classList.add('cocoBottomSheet_fadein');
 			document.body.classList.add('cocoBottomSheetforbounse');
@@ -321,11 +321,6 @@ class cocoBottomSheetJS{
 	showmax(){
 		if(!this.is_show){
 			this.is_show = true;
-			
-			document.querySelector('body').prepend(this.BSElement);
-			if(this.overlayer){
-				document.querySelector('body').prepend(this.BSoverElement);
-			}
 			
 			this.BSoverElement.classList.add('cocoBottomSheet_fadein');
 			document.body.classList.add('cocoBottomSheetforbounse');
