@@ -32,6 +32,20 @@ class cocoBottomSheetJS{
 		this.BSbuttonElement.classList.add('cocoBottomSheet_handledesign');
 		this.BSbuttonElement.classList.add('cocoBottomSheet_handle');
 		
+		
+		
+		//추가적인 스크립트
+		this.jsData = null;
+		this.callback = null;
+		
+		this.init();
+	};
+	
+	
+	//클래스 선언시 자동실행
+	init(){
+		
+		
 		if(this.overlayer){
 			//오버레이어 구성
 			this.BSoverElement = document.createElement('article');
@@ -50,17 +64,6 @@ class cocoBottomSheetJS{
 		}else{
 			this.BSElement.innerHTML = this.code;
 		}
-		
-		//추가적인 스크립트
-		this.jsData = null;
-		this.callback = null;
-		
-		this.init();
-	};
-	
-	
-	//클래스 선언시 자동실행
-	init(){
 		
 		document.querySelector('body').prepend(this.BSElement);
 		if(this.overlayer){
