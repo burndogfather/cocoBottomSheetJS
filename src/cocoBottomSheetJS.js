@@ -27,6 +27,8 @@ class cocoBottomSheetJS{
 		this.newlytouchY = 0; //바로직전의 마우스좌표
 		
 		this.BSoverElement = null;
+		this.BSElement = null;
+		this.BSbuttonElement = null;
 		
 		//추가적인 스크립트
 		this.jsData = null;
