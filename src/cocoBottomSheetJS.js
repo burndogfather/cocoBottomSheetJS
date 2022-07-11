@@ -321,7 +321,6 @@ class cocoBottomSheetJS{
 			}else{
 				this.BSElement.style.transform = 'translate(0px, -100%)';
 			}
-			this.BSElement.style.transition = 'none';
 			if(this.jsData !== null){
 				this.jsData();
 			}
@@ -340,7 +339,6 @@ class cocoBottomSheetJS{
 			}else{
 				this.BSElement.style.transform = 'translate(0px, -100%)';
 			}
-			this.BSElement.style.transition = 'none';
 			if(this.jsData !== null){
 				this.jsData();
 			}
@@ -359,7 +357,7 @@ class cocoBottomSheetJS{
 			}else{
 				this.BSElement.style.transform = 'translate(150%, -100%)';
 			}
-			this.BSElement.style.transition = 'all 0.1s ease-out';
+			this.BSElement.style.transition = 'all 0.2s ease-out';
 			if(this.callback !== null){
 				this.callback();
 			}
