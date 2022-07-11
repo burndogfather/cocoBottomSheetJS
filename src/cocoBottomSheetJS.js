@@ -136,6 +136,7 @@ class cocoBottomSheetJS{
 				//클릭끝남
 				this.touchend(e);
 			});
+			observer.observe(target, { attributes : true, attributeFilter : ['style'] });
 		}
 	};
 	
