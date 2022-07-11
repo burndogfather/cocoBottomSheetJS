@@ -60,8 +60,8 @@ function loadCode(_this){
 	
 	//You can modify the style of the bottom sheet on the spot.
 	bottomsheet.setcss({
-		'background-color':'#111',
-		'color':'#f1f1f1'
+		'background-color','#111',
+		'color','#f1f1f1'
 	});
 	
 }
