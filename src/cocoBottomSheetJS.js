@@ -294,13 +294,13 @@ class cocoBottomSheetJS{
 	//바텀시트를 출력
 	show(){
 		if(!this.is_show){
-			document.querySelector('body').prepend(this.BSElement);
+			this.is_show = true;
 			
+			document.querySelector('body').prepend(this.BSElement);
 			if(this.overlayer){
 				document.querySelector('body').prepend(this.BSoverElement);
 			}
 			
-			this.is_show = true;
 			this.BSoverElement.classList.add('cocoBottomSheet_fadein');
 			document.body.classList.add('cocoBottomSheetforbounse');
 			if(this.ismobile){
@@ -318,6 +318,7 @@ class cocoBottomSheetJS{
 	showmax(){
 		if(!this.is_show){
 			this.is_show = true;
+			
 			this.BSoverElement.classList.add('cocoBottomSheet_fadein');
 			document.body.classList.add('cocoBottomSheetforbounse');
 			if(this.ismobile){
@@ -327,6 +328,8 @@ class cocoBottomSheetJS{
 			}
 			this.BSElement.style.transition = 'none';
 			this.jsData();
+			
+			
 		}
 	};
 	
@@ -345,6 +348,9 @@ class cocoBottomSheetJS{
 			if(this.callback !== null){
 				this.callback();
 			}
+			
+			this.BSElement.remove();
+			this.BSoverElement.remove();
 			
 		}
 	};
