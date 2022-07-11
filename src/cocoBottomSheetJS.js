@@ -43,9 +43,8 @@ class cocoBottomSheetJS{
 		this.BSbuttonElement.classList.add('cocoBottomSheet_handle');
 		
 		if(this.ismobile){
-			
 			this.BSElement.innerHTML = this.code;
-			document.body.appendChild(this.BSbuttonElement);
+			this.BSElement.appendChild(this.BSbuttonElement);
 		}else{
 			this.BSElement.innerHTML = this.code;
 		}
