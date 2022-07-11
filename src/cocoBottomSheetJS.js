@@ -1,4 +1,4 @@
-'use strict';
+
 class cocoBottomSheetJS{
 	constructor({
 		//입력데이터
@@ -31,6 +31,7 @@ class cocoBottomSheetJS{
 			let old_overlayer = document.querySelectorAll('cocoBottomSheet_overlayer');
 			for(let i=0; i<old_overlayer.length; i++){
 				old_overlayer[i].remove();
+				console.log(old_overlayer[i]);
 			}
 			this.BSoverElement = document.createElement('article');
 			this.BSoverElement.classList.add('cocoBottomSheet_overlayer');
