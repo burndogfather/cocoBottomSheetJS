@@ -344,6 +344,12 @@ class cocoBottomSheetJS{
 			if(this.jsData !== null){
 				this.jsData();
 			}
+		}else{
+			if(this.ismobile){
+				this.BSElement.style.transform = 'translate(0px, -'+this.max+'px)';
+			}else{
+				this.BSElement.style.transform = 'translate(0px, -100%)';
+			}
 		}
 	};
 	
