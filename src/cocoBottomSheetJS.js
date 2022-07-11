@@ -217,7 +217,8 @@ class cocoBottomSheetJS{
 	//htmlcode를 재정의
 	sethtml(htmlcode){
 		this.code = htmlcode;
-		this.BSElement.innerHTML = this.BSElement.innerHTML + this.code;
+		this.BSElement.innerHTML = this.code;
+		this.BSElement.appendChild(this.BSbuttonElement);
 	};
 	
 	//바텀시트 스타일재정의
