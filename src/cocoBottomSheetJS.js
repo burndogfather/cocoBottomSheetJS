@@ -26,6 +26,18 @@ class cocoBottomSheetJS{
 		this.starttouchY = 0; //마우스최초좌표
 		this.newlytouchY = 0; //바로직전의 마우스좌표
 		
+		this.BSoverElement = null;
+		
+		//추가적인 스크립트
+		this.jsData = null;
+		this.callback = null;
+		
+		this.init();
+	};
+	
+	//클래스 선언시 자동실행
+	init(){
+		
 		if(this.overlayer){
 			//오버레이어 구성
 			this.BSoverElement = document.createElement('article');
@@ -55,15 +67,6 @@ class cocoBottomSheetJS{
 			document.querySelector('body').prepend(this.BSoverElement);
 		}
 		
-		//추가적인 스크립트
-		this.jsData = null;
-		this.callback = null;
-		
-		this.init();
-	};
-	
-	//클래스 선언시 자동실행
-	init(){
 		//min 사이즈 재정의
 		if(/^[0-9]+$/.test(this.min)){
 			this.min = parseInt(this.min);
