@@ -28,9 +28,9 @@
 				bottomsheet.anotherHandle(document.querySelector('#apt'));
 				
 				bottomsheet.setjs(function(){
+					console.log('isvisible() : '+bottomsheet.isvisible());
 					let check_box = document.querySelector('.check_box');
 					check_box.scrollTo({top:0, left:0, behavior:'instant'});
-					//alert('isvisible() : '+bottomsheet.isvisible());
 				});
 				
 				bottomsheet.setcallback(function(){
