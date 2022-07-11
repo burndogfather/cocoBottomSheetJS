@@ -210,6 +210,7 @@ class cocoBottomSheetJS{
 				this.BSElement.style.transform = 'translate(0, ' + maxcalc + 'px)';
 			}
 			
+			console.log();
 			this.newlytouchY = pageY;
 			
 		}
