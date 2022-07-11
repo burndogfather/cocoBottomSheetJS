@@ -26,16 +26,6 @@ class cocoBottomSheetJS{
 		this.starttouchY = 0; //마우스최초좌표
 		this.newlytouchY = 0; //바로직전의 마우스좌표
 		
-		
-		
-		//추가적인 스크립트
-		this.jsData = null;
-		this.callback = null;
-		
-		this.init();
-	};
-	
-	domcreate(){
 		if(this.overlayer){
 			//오버레이어 구성
 			this.BSoverElement = document.createElement('article');
@@ -59,41 +49,13 @@ class cocoBottomSheetJS{
 			this.BSElement.innerHTML = this.code;
 		}
 		
-		document.querySelector('body').prepend(this.BSElement);
+		//추가적인 스크립트
+		this.jsData = null;
+		this.callback = null;
 		
-		if(this.overlayer){
-			document.querySelector('body').prepend(this.BSoverElement);
-		}
-		
-		//handle이벤트
-		if(this.ismobile){
-			this.BSbuttonElement.addEventListener('touchstart', (e)=>{
-				e.stopImmediatePropagation();
-				e.stopPropagation();
-				//클릭시작
-				this.touchstart(e);
-			});
-			this.BSbuttonElement.addEventListener('touchmove', (e)=>{
-				e.stopImmediatePropagation();
-				e.stopPropagation();
-				//클릭움직임
-				this.touchmoving(e);
-			});
-			this.BSbuttonElement.addEventListener('touchend', (e)=>{
-				e.stopImmediatePropagation();
-				e.stopPropagation();
-				//클릭끝남
-				this.touchend(e);
-			});
-			this.BSbuttonElement.addEventListener('touchcancel', (e)=>{
-				e.stopImmediatePropagation();
-				e.stopPropagation();
-				//클릭끝남
-				this.touchend(e);
-			});
-		}
-		
+		this.init();
 	};
+	
 	
 	//클래스 선언시 자동실행
 	init(){
@@ -131,7 +93,33 @@ class cocoBottomSheetJS{
 		}
 		
 		
-		
+		//handle이벤트
+		if(this.ismobile){
+			this.BSbuttonElement.addEventListener('touchstart', (e)=>{
+				e.stopImmediatePropagation();
+				e.stopPropagation();
+				//클릭시작
+				this.touchstart(e);
+			});
+			this.BSbuttonElement.addEventListener('touchmove', (e)=>{
+				e.stopImmediatePropagation();
+				e.stopPropagation();
+				//클릭움직임
+				this.touchmoving(e);
+			});
+			this.BSbuttonElement.addEventListener('touchend', (e)=>{
+				e.stopImmediatePropagation();
+				e.stopPropagation();
+				//클릭끝남
+				this.touchend(e);
+			});
+			this.BSbuttonElement.addEventListener('touchcancel', (e)=>{
+				e.stopImmediatePropagation();
+				e.stopPropagation();
+				//클릭끝남
+				this.touchend(e);
+			});
+		}
 	};
 	
 	//터치를 시작하는 순간 시작좌표를 수집
@@ -306,7 +294,12 @@ class cocoBottomSheetJS{
 	//바텀시트를 출력
 	show(){
 		if(!this.is_show){
-			this.domcreate();
+			document.querySelector('body').prepend(this.BSElement);
+			
+			if(this.overlayer){
+				document.querySelector('body').prepend(this.BSoverElement);
+			}
+			
 			this.is_show = true;
 			this.BSoverElement.classList.add('cocoBottomSheet_fadein');
 			document.body.classList.add('cocoBottomSheetforbounse');
