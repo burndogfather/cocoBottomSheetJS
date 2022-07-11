@@ -252,6 +252,7 @@ class cocoBottomSheetJS{
 	//바텀시트를 제어하는 요소를 추가
 	anotherHandle(Element){
 		//handle이벤트
+		console.log(Element);
 		if(this.ismobile && typeof Element == 'object'){
 			Element.classList.add('cocoBottomSheet_handle');
 			Element.addEventListener('touchstart', (e)=>{
