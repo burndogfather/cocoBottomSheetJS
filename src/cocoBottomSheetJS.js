@@ -50,8 +50,8 @@ class cocoBottomSheetJS{
 		}
 		
 		//추가적인 스크립트
-		this.jsData = '';
-		this.callback = '';
+		this.jsData = null;
+		this.callback = null;
 		
 		this.init();
 	};
@@ -310,8 +310,9 @@ class cocoBottomSheetJS{
 				this.BSElement.style.transform = 'translate(0px, -100%)';
 			}
 			this.BSElement.style.transition = 'none';
-			this.jsData();
-			
+			if(this.jsData !== null){
+				this.jsData();
+			}
 		}
 	};
 	
@@ -333,7 +334,9 @@ class cocoBottomSheetJS{
 				this.BSElement.style.transform = 'translate(0px, -100%)';
 			}
 			this.BSElement.style.transition = 'none';
-			this.jsData();
+			if(this.jsData !== null){
+				this.jsData();
+			}
 			
 			
 		}
