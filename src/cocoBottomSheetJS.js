@@ -43,8 +43,9 @@ class cocoBottomSheetJS{
 		this.BSbuttonElement.classList.add('cocoBottomSheet_handle');
 		
 		if(this.ismobile){
-			document.body.appendChild(this.BSbuttonElement);
+			
 			this.BSElement.innerHTML = this.code;
+			document.body.appendChild(this.BSbuttonElement);
 		}else{
 			this.BSElement.innerHTML = this.code;
 		}
@@ -97,25 +98,25 @@ class cocoBottomSheetJS{
 		
 		//handle이벤트
 		if(this.ismobile){
-			this.BSElement.querySelector('.cocoBottomSheet_handle').addEventListener('touchstart', (e)=>{
+			this.BSbuttonElement.addEventListener('touchstart', (e)=>{
 				e.stopImmediatePropagation();
 				e.stopPropagation();
 				//클릭시작
 				this.touchstart(e);
 			});
-			this.BSElement.querySelector('.cocoBottomSheet_handle').addEventListener('touchmove', (e)=>{
+			this.BSbuttonElement.addEventListener('touchmove', (e)=>{
 				e.stopImmediatePropagation();
 				e.stopPropagation();
 				//클릭움직임
 				this.touchmoving(e);
 			});
-			this.BSElement.querySelector('.cocoBottomSheet_handle').addEventListener('touchend', (e)=>{
+			this.BSbuttonElement.addEventListener('touchend', (e)=>{
 				e.stopImmediatePropagation();
 				e.stopPropagation();
 				//클릭끝남
 				this.touchend(e);
 			});
-			this.BSElement.querySelector('.cocoBottomSheet_handle').addEventListener('touchcancel', (e)=>{
+			this.BSbuttonElement.addEventListener('touchcancel', (e)=>{
 				e.stopImmediatePropagation();
 				e.stopPropagation();
 				//클릭끝남
