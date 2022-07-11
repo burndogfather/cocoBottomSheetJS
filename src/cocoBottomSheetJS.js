@@ -26,6 +26,12 @@ class cocoBottomSheetJS{
 		this.starttouchY = 0; //마우스최초좌표
 		this.newlytouchY = 0; //바로직전의 마우스좌표
 		
+		this.BSElement = null;
+		this.BSoverElement = null;
+		this.BSbuttonElement = document.createElement('button');
+		this.BSbuttonElement.classList.add('cocoBottomSheet_handledesign');
+		this.BSbuttonElement.classList.add('cocoBottomSheet_handle');
+		
 		if(this.overlayer){
 			//오버레이어 구성
 			this.BSoverElement = document.createElement('article');
@@ -37,10 +43,6 @@ class cocoBottomSheetJS{
 		}
 		this.BSElement = document.createElement('article');
 		this.BSElement.classList.add('cocoBottomSheet');
-		
-		this.BSbuttonElement = document.createElement('button');
-		this.BSbuttonElement.classList.add('cocoBottomSheet_handledesign');
-		this.BSbuttonElement.classList.add('cocoBottomSheet_handle');
 		
 		if(this.ismobile){
 			this.BSElement.innerHTML = this.code;
