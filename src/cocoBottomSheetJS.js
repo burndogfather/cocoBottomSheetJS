@@ -28,6 +28,10 @@ class cocoBottomSheetJS{
 		
 		if(this.overlayer){
 			//오버레이어 구성
+			let old_overlayer = document.querySelectorAll('cocoBottomSheet_overlayer');
+			for(let i=0; i<old_overlayer.length; i++){
+				old_overlayer[i].remove();
+			}
 			this.BSoverElement = document.createElement('article');
 			this.BSoverElement.classList.add('cocoBottomSheet_overlayer');
 			this.BSoverElement.addEventListener('click', (e)=>{
