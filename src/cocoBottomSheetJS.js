@@ -40,34 +40,7 @@ class cocoBottomSheetJS{
 	//클래스 선언시 자동실행
 	init(){
 		
-		if(this.overlayer){
-			//오버레이어 구성
-			this.BSoverElement = document.createElement('article');
-			this.BSoverElement.classList.add('cocoBottomSheet_overlayer');
-			this.BSoverElement.addEventListener('click', (e)=>{
-				//클릭시 닫음
-				this.hide();
-			});
-		}
-		this.BSElement = document.createElement('article');
-		this.BSElement.classList.add('cocoBottomSheet');
 		
-		this.BSbuttonElement = document.createElement('button');
-		this.BSbuttonElement.classList.add('cocoBottomSheet_handledesign');
-		this.BSbuttonElement.classList.add('cocoBottomSheet_handle');
-		
-		if(this.ismobile){
-			this.BSElement.innerHTML = this.code;
-			this.BSElement.appendChild(this.BSbuttonElement);
-		}else{
-			this.BSElement.innerHTML = this.code;
-		}
-		
-		document.querySelector('body').prepend(this.BSElement);
-		
-		if(this.overlayer){
-			document.querySelector('body').prepend(this.BSoverElement);
-		}
 		
 		//min 사이즈 재정의
 		if(/^[0-9]+$/.test(this.min)){
@@ -301,6 +274,37 @@ class cocoBottomSheetJS{
 	//바텀시트를 출력
 	show(){
 		if(!this.is_show){
+			
+			
+			if(this.overlayer){
+				//오버레이어 구성
+				this.BSoverElement = document.createElement('article');
+				this.BSoverElement.classList.add('cocoBottomSheet_overlayer');
+				this.BSoverElement.addEventListener('click', (e)=>{
+					//클릭시 닫음
+					this.hide();
+				});
+			}
+			this.BSElement = document.createElement('article');
+			this.BSElement.classList.add('cocoBottomSheet');
+			
+			this.BSbuttonElement = document.createElement('button');
+			this.BSbuttonElement.classList.add('cocoBottomSheet_handledesign');
+			this.BSbuttonElement.classList.add('cocoBottomSheet_handle');
+			
+			if(this.ismobile){
+				this.BSElement.innerHTML = this.code;
+				this.BSElement.appendChild(this.BSbuttonElement);
+			}else{
+				this.BSElement.innerHTML = this.code;
+			}
+			
+			document.querySelector('body').prepend(this.BSElement);
+			
+			if(this.overlayer){
+				document.querySelector('body').prepend(this.BSoverElement);
+			}
+			
 			this.is_show = true;
 			this.BSoverElement.classList.add('cocoBottomSheet_fadein');
 			document.body.classList.add('cocoBottomSheetforbounse');
