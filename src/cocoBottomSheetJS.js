@@ -338,7 +338,10 @@ class cocoBottomSheetJS{
 				this.BSElement.style.transform = 'translate(150%, -100%)';
 			}
 			this.BSElement.style.transition = 'all 0.1s ease-out';
-			this.callback();
+			if(this.callback !== null){
+				this.callback();
+			}
+			
 		}
 	};
 };
