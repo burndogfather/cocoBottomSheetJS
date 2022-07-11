@@ -202,7 +202,6 @@ class cocoBottomSheetJS{
 				this.BSElement.style.transform = 'translate(0, ' + calc + 'px)';
 			}
 			if(mincalc-this.autofilloffset < calc && !up){
-				this.BSElement.style.transition = 'all 0.2s ease-out';
 				this.moving = false;
 				this.hide();
 			}
@@ -355,12 +354,12 @@ class cocoBottomSheetJS{
 			this.BSoverElement.classList.remove('cocoBottomSheet_fadein');
 			document.body.classList.remove('cocoBottomSheetforbounse');
 			document.querySelector('html').classList.remove('cocoBottomSheetforbounse');
+			this.BSElement.style.transition = 'all 0.2s ease-out';
 			if(this.ismobile){
 				this.BSElement.style.transform = 'translate(0px, -0px)';
 			}else{
 				this.BSElement.style.transform = 'translate(150%, -100%)';
 			}
-			this.BSElement.style.transition = 'all 0.2s ease-out';
 			if(this.callback !== null){
 				this.callback();
 			}
