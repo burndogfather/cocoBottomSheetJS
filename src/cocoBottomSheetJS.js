@@ -136,6 +136,8 @@ class cocoBottomSheetJS{
 				//클릭끝남
 				this.touchend(e);
 			});
+			
+			//watchdog for moving
 			var observer = new MutationObserver(function(mutations) {
 				mutations.forEach(function(mutationRecord) {
 					console.log('style changed!');
