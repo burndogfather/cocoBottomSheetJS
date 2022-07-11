@@ -351,9 +351,6 @@ class cocoBottomSheetJS{
 	hide(){
 		if(this.is_show){
 			this.is_show = false;
-			this.BSoverElement.classList.remove('cocoBottomSheet_fadein');
-			document.body.classList.remove('cocoBottomSheetforbounse');
-			document.querySelector('html').classList.remove('cocoBottomSheetforbounse');
 			this.BSElement.style.transition = 'all 0.15s ease-out';
 			if(this.ismobile){
 				this.BSElement.style.transform = 'translate(0px, -0px)';
@@ -363,6 +360,9 @@ class cocoBottomSheetJS{
 			if(this.callback !== null){
 				this.callback();
 			}
+			this.BSoverElement.classList.remove('cocoBottomSheet_fadein');
+			document.body.classList.remove('cocoBottomSheetforbounse');
+			document.querySelector('html').classList.remove('cocoBottomSheetforbounse');
 		}
 	};
 };
