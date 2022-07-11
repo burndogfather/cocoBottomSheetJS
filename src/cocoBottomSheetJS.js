@@ -198,13 +198,16 @@ class cocoBottomSheetJS{
 			let mincalc = parseFloat('-'+this.min);
 			let whcalc = parseFloat('-'+wh);
 			if(whcalc <= calc && maxcalc <= calc){
+				this.BSElement.style.transition = 'none';
 				this.BSElement.style.transform = 'translate(0, ' + calc + 'px)';
 			}
 			if(mincalc-this.autofilloffset < calc && !up){
+				this.BSElement.style.transition = 'all 0.2s ease-out';
 				this.moving = false;
 				this.hide();
 			}
 			if(maxcalc+this.autofilloffset > calc && up){
+				this.BSElement.style.transition = 'all 0.2s ease-out';
 				this.BSElement.style.transform = 'translate(0, ' + maxcalc + 'px)';
 			}
 			
