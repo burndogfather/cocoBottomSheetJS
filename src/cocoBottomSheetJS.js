@@ -154,8 +154,6 @@ class cocoBottomSheetJS{
 			}
 			this.newlytouchY = this.starttouchY;
 			
-			
-			
 			let translate3d = this.BSElement.style.transform.match(/\(.*\)/gi)[0];
 			translate3d = translate3d.split(',')[1];
 			translate3d = translate3d.replace(/[^0-9|\-|.]/g,'');
