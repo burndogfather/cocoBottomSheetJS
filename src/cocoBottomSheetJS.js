@@ -141,7 +141,7 @@ class cocoBottomSheetJS{
 			var observer = new MutationObserver(function(mutations) {
 				mutations.forEach(function(mutationRecord) {
 					console.log(this.max);
-				});    
+				});
 			});
 			observer.observe(this.BSElement, {attributes:true, attributeFilter:['style']});
 		}
