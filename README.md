@@ -60,8 +60,8 @@ function loadCode(_this){
 	
 	//You can modify the style of the bottom sheet on the spot.
 	bottomsheet.setcss({
-		'background-color','#111',
-		'color','#f1f1f1'
+		'background-color':'#111',
+		'color':'#f1f1f1'
 	});
 	
 }
@@ -83,7 +83,7 @@ function loadCode(_this){
 	bottomsheet.sethtml('Hello World!');
 	  
 	//setcs() <- Change the style of the bottom sheet.  
-	bottomsheet.setcss({'font-size','20px'});  
+	bottomsheet.setcss({'font-size':'20px'});  
 	
 	//You can force javascript to run when the bottom sheet is unfolded. Same role as callback function
 	bottomsheet.setjs(function(){
