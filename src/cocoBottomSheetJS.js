@@ -140,7 +140,7 @@ class cocoBottomSheetJS{
 			//watchdog for moving
 			var observer = new MutationObserver(function(mutations) {
 				mutations.forEach(function(mutationRecord) {
-					console.log('style changed!');
+					console.log(this.max);
 				});    
 			});
 			observer.observe(this.BSElement, {attributes:true, attributeFilter:['style']});
@@ -226,12 +226,10 @@ class cocoBottomSheetJS{
 	touchend(event){
 		if(this.moving){
 			this.moving = false;
-			
 			let translate3d = this.BSElement.style.transform.match(/\(.*\)/gi)[0];
 			translate3d = translate3d.split(',')[1];
 			translate3d = translate3d.replace(/[^0-9|\-|.]/g,'');
 			this.translatePOS = parseFloat(translate3d);
-			
 		}
 		
 	};
