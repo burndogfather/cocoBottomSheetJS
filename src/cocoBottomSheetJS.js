@@ -252,7 +252,6 @@ class cocoBottomSheetJS{
 	//바텀시트를 제어하는 요소를 추가
 	anotherHandle(Element){
 		//handle이벤트
-		console.log(Element);
 		if(this.ismobile && typeof Element == 'object'){
 			Element.classList.add('cocoBottomSheet_handle');
 			Element.addEventListener('touchstart', (e)=>{
@@ -305,6 +304,7 @@ class cocoBottomSheetJS{
 			
 			this.BSoverElement.classList.add('cocoBottomSheet_fadein');
 			document.body.classList.add('cocoBottomSheetforbounse');
+			.html.classList.add('cocoBottomSheetforbounse');
 			if(this.ismobile){
 				this.BSElement.style.transform = 'translate(0px, -'+this.min+'px)';
 			}else{
