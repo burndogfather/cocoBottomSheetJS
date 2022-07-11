@@ -50,8 +50,8 @@ class cocoBottomSheetJS{
 		}
 		
 		//추가적인 스크립트
-		this.jsData = null;
-		this.callback = null;
+		this.jsData = '';
+		this.callback = '';
 		
 		this.init();
 	};
@@ -230,6 +230,7 @@ class cocoBottomSheetJS{
 	
 	//바텀시트 스크립트추가
 	setjs(jsdata){
+		
 		if(typeof jsdata === 'function'){
 			this.jsData = jsdata;
 		}
