@@ -321,7 +321,6 @@ class cocoBottomSheetJS{
 	showmax(){
 		if(!this.is_show){
 			this.is_show = true;
-			
 			this.BSoverElement.classList.add('cocoBottomSheet_fadein');
 			document.body.classList.add('cocoBottomSheetforbounse');
 			document.querySelector('html').classList.add('cocoBottomSheetforbounse');
@@ -355,9 +354,6 @@ class cocoBottomSheetJS{
 			if(this.callback !== null){
 				this.callback();
 			}
-			
-			this.BSElement.remove();
-			this.BSoverElement.remove();
 			
 		}
 	};
