@@ -69,11 +69,11 @@ class cocoBottomSheetJS{
 		}
 		if(this.ismobile){
 			this.BSElement.appendChild(this.BSbuttonElement);
-			$(this.BSElement).html(this.code)
+			$(this.BSElement).html(this.code);
 			//this.BSElement.innerHTML = this.code;
 			
 		}else{
-			$(this.BSElement).html(this.code)
+			$(this.BSElement).html(this.code);
 			//this.BSElement.innerHTML = this.code;
 		}
 		
