@@ -88,7 +88,7 @@ class cocoBottomSheetJS{
 			let script_plain = '';
 			for(let i=0; i<script.length; i++){
 				if(script[i].src){
-					
+					script_src
 				}
 				console.log(script[i].src);
 				console.log(script[i].innerText);
