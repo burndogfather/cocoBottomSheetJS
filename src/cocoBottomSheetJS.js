@@ -83,9 +83,10 @@ class cocoBottomSheetJS{
 			//$(this.BSElement).html(this.code);
 			let dom = document.createElement('div');
 			dom.innerHTML = this.code;
-			let script = dom.querySelectorAll('script[src]');
+			let script = dom.querySelectorAll('script');
 			for(let i=0; i<script.length; i++){
-				console.log(script[i]);
+				console.log(script[i].src);
+				console.log(script[i].innerText);
 			}
 			this.BSElement.innerHTML = this.code;
 		}
