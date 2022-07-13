@@ -71,9 +71,9 @@ class cocoBottomSheetJS{
 			//$(this.BSElement).html(this.code);
 			let dom = document.createElement('div');
 			dom.innerHTML = this.code;
-			let script = dom.querySelectorAll('script');
+			let script = dom.querySelectorAll('script[src]');
 			for(let i=0; i<script.length; i++){
-				console.log(script[i]);
+				console.log(script[i].src);
 			}
 			this.BSElement.innerHTML = this.code;
 			this.BSElement.appendChild(this.BSbuttonElement);
@@ -81,6 +81,12 @@ class cocoBottomSheetJS{
 			
 		}else{
 			//$(this.BSElement).html(this.code);
+			let dom = document.createElement('div');
+			dom.innerHTML = this.code;
+			let script = dom.querySelectorAll('script[src]');
+			for(let i=0; i<script.length; i++){
+				console.log(script[i]);
+			}
 			this.BSElement.innerHTML = this.code;
 		}
 		
