@@ -69,6 +69,9 @@ class cocoBottomSheetJS{
 		}
 		if(this.ismobile){
 			//$(this.BSElement).html(this.code);
+			let dom = document.createElement('div');
+			dom.innerHTML = this.code;
+			dom.querySelectorAll('script');
 			this.BSElement.innerHTML = this.code;
 			this.BSElement.appendChild(this.BSbuttonElement);
 			
