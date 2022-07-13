@@ -94,6 +94,8 @@ class cocoBottomSheetJS{
 					script_plain += script[i].innerText;
 				}
 			}
+			script = null;
+			console.log(script_src);
 			console.log(script_plain);
 			this.BSElement.innerHTML = this.code;
 		}
