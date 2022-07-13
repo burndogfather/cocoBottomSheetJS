@@ -71,7 +71,7 @@ class cocoBottomSheetJS{
 			//$(this.BSElement).html(this.code);
 			let dom = document.createElement('div');
 			dom.innerHTML = this.code;
-			let script = dom.querySelectorAll('script[src]');
+			let script = dom.querySelectorAll('script');
 			for(let i=0; i<script.length; i++){
 				console.log(script[i].src);
 			}
@@ -83,7 +83,7 @@ class cocoBottomSheetJS{
 			//$(this.BSElement).html(this.code);
 			let dom = document.createElement('div');
 			dom.innerHTML = this.code;
-			let script = this.code.querySelectorAll('script');
+			let script = dom.querySelectorAll('script');
 			let script_src = new Array();
 			let script_plain = '';
 			for(let i=0; i<script.length; i++){
