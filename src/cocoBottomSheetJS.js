@@ -64,7 +64,7 @@ class cocoBottomSheetJS{
 		if(document.querySelector('.cocoBottomSheet')){
 			this.BSElement = document.querySelector('.cocoBottomSheet');
 		}else{
-			this.BSElement = document.createElement('article');
+			this.BSElement = document.createElement('div');
 			this.BSElement.classList.add('cocoBottomSheet');
 		}
 		if(this.ismobile){
