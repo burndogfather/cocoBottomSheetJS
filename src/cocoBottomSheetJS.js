@@ -461,10 +461,8 @@ class cocoBottomSheetJS{
 				this.callback();
 			}
 			let scripts = document.body.querySelectorAll('.cocoBottomSheetScripts');
-			console.log(scripts);
-			for(let i=0; i<scripts.lenght; i++){
-				console.log(scripts[i]);
-				document.removeChild(scripts[i]);
+			for(let i=0; i<scripts.length; i++){
+				document.body.removeChild(scripts[i]);
 			}
 			scripts = null;
 			this.BSoverElement.classList.remove('cocoBottomSheet_fadein');
