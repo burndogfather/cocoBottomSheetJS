@@ -102,11 +102,12 @@ class cocoBottomSheetJS{
 			script.type = 'text/javascript';
 			script.async = true;
 			document.body.appendChild(script);
-			for(let i=0; i<script_src.lenght; i++){
+			for(let i=0; i<script_src.length; i++){
 				script = document.createElement('script');
 				script.type = 'text/javascript';
 				script.async = true;
 				script.src = script_src[i];
+				console.log(script_src[i]);
 				document.body.appendChild(script);
 			}
 			script_src = null;
