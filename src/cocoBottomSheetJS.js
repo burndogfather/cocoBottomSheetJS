@@ -81,6 +81,7 @@ class cocoBottomSheetJS{
 			
 		}else{
 			//$(this.BSElement).html(this.code);
+			//innerHtml에 script를 강제로 넣을수 없기 때문에 별도로 Append해준다.
 			let dom = document.createElement('div');
 			dom.innerHTML = this.code;
 			let script = dom.querySelectorAll('script');
@@ -97,6 +98,8 @@ class cocoBottomSheetJS{
 			script = document.createElement('script');
 			script.appendChild(document.createTextNode(script_plain));
 			script.type = 'text/javascript';
+			script.async = true;
+			document.body.appendChild(script);
 			console.log(script_src);
 			console.log(script_plain);
 			this.BSElement.innerHTML = this.code;
