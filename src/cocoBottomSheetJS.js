@@ -101,13 +101,14 @@ class cocoBottomSheetJS{
 			script_plain = null;
 			script.type = 'text/javascript';
 			script.async = true;
+			script.classList.add('cocoBottomSheetJS');
 			document.body.appendChild(script);
 			for(let i=0; i<script_src.length; i++){
 				script = document.createElement('script');
 				script.type = 'text/javascript';
 				script.async = true;
 				script.src = script_src[i];
-				script.flag = 'cocoBottomSheetJS';
+				script.classList.add('cocoBottomSheetJS');
 				console.log(script_src[i]);
 				document.body.appendChild(script);
 			}
