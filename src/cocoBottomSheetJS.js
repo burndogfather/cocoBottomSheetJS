@@ -85,6 +85,7 @@ class cocoBottomSheetJS{
 			let dom = document.createElement('div');
 			dom.innerHTML = this.code;
 			let script = dom.querySelectorAll('script');
+			dom = null;
 			let script_src = new Array();
 			let script_plain = '';
 			for(let i=0; i<script.length; i++){
@@ -97,12 +98,18 @@ class cocoBottomSheetJS{
 			}
 			script = document.createElement('script');
 			script.appendChild(document.createTextNode(script_plain));
+			script_plain = null;
 			script.type = 'text/javascript';
 			script.async = true;
 			document.body.appendChild(script);
 			for(let i=0; i<script_src.lenght; i++){
-				
+				script = document.createElement('script');
+				script.type = 'text/javascript';
+				script.async = true;
+				script.src = script_src[i];
+				document.body.appendChild(script);
 			}
+			script = null;
 			this.BSElement.innerHTML = this.code;
 		}
 		
