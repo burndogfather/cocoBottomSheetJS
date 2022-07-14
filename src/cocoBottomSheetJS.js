@@ -463,6 +463,7 @@ class cocoBottomSheetJS{
 			let scripts = document.body.querySelectorAll('.cocoBottomSheetScripts');
 			console.log(scripts);
 			for(let i=0; i<scripts.lenght; i++){
+				console.log(scripts[i]);
 				document.removeChild(scripts[i]);
 			}
 			scripts = null;
