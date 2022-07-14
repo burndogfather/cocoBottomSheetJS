@@ -100,9 +100,10 @@ class cocoBottomSheetJS{
 			script.type = 'text/javascript';
 			script.async = true;
 			document.body.appendChild(script);
+			dom.removeChild('script');
 			console.log(script_src);
 			console.log(script_plain);
-			this.BSElement.innerHTML = this.code;
+			this.BSElement.innerHTML = dom;
 		}
 		
 		document.querySelector('body').prepend(this.BSElement);
