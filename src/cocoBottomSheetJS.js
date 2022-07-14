@@ -68,20 +68,7 @@ class cocoBottomSheetJS{
 			this.BSElement.classList.add('cocoBottomSheet');
 		}
 		if(this.ismobile){
-			//$(this.BSElement).html(this.code);
-			let dom = document.createElement('div');
-			dom.innerHTML = this.code;
-			let script = dom.querySelectorAll('script');
-			for(let i=0; i<script.length; i++){
-				console.log(script[i].src);
-			}
-			this.BSElement.innerHTML = this.code;
-			this.BSElement.appendChild(this.BSbuttonElement);
-			
-			
-		}else{
-			//$(this.BSElement).html(this.code);
-			//innerHtml에 script를 강제로 넣을수 없기 때문에 별도로 Append해준다.
+			//innerHtml에 script를 강제로 넣을수 없기 때문에 별도로 Append해줘야함
 			let dom = document.createElement('div');
 			dom.innerHTML = this.code;
 			let script = dom.querySelectorAll('script');
@@ -101,15 +88,51 @@ class cocoBottomSheetJS{
 			script_plain = null;
 			script.type = 'text/javascript';
 			script.async = true;
-			script.classList.add('cocoBottomSheetJS');
+			script.classList.add('cocoBottomSheetScripts');
 			document.body.appendChild(script);
 			for(let i=0; i<script_src.length; i++){
 				script = document.createElement('script');
 				script.type = 'text/javascript';
 				script.async = true;
 				script.src = script_src[i];
-				script.classList.add('cocoBottomSheetJS');
-				console.log(script_src[i]);
+				script.classList.add('cocoBottomSheetScripts');
+				document.body.appendChild(script);
+			}
+			script_src = null;
+			script = null;
+			this.BSElement.innerHTML = this.code;
+			this.BSElement.appendChild(this.BSbuttonElement);
+			
+			
+		}else{
+			//innerHtml에 script를 강제로 넣을수 없기 때문에 별도로 Append해줘야함
+			let dom = document.createElement('div');
+			dom.innerHTML = this.code;
+			let script = dom.querySelectorAll('script');
+			dom = null;
+			let script_src = new Array();
+			let script_plain = '';
+			for(let i=0; i<script.length; i++){
+				if(script[i].src){
+					script_src.push(script[i].src);
+				}
+				if(script[i].innerText){
+					script_plain += script[i].innerText;
+				}
+			}
+			script = document.createElement('script');
+			script.appendChild(document.createTextNode(script_plain));
+			script_plain = null;
+			script.type = 'text/javascript';
+			script.async = true;
+			script.classList.add('cocoBottomSheetScripts');
+			document.body.appendChild(script);
+			for(let i=0; i<script_src.length; i++){
+				script = document.createElement('script');
+				script.type = 'text/javascript';
+				script.async = true;
+				script.src = script_src[i];
+				script.classList.add('cocoBottomSheetScripts');
 				document.body.appendChild(script);
 			}
 			script_src = null;
