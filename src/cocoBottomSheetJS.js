@@ -296,6 +296,38 @@ class cocoBottomSheetJS{
 	//htmlcode를 재정의
 	sethtml(htmlcode){
 		this.code = htmlcode;
+		//innerHtml에 script를 강제로 넣을수 없기 때문에 별도로 Append해줘야함
+		let dom = document.createElement('div');
+		dom.innerHTML = this.code;
+		let script = dom.querySelectorAll('script');
+		dom = null;
+		let script_src = new Array();
+		let script_plain = '';
+		for(let i=0; i<script.length; i++){
+			if(script[i].src){
+				script_src.push(script[i].src);
+			}
+			if(script[i].innerText){
+				script_plain += script[i].innerText;
+			}
+		}
+		script = document.createElement('script');
+		script.appendChild(document.createTextNode(script_plain));
+		script_plain = null;
+		script.type = 'text/javascript';
+		script.async = true;
+		script.classList.add('cocoBottomSheetScripts');
+		document.body.appendChild(script);
+		for(let i=0; i<script_src.length; i++){
+			script = document.createElement('script');
+			script.type = 'text/javascript';
+			script.async = true;
+			script.src = script_src[i];
+			script.classList.add('cocoBottomSheetScripts');
+			document.body.appendChild(script);
+		}
+		script_src = null;
+		script = null;
 		this.BSElement.innerHTML = this.code;
 		this.BSElement.appendChild(this.BSbuttonElement);
 	};
