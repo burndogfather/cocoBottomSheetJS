@@ -109,6 +109,7 @@ class cocoBottomSheetJS{
 				script.src = script_src[i];
 				document.body.appendChild(script);
 			}
+			script_src = null;
 			script = null;
 			this.BSElement.innerHTML = this.code;
 		}
