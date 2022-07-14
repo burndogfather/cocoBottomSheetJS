@@ -107,6 +107,7 @@ class cocoBottomSheetJS{
 				script.type = 'text/javascript';
 				script.async = true;
 				script.src = script_src[i];
+				script.flag = 'cocoBottomSheetJS';
 				console.log(script_src[i]);
 				document.body.appendChild(script);
 			}
