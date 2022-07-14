@@ -462,11 +462,13 @@ class cocoBottomSheetJS{
 			}
 			let scripts = document.body.querySelectorAll('.cocoBottomSheetScripts');
 			for(let i=0; i<scripts.lenght; i++){
-				
+				document.body.removeChild(scripts[i]);
 			}
+			scripts = null;
 			this.BSoverElement.classList.remove('cocoBottomSheet_fadein');
 			document.body.classList.remove('cocoBottomSheetforbounse');
 			document.querySelector('html').classList.remove('cocoBottomSheetforbounse');
 		}
+		return null;
 	};
 };
