@@ -489,4 +489,11 @@ class cocoBottomSheetJS{
 			}
 		}
 	};
+	
+	//닫을수 있는 바텀시트의 상태변경
+	setnotclose(flag){
+		if(typeof flag === 'boolean'){
+			this.notclose = flag;
+		}
+	};
 };
