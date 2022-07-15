@@ -6,7 +6,8 @@ class cocoBottomSheetJS{
 		overlayer,
 		min,
 		max,
-		autofilloffset
+		autofilloffset,
+		notclose
 	}){
 		//초기설정
 		if(/(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS)/i.test(window.navigator.userAgent)){
@@ -14,6 +15,14 @@ class cocoBottomSheetJS{
 		}else{
 			this.ismobile = false;
 		}
+		
+		//닫을수 있는 바텀시트인지
+		if(typeof notclose === 'boolean'){
+			this.notclose = notclose;
+		}else{
+			this.notclose = false;
+		}
+		
 		this.moving = false; //드래그중인지 flag
 		this.is_show = false; //바텀시트가 열림감지
 		this.code = htmlcode; //바텀시트에 들어갈 데이터
