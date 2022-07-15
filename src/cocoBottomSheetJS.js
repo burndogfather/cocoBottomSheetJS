@@ -480,6 +480,11 @@ class cocoBottomSheetJS{
 	hold(flag){
 		if(typeof flag === 'boolean'){
 			this.holdon = flag;
+			if(flag){
+				this.BSElement.removeChild(this.BSbuttonElement);
+			}else{
+				this.BSElement.appendChild(this.BSbuttonElement);
+			}
 		}
 	};
 };
