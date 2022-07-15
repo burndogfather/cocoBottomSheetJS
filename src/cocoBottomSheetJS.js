@@ -65,7 +65,7 @@ class cocoBottomSheetJS{
 				this.BSoverElement.classList.add('cocoBottomSheet_overlayer');
 			}
 			
-			if(!this.notclose){
+			if(!this.notclose && !this.holdon){
 				this.BSoverElement.addEventListener('click', (e)=>{
 					//클릭시 닫음
 					this.hide();
@@ -159,7 +159,7 @@ class cocoBottomSheetJS{
 	//터치를 시작하는 순간 시작좌표를 수집
 	touchstart(event){
 		
-		if(!this.moving){
+		if(!this.moving && !this.holdon){
 			this.moving = true;
 			let wh = window.innerHeight;
 			if(event.touches[0].pageY <= 0){
@@ -182,7 +182,7 @@ class cocoBottomSheetJS{
 	//터치드래그 진행중
 	touchmoving(event){
 		
-		if(this.moving){
+		if(this.moving && !this.holdon){
 			let wh = window.innerHeight;
 			let pageY;
 			let moveY;
@@ -238,7 +238,7 @@ class cocoBottomSheetJS{
 	
 	//터치드래그 끝남
 	touchend(event){
-		if(this.moving){
+		if(this.moving && !this.holdon){
 			this.moving = false;
 			let translate3d = this.BSElement.style.transform.match(/\(.*\)/gi)[0];
 			translate3d = translate3d.split(',')[1];
@@ -332,7 +332,7 @@ class cocoBottomSheetJS{
 	
 	//바텀시트를 출력
 	show(){
-		if(!this.is_show){
+		if(!this.is_show && !this.holdon){
 			this.is_show = true;
 			this.BSoverElement.classList.add('cocoBottomSheet_fadein');
 			document.body.classList.add('cocoBottomSheetforbounse');
@@ -383,7 +383,7 @@ class cocoBottomSheetJS{
 	
 	//바텀시트를 최소크기로 출력
 	showmin(){
-		if(this.is_show){
+		if(this.is_show && !this.holdon){
 			this.BSElement.style.transition = 'all 0.15s ease-out';
 			if(this.ismobile){
 				this.BSElement.style.transform = 'translate(0px, -'+this.min+'px)';
@@ -395,7 +395,7 @@ class cocoBottomSheetJS{
 	
 	//바텀시트를 최대크기로 출력
 	showmax(){
-		if(!this.is_show){
+		if(!this.is_show && !this.holdon){
 			this.is_show = true;
 			this.BSoverElement.classList.add('cocoBottomSheet_fadein');
 			document.body.classList.add('cocoBottomSheetforbounse');
@@ -453,7 +453,7 @@ class cocoBottomSheetJS{
 	
 	//바텀시트를 없애기
 	hide(){
-		if(this.is_show && !this.notclose){
+		if(this.is_show && !this.notclose && !this.holdon){
 			this.is_show = false;
 			this.BSElement.style.transition = 'all 0.15s ease-out';
 			if(this.ismobile){
