@@ -477,6 +477,8 @@ class cocoBottomSheetJS{
 	
 	//바텀시트 조작금지
 	hold(flag){
-		
+		if(typeof flag === 'boolean'){
+			this.moving = flag;
+		}
 	};
 };
