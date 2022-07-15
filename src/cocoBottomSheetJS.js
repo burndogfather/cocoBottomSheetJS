@@ -483,7 +483,9 @@ class cocoBottomSheetJS{
 			if(flag && this.ismobile){
 				this.BSElement.removeChild(this.BSbuttonElement);
 			}else{
-				this.BSElement.appendChild(this.BSbuttonElement);
+				if(this.ismobile){
+					this.BSElement.appendChild(this.BSbuttonElement);
+				}
 			}
 		}
 	};
