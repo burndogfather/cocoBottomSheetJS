@@ -480,12 +480,8 @@ class cocoBottomSheetJS{
 	hold(flag){
 		if(typeof flag === 'boolean'){
 			this.holdon = flag;
-			if(flag){
-				try {
-					this.BSElement.removeChild(this.BSbuttonElement);
-				}catch(){
-					
-				}
+			if(flag && this.ismobile){
+				this.BSElement.removeChild(this.BSbuttonElement);
 			}else{
 				this.BSElement.appendChild(this.BSbuttonElement);
 			}
