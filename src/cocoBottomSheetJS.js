@@ -64,10 +64,13 @@ class cocoBottomSheetJS{
 				this.BSoverElement.classList.add('cocoBottomSheet_overlayer');
 			}
 			
-			this.BSoverElement.addEventListener('click', (e)=>{
-				//클릭시 닫음
-				this.hide();
-			});
+			if(!this.notclose){
+				this.BSoverElement.addEventListener('click', (e)=>{
+					//클릭시 닫음
+					this.hide();
+				});
+			}
+			
 		}
 		
 		if(document.querySelector('.cocoBottomSheet')){
