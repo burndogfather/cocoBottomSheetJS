@@ -219,6 +219,8 @@ class cocoBottomSheetJS{
 				this.moving = false;
 				if(!this.notclose){
 					this.hide();
+				}else{
+					this.showmin();
 				}
 				
 			}
