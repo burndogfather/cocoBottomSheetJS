@@ -55,7 +55,8 @@ function loadCode(_this){
 		min:'30vh', //Minimal height of the bottom sheet. If it is less than this height, it will close automatically.
 		max:'85vh', //Maximum height of the bottom sheet. Restricted to no higher than this height.
 		
-		autofilloffset:100 //Offset adjustment size with auto-expanded, auto-close enabled
+		autofilloffset:100, //Offset adjustment size with auto-expanded, auto-close enabled
+		notclose:false //Use true when using a bottom sheet that cannot be closed
 	});
 	
 	//You can modify the style of the bottom sheet on the spot.
