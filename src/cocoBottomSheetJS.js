@@ -217,7 +217,10 @@ class cocoBottomSheetJS{
 			}
 			if(mincalc-this.autofilloffset < calc && !up){
 				this.moving = false;
-				this.hide();
+				if(!this.notclose){
+					this.hide();
+				}
+				
 			}
 			if(maxcalc+this.autofilloffset > calc && up){
 				this.BSElement.style.transition = 'all 0.15s ease-out';
@@ -435,7 +438,7 @@ class cocoBottomSheetJS{
 	
 	//바텀시트를 없애기
 	hide(){
-		if(this.is_show){
+		if(this.is_show && !this.notclose){
 			this.is_show = false;
 			this.BSElement.style.transition = 'all 0.15s ease-out';
 			if(this.ismobile){
