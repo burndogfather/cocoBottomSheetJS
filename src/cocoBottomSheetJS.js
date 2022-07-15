@@ -378,6 +378,17 @@ class cocoBottomSheetJS{
 		}
 	};
 	
+	//바텀시트를 최소크기로 출력
+	showmin(){
+		if(this.is_show){
+			if(this.ismobile){
+				this.BSElement.style.transform = 'translate(0px, -'+this.min+'px)';
+			}else{
+				this.BSElement.style.transform = 'translate(0px, -100%)';
+			}
+		}
+	}
+	
 	//바텀시트를 최대크기로 출력
 	showmax(){
 		if(!this.is_show){
