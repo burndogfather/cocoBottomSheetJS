@@ -474,4 +474,9 @@ class cocoBottomSheetJS{
 		}
 		return null;
 	};
+	
+	//바텀시트 조작금지
+	hold(flag){
+		
+	};
 };
