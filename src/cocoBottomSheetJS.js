@@ -383,6 +383,7 @@ class cocoBottomSheetJS{
 	//바텀시트를 최소크기로 출력
 	showmin(){
 		if(this.is_show){
+			this.BSElement.style.transition = 'all 0.15s ease-out';
 			if(this.ismobile){
 				this.BSElement.style.transform = 'translate(0px, -'+this.min+'px)';
 			}else{
