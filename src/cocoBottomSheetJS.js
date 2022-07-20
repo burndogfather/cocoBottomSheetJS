@@ -9,7 +9,7 @@ class cocoBottomSheetJS{
 		autofilloffset,
 		notclose
 	}){
-		console.log(this);
+		
 		//초기설정
 		if(/(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS)/i.test(window.navigator.userAgent)){
 			this.ismobile = true;
@@ -56,7 +56,7 @@ class cocoBottomSheetJS{
 	//클래스 선언시 자동실행
 	init(){
 		
-		
+		console.log(this);
 		if(this.overlayer){
 			//오버레이어 구성
 			if(document.querySelector('.cocoBottomSheet_overlayer')){
