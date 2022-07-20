@@ -50,9 +50,6 @@ class cocoBottomSheetJS{
 		this.callback = null;
 		
 		this.init();
-		console.log(this);
-		console.log(this.self);
-		console.log(cocoBottomSheetJS);
 	};
 	
 	
