@@ -7,7 +7,8 @@ class cocoBottomSheetJS{
 		min,
 		max,
 		autofilloffset,
-		notclose
+		notclose,
+		this
 	}){
 		
 		//초기설정
@@ -51,6 +52,8 @@ class cocoBottomSheetJS{
 		
 		this.init();
 		console.log(this);
+		console.log(this.self);
+		console.log(cocoBottomSheetJS);
 	};
 	
 	
