@@ -5,7 +5,7 @@ Similar to the bottom sheet of iOS, it can be implemented with JavaScript🔥
    
 ### Features  
    
-- It's written in vannilla JS
+- It's written in vanilla JS
 - Corresponds to the responsive UI
 - Fast using css-based animation
    
