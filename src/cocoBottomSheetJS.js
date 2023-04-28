@@ -453,7 +453,7 @@ class cocoBottomSheetJS{
 	
 	//바텀시트를 없애기
 	hide(){
-		if(this.is_show && !this.notclose && !this.holdon){
+		if(this.is_show && !this.holdon){
 			this.is_show = false;
 			this.BSElement.style.transition = 'all 0.15s ease-out';
 			if(this.ismobile){
