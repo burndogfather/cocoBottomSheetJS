@@ -37,8 +37,18 @@ class cocoBottomSheetJS{
 		this.starttouchY = 0; //마우스최초좌표
 		this.newlytouchY = 0; //바로직전의 마우스좌표
 		
-		this.BSElement = null;
-		this.BSoverElement = null;
+		this.BSElement = document.createElement('article');
+		this.BSElement.classList.add('cocoBottomSheet');
+		
+		this.BSoverElement = document.createElement('article');
+		this.BSoverElement.classList.add('cocoBottomSheet_overlayer');
+		if(!this.notclose && !this.holdon){
+			this.BSoverElement.addEventListener('click', (e)=>{
+				//클릭시 닫음
+				this.hide();
+			});
+		}
+		
 		this.BSbuttonElement = document.createElement('button');
 		this.BSbuttonElement.classList.add('cocoBottomSheet_handledesign');
 		this.BSbuttonElement.classList.add('cocoBottomSheet_handle');
@@ -53,6 +63,7 @@ class cocoBottomSheetJS{
 	//클래스 선언시 자동실행
 	init(){
 		
+		/*
 		if(this.overlayer){
 			//오버레이어 구성
 			if(document.querySelector('.cocoBottomSheet_overlayer')){
@@ -68,7 +79,6 @@ class cocoBottomSheetJS{
 					this.hide();
 				});
 			}
-			
 		}
 		
 		if(document.querySelector('.cocoBottomSheet')){
@@ -77,14 +87,13 @@ class cocoBottomSheetJS{
 			this.BSElement = document.createElement('article');
 			this.BSElement.classList.add('cocoBottomSheet');
 		}
+		*/
+		
 		if(this.ismobile){
 			
 			this.BSElement.innerHTML = this.code;
 			this.BSElement.appendChild(this.BSbuttonElement);
-			
-			
 		}else{
-			
 			this.BSElement.innerHTML = this.code;
 		}
 		
