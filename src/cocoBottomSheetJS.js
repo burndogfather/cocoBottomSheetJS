@@ -197,8 +197,6 @@ class cocoBottomSheetJS{
 			if(mincalc-this.autofilloffset < calc && !up){
 				this.moving = false;
 				if(!this.notclose){
-					event.stopImmediatePropagation();
-					event.stopPropagation();
 					this.hide();
 					
 				}else{
