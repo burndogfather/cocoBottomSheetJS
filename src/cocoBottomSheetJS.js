@@ -467,6 +467,10 @@ class cocoBottomSheetJS{
 			
 			document.querySelector('html').style.removeProperty('overflow');
 			document.querySelector('html').style.removeProperty('pointer-events');
+			document.querySelector('html').style.removeProperty('position');
+			document.querySelector('html').style.removeProperty('top');
+			document.querySelector('html').style.removeProperty('left');
+			document.querySelector('html').style.removeProperty('right');
 		}
 		return null;
 	};
