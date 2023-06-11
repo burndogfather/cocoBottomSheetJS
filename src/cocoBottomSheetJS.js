@@ -473,7 +473,7 @@ class cocoBottomSheetJS{
 			document.querySelector('html').style.removeProperty('overflow');
 			document.querySelector('html').style.removeProperty('position');
 			
-			console.log(this.temp['scroll']);
+			window.scrollTo(0, this.temp['scroll']);
 			
 		}
 		return null;
