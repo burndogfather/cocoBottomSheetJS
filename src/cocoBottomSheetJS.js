@@ -354,7 +354,7 @@ class cocoBottomSheetJS{
 			script_src = null;
 			script = null;
 			
-			console.log(window.pageYOffset);
+			
 			document.querySelector('html').style.overflow = 'hidden';
 			document.querySelector('html').style.position = 'fixed';
 			document.querySelector('html').style.top = '-'+window.pageYOffset;
@@ -436,6 +436,7 @@ class cocoBottomSheetJS{
 			}
 		}
 		
+		console.log('-'+window.pageYOffset);
 		document.querySelector('html').style.overflow = 'hidden';
 		document.querySelector('html').style.position = 'fixed';
 		document.querySelector('html').style.top = '-'+window.pageYOffset;
