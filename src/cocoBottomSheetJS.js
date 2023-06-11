@@ -435,8 +435,7 @@ class cocoBottomSheetJS{
 				this.BSElement.style.transform = 'translate(0px, -100%)';
 			}
 		}
-		
-		console.log('-'+window.pageYOffset+'px');
+	
 		document.querySelector('html').style.overflow = 'hidden';
 		document.querySelector('html').style.position = 'fixed';
 		document.querySelector('html').style.top = '-'+window.pageYOffset+'px';
