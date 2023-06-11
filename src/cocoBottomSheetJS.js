@@ -42,7 +42,7 @@ class cocoBottomSheetJS{
 		this.BSbuttonElement = document.createElement('button');
 		this.BSbuttonElement.classList.add('cocoBottomSheet_handledesign');
 		this.BSbuttonElement.classList.add('cocoBottomSheet_handle');
-		
+		console.log(this.BSbuttonElement);
 		//추가적인 스크립트
 		this.jsData = null;
 		this.callback = null;
