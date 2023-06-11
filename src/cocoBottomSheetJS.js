@@ -464,11 +464,13 @@ class cocoBottomSheetJS{
 			scripts = null;
 			this.BSoverElement.classList.remove('cocoBottomSheet_fadein');
 			
-			document.querySelector('html').style.removeProperty('overflow');
-			document.querySelector('html').style.removeProperty('top');
-			document.querySelector('html').style.removeProperty('position');
 			document.querySelector('html').style.removeProperty('left');
 			document.querySelector('html').style.removeProperty('right');
+			document.querySelector('html').style.removeProperty('top');
+			document.querySelector('html').style.removeProperty('overflow');
+			
+			document.querySelector('html').style.removeProperty('position');
+			
 		}
 		return null;
 	};
