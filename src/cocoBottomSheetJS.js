@@ -164,7 +164,7 @@ class cocoBottomSheetJS{
 	touchmoving(event){
 		
 		if(this.moving && !this.holdon){
-			let wh = window.innerHeight;
+			let wh = document.body.scrollHeight;
 			let pageY;
 			let moveY;
 			
@@ -185,7 +185,7 @@ class cocoBottomSheetJS{
 				up = false;
 			}
 			
-			
+			console.log(pageY);
 			moveY = this.starttouchY - pageY;
 			let calc = Math.round(this.translatePOS - moveY);
 			let maxcalc = parseFloat('-'+this.max);
