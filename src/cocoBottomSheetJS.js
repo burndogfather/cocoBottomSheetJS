@@ -356,8 +356,8 @@ class cocoBottomSheetJS{
 			
 			
 			document.querySelector('html').style.overflow = 'hidden';
-			document.querySelector('html').style.position = 'fixed';
 			document.querySelector('html').style.top = '-'+window.pageYOffset+'px';
+			document.querySelector('html').style.position = 'fixed';
 			document.querySelector('html').style.left = '0';
 			document.querySelector('html').style.right = '0';
 		}
@@ -374,8 +374,8 @@ class cocoBottomSheetJS{
 			}
 			
 			document.querySelector('html').style.overflow = 'hidden';
-			document.querySelector('html').style.position = 'fixed';
 			document.querySelector('html').style.top = '-'+window.pageYOffset+'px';
+			document.querySelector('html').style.position = 'fixed';
 			document.querySelector('html').style.left = '0';
 			document.querySelector('html').style.right = '0';
 		}
@@ -465,8 +465,8 @@ class cocoBottomSheetJS{
 			this.BSoverElement.classList.remove('cocoBottomSheet_fadein');
 			
 			document.querySelector('html').style.removeProperty('overflow');
-			document.querySelector('html').style.removeProperty('position');
 			document.querySelector('html').style.removeProperty('top');
+			document.querySelector('html').style.removeProperty('position');
 			document.querySelector('html').style.removeProperty('left');
 			document.querySelector('html').style.removeProperty('right');
 		}
