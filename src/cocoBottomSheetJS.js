@@ -176,7 +176,7 @@ class cocoBottomSheetJS{
 			}else{
 				pageY = event.touches[0].pageY;
 			}
-			
+			console.log(pageY);
 			//up / down 구분
 			let up = false;
 			if(this.newlytouchY > pageY){
