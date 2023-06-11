@@ -181,10 +181,8 @@ class cocoBottomSheetJS{
 			let up = false;
 			if(this.newlytouchY > pageY){
 				up = true;
-				//console.log('up');
 			}else{
 				up = false;
-				//console.log('down');
 			}
 			
 			
