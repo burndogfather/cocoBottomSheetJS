@@ -55,7 +55,7 @@ class cocoBottomSheetJS{
 	
 	//클래스 선언시 자동실행
 	init(){
-		
+		console.log(this);
 		if(this.overlayer){
 			//오버레이어 구성
 			if(document.querySelector('.cocoBottomSheet_overlayer')){
