@@ -185,7 +185,6 @@ class cocoBottomSheetJS{
 				up = false;
 			}
 			
-			console.log(pageY);
 			moveY = this.starttouchY - pageY;
 			let calc = Math.round(this.translatePOS - moveY);
 			let maxcalc = parseFloat('-'+this.max);
