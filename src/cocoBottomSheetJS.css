@@ -21,10 +21,6 @@
 	-ms-user-select:none;
 	user-select:none;
 }
-.cocoBottomSheetforbounse{
-	position:fixed;
-	overflow:hidden;
-}
 .cocoBottomSheet > .cocoBottomSheet_handledesign{
 	margin:0;
 	padding:0;
