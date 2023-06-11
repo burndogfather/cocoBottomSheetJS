@@ -52,7 +52,7 @@ class cocoBottomSheetJS{
 		this.BSbuttonElement = document.createElement('button');
 		this.BSbuttonElement.classList.add('cocoBottomSheet_handledesign');
 		this.BSbuttonElement.classList.add('cocoBottomSheet_handle');
-		console.log(this.BSbuttonElement);
+	
 		//추가적인 스크립트
 		this.jsData = null;
 		this.callback = null;
@@ -63,34 +63,7 @@ class cocoBottomSheetJS{
 	//클래스 선언시 자동실행
 	init(){
 		
-		/*
-		if(this.overlayer){
-			//오버레이어 구성
-			if(document.querySelector('.cocoBottomSheet_overlayer')){
-				this.BSoverElement = document.querySelector('.cocoBottomSheet_overlayer');
-			}else{
-				this.BSoverElement = document.createElement('article');
-				this.BSoverElement.classList.add('cocoBottomSheet_overlayer');
-			}
-			
-			if(!this.notclose && !this.holdon){
-				this.BSoverElement.addEventListener('click', (e)=>{
-					//클릭시 닫음
-					this.hide();
-				});
-			}
-		}
-		
-		if(document.querySelector('.cocoBottomSheet')){
-			this.BSElement = document.querySelector('.cocoBottomSheet');
-		}else{
-			this.BSElement = document.createElement('article');
-			this.BSElement.classList.add('cocoBottomSheet');
-		}
-		*/
-		
 		if(this.ismobile){
-			
 			this.BSElement.innerHTML = this.code;
 			this.BSElement.appendChild(this.BSbuttonElement);
 		}else{
