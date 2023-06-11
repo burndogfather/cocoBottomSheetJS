@@ -52,6 +52,7 @@ class cocoBottomSheetJS{
 		this.BSbuttonElement = document.createElement('button');
 		this.BSbuttonElement.classList.add('cocoBottomSheet_handledesign');
 		this.BSbuttonElement.classList.add('cocoBottomSheet_handle');
+		this.BSElement.appendChild(this.BSbuttonElement);
 	
 		//추가적인 스크립트
 		this.jsData = null;
@@ -65,9 +66,10 @@ class cocoBottomSheetJS{
 		console.log(this.ismobile);
 		if(this.ismobile){
 			this.BSElement.innerHTML = this.code;
-			this.BSElement.appendChild(this.BSbuttonElement);
+			
 		}else{
 			this.BSElement.innerHTML = this.code;
+			this.BSbuttonElement.style.display = 'none';
 		}
 		
 		document.querySelector('body').prepend(this.BSElement);
