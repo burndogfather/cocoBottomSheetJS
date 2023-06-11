@@ -195,7 +195,6 @@ class cocoBottomSheetJS{
 				this.BSElement.style.transition = 'none';
 				this.BSElement.style.transform = 'translate(0, ' + calc + 'px)';
 			}
-			console.log(mincalc-this.autofilloffset, calc);
 			if(mincalc-this.autofilloffset < calc && !up){
 				this.moving = false;
 				if(!this.notclose){
