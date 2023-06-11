@@ -468,7 +468,6 @@ class cocoBottomSheetJS{
 			document.querySelector('html').style.removeProperty('right');
 			document.querySelector('html').style.removeProperty('top');
 			document.querySelector('html').style.removeProperty('overflow');
-			
 			document.querySelector('html').style.removeProperty('position');
 			
 		}
