@@ -168,17 +168,15 @@ class cocoBottomSheetJS{
 			let pageY;
 			let moveY;
 			
-			console.log(pageY, wh);
+			
 			
 			//터치드래그중인 상태에서의 마우스좌표구하기
 			if(event.touches[0].pageY <= 0){
 				pageY = 0;
-			}else if(event.touches[0].pageY >= wh){
-				pageY = wh;
 			}else{
 				pageY = event.touches[0].pageY;
 			}
-			
+			console.log(pageY, wh);
 			//up / down 구분
 			let up = false;
 			if(this.newlytouchY > pageY){
