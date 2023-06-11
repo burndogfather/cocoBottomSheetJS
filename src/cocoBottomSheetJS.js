@@ -24,6 +24,7 @@ class cocoBottomSheetJS{
 			this.notclose = false;
 		}
 		
+		this.temp = new Array();
 		this.holdon = false; //움직임 고정 flag
 		this.moving = false; //드래그중인지 flag
 		this.is_show = false; //바텀시트가 열림감지
@@ -354,7 +355,7 @@ class cocoBottomSheetJS{
 			script_src = null;
 			script = null;
 			
-			
+			this.temp['scroll'] = window.pageYOffset;
 			document.querySelector('html').style.overflow = 'hidden';
 			document.querySelector('html').style.top = '-'+window.pageYOffset+'px';
 			document.querySelector('html').style.position = 'fixed';
@@ -373,6 +374,7 @@ class cocoBottomSheetJS{
 				this.BSElement.style.transform = 'translate(0px, -100%)';
 			}
 			
+			this.temp['scroll'] = window.pageYOffset;
 			document.querySelector('html').style.overflow = 'hidden';
 			document.querySelector('html').style.top = '-'+window.pageYOffset+'px';
 			document.querySelector('html').style.position = 'fixed';
@@ -436,6 +438,7 @@ class cocoBottomSheetJS{
 			}
 		}
 	
+		this.temp['scroll'] = window.pageYOffset;
 		document.querySelector('html').style.overflow = 'hidden';
 		document.querySelector('html').style.top = '-'+window.pageYOffset+'px';
 		document.querySelector('html').style.position = 'fixed';
@@ -469,6 +472,8 @@ class cocoBottomSheetJS{
 			document.querySelector('html').style.removeProperty('top');
 			document.querySelector('html').style.removeProperty('overflow');
 			document.querySelector('html').style.removeProperty('position');
+			
+			console.log(this.temp['scroll']);
 			
 		}
 		return null;
