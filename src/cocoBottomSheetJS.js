@@ -142,7 +142,7 @@ class cocoBottomSheetJS{
 		
 		if(!this.moving && !this.holdon){
 			this.moving = true;
-			let wh = window.innerHeight;
+			let wh = document.body.scrollHeight;
 			if(event.touches[0].pageY <= 0){
 				this.starttouchY = 0;
 			}else if(event.touches[0].pageY >= wh){
@@ -168,6 +168,8 @@ class cocoBottomSheetJS{
 			let pageY;
 			let moveY;
 			
+			console.log(pageY, wh);
+			
 			//터치드래그중인 상태에서의 마우스좌표구하기
 			if(event.touches[0].pageY <= 0){
 				pageY = 0;
@@ -176,7 +178,7 @@ class cocoBottomSheetJS{
 			}else{
 				pageY = event.touches[0].pageY;
 			}
-			console.log(pageY);
+			
 			//up / down 구분
 			let up = false;
 			if(this.newlytouchY > pageY){
