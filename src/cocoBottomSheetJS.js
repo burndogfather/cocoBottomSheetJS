@@ -437,10 +437,10 @@ class cocoBottomSheetJS{
 		}
 	
 		document.querySelector('html').style.overflow = 'hidden';
-		document.querySelector('html').style.position = 'fixed';
 		document.querySelector('html').style.top = '-'+window.pageYOffset+'px';
 		document.querySelector('html').style.left = '0';
 		document.querySelector('html').style.right = '0';
+		document.querySelector('html').style.position = 'fixed';
 	};
 	
 	//바텀시트를 없애기
