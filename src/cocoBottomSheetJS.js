@@ -46,7 +46,7 @@ class cocoBottomSheetJS{
 		//추가적인 스크립트
 		this.jsData = null;
 		this.callback = null;
-		
+		console.log(this);
 		this.init();
 	};
 	
