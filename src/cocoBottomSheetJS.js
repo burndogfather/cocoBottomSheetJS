@@ -354,8 +354,8 @@ class cocoBottomSheetJS{
 			script_src = null;
 			script = null;
 			
+			console.log(window.pageYOffset);
 			document.querySelector('html').style.overflow = 'hidden';
-			document.querySelector('html').style.pointerEvents = 'none';
 			document.querySelector('html').style.position = 'fixed';
 			document.querySelector('html').style.top = '-'+window.pageYOffset;
 			document.querySelector('html').style.left = '0';
@@ -374,7 +374,6 @@ class cocoBottomSheetJS{
 			}
 			
 			document.querySelector('html').style.overflow = 'hidden';
-			document.querySelector('html').style.pointerEvents = 'none';
 			document.querySelector('html').style.position = 'fixed';
 			document.querySelector('html').style.top = '-'+window.pageYOffset;
 			document.querySelector('html').style.left = '0';
@@ -438,7 +437,6 @@ class cocoBottomSheetJS{
 		}
 		
 		document.querySelector('html').style.overflow = 'hidden';
-		document.querySelector('html').style.pointerEvents = 'none';
 		document.querySelector('html').style.position = 'fixed';
 		document.querySelector('html').style.top = '-'+window.pageYOffset;
 		document.querySelector('html').style.left = '0';
@@ -466,7 +464,6 @@ class cocoBottomSheetJS{
 			this.BSoverElement.classList.remove('cocoBottomSheet_fadein');
 			
 			document.querySelector('html').style.removeProperty('overflow');
-			document.querySelector('html').style.removeProperty('pointer-events');
 			document.querySelector('html').style.removeProperty('position');
 			document.querySelector('html').style.removeProperty('top');
 			document.querySelector('html').style.removeProperty('left');
