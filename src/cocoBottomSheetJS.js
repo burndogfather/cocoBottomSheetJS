@@ -450,8 +450,6 @@ class cocoBottomSheetJS{
 			}
 			scripts = null;
 			this.BSoverElement.classList.remove('cocoBottomSheet_fadein');
-			document.body.classList.remove('cocoBottomSheetforbounse');
-			document.querySelector('html').classList.remove('cocoBottomSheetforbounse');
 			
 			document.querySelector('html').style.overflow = 'auto';
 		}
