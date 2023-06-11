@@ -355,6 +355,8 @@ class cocoBottomSheetJS{
 			}
 			script_src = null;
 			script = null;
+			
+			document.querySelector('html').style.overflow = 'hidden';
 		}
 	};
 	
@@ -367,6 +369,8 @@ class cocoBottomSheetJS{
 			}else{
 				this.BSElement.style.transform = 'translate(0px, -100%)';
 			}
+			
+			document.querySelector('html').style.overflow = 'hidden';
 		}
 	}
 	
@@ -424,6 +428,8 @@ class cocoBottomSheetJS{
 				this.BSElement.style.transform = 'translate(0px, -100%)';
 			}
 		}
+		
+		document.querySelector('html').style.overflow = 'hidden';
 	};
 	
 	//바텀시트를 없애기
@@ -447,6 +453,8 @@ class cocoBottomSheetJS{
 			this.BSoverElement.classList.remove('cocoBottomSheet_fadein');
 			document.body.classList.remove('cocoBottomSheetforbounse');
 			document.querySelector('html').classList.remove('cocoBottomSheetforbounse');
+			
+			document.querySelector('html').style.overflow = 'auto';
 		}
 		return null;
 	};
