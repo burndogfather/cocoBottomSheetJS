@@ -63,7 +63,7 @@ class cocoBottomSheetJS{
 	
 	//클래스 선언시 자동실행
 	init(){
-		console.log(this.ismobile);
+		
 		if(this.ismobile){
 			this.BSElement.innerHTML = this.code;
 			
