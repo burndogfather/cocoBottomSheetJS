@@ -1,4 +1,3 @@
-'use strict';
 class cocoBottomSheetJS{
 	constructor({
 		//입력데이터
