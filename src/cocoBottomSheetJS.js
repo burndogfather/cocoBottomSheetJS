@@ -115,13 +115,13 @@ class cocoBottomSheetJS{
 				e.stopPropagation();
 				//클릭시작
 				this.touchstart(e);
-			});
+			}, { passive: true });
 			this.BSbuttonElement.addEventListener('touchmove', (e)=>{
 				e.stopImmediatePropagation();
 				e.stopPropagation();
 				//클릭움직임
 				this.touchmoving(e);
-			});
+			}, { passive: true });
 			this.BSbuttonElement.addEventListener('touchend', (e)=>{
 				e.stopImmediatePropagation();
 				e.stopPropagation();
