@@ -10,7 +10,7 @@ class cocoBottomSheetJS{
 	}){
 		
 		//초기설정
-		if(/(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS|IOS|ANDROID|AOS|APP)/i.test(window.navigator.userAgent)){
+		if(/(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS|IOS|ANDROID|AOS|APP|INAPP)/i.test(window.navigator.userAgent)){
 			this.ismobile = true;
 		}else{
 			this.ismobile = false;
