@@ -10,7 +10,7 @@ class cocoBottomSheetJS{
 	}){
 		
 		//초기설정
-		if(/(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS|IOS)/i.test(window.navigator.userAgent)){
+		if(/(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS|IOS|ANDROID|AOS|APP)/i.test(window.navigator.userAgent)){
 			this.ismobile = true;
 		}else{
 			this.ismobile = false;
@@ -91,7 +91,6 @@ class cocoBottomSheetJS{
 				this.min = parseInt(this.min);
 			}
 		}
-		console.log(this.min);
 		
 		//max 사이즈 재정의
 		if(/^[0-9]+$/.test(this.max)){
@@ -314,7 +313,6 @@ class cocoBottomSheetJS{
 			this.is_show = true;
 			this.BSoverElement.classList.add('cocoBottomSheet_fadein');
 			if(this.ismobile){
-				console.log(this.min);
 				this.BSElement.style.transform = 'translate(0px, -'+this.min+'px)';
 			}else{
 				this.BSElement.style.transform = 'translate(0px, -100%)';
