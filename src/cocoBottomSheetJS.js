@@ -314,6 +314,7 @@ class cocoBottomSheetJS{
 			this.is_show = true;
 			this.BSoverElement.classList.add('cocoBottomSheet_fadein');
 			if(this.ismobile){
+				console.log(this.min);
 				this.BSElement.style.transform = 'translate(0px, -'+this.min+'px)';
 			}else{
 				this.BSElement.style.transform = 'translate(0px, -100%)';
