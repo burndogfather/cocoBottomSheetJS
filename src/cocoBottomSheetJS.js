@@ -10,7 +10,7 @@ class cocoBottomSheetJS{
 	}){
 		
 		//초기설정
-		if(/(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS|IOS|ANDROID|AOS|APP|INAPP)/i.test(window.navigator.userAgent)){
+		if(/(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS|IOS|ANDROID|AOS|APP|inapp|naver|snapchat|wirtschaftswoche|thunderbird|instagram|everytimeapp|whatsApp|electron|wadiz|aliapp|zumapp|iphone(.*)whale|android(.*)whale|kakaostory|band|twitter|DaumApps|DaumDevice\/mobile|FB_IAB|FB4A|FBAN|FBIOS|FBSS|trill|SamsungBrowser)/i.test(window.navigator.userAgent)){
 			this.ismobile = true;
 		}else{
 			this.ismobile = false;
