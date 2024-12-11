@@ -91,6 +91,7 @@ class cocoBottomSheetJS{
 				this.min = parseInt(this.min);
 			}
 		}
+		console.log(this.min);
 		
 		//max 사이즈 재정의
 		if(/^[0-9]+$/.test(this.max)){
