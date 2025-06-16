@@ -309,6 +309,7 @@ class cocoBottomSheetJS{
 	
 	//바텀시트를 출력
 	show(){
+		console.log(this.ismobile);
 		if(!this.is_show && !this.holdon){
 			this.is_show = true;
 			this.BSoverElement.classList.add('cocoBottomSheet_fadein');
