@@ -71,6 +71,7 @@ class cocoBottomSheetJS{
 		window.addEventListener('resize', ()=>{
 			this.ismobile = window.innerWidth <= 767;
 			if(this.ismobile){
+				this.BSbuttonElement.style.removeProperty('display');
 			}else{
 				this.BSbuttonElement.style.display = 'none';
 			}
