@@ -70,6 +70,8 @@ class cocoBottomSheetJS{
 		
 		window.addEventListener('resize', ()=>{
 			this.ismobile = window.innerWidth <= 767;
+			this.hide();
+			this.show();
 		});
 		
 		if(this.ismobile){
