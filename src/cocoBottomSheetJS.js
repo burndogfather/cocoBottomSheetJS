@@ -323,10 +323,9 @@ class cocoBottomSheetJS{
 			this.BSoverElement.classList.add('cocoBottomSheet_fadein');
 			if(this.ismobile){
 				if(percent === false){
-					console.log(percent);
-					this.BSElement.style.transform = 'translate(0px, -'+parseInt(percent.replace('%',''))/100 * document.body.scrollHeight+'px)';
-				}else{
 					this.BSElement.style.transform = 'translate(0px, -'+this.min+'px)';
+				}else{
+					this.BSElement.style.transform = 'translate(0px, -'+parseInt(percent.replace('%',''))/100 * document.body.scrollHeight+'px)';
 				}
 				
 			}else{
