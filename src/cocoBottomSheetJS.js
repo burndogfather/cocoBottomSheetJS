@@ -325,6 +325,7 @@ class cocoBottomSheetJS{
 				if(percent === false){
 					this.BSElement.style.transform = 'translate(0px, -'+this.min+'px)';
 				}else{
+					percent += '';
 					this.BSElement.style.transform = 'translate(0px, -'+parseInt(percent.replace('%',''))/100 * document.body.scrollHeight+'px)';
 				}
 				
