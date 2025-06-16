@@ -9,12 +9,16 @@ class cocoBottomSheetJS{
 		notclose
 	}){
 		
+		
 		//초기설정
+		/*
 		if(/(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS|IOS|ANDROID|AOS|APP|inapp|naver|snapchat|wirtschaftswoche|thunderbird|instagram|everytimeapp|whatsApp|electron|wadiz|aliapp|zumapp|iphone(.*)whale|android(.*)whale|kakaostory|band|twitter|DaumApps|DaumDevice\/mobile|FB_IAB|FB4A|FBAN|FBIOS|FBSS|trill|SamsungBrowser)/i.test(window.navigator.userAgent)){
 			this.ismobile = true;
 		}else{
 			this.ismobile = false;
 		}
+		*/
+		this.ismobile = window.innerWidth <= 767;
 		
 		//닫을수 있는 바텀시트인지
 		if(typeof notclose === 'boolean'){
@@ -63,6 +67,10 @@ class cocoBottomSheetJS{
 	
 	//클래스 선언시 자동실행
 	init(){
+		
+		window.addEventListener('resize', ()=>{
+			this.ismobile = window.innerWidth <= 767;
+		});
 		
 		if(this.ismobile){
 			this.BSElement.innerHTML = this.code;
