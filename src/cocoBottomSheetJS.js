@@ -319,13 +319,18 @@ class cocoBottomSheetJS{
 	};
 	
 	//바텀시트를 출력
-	show(){
+	show(percent=false){
 		
 		if(!this.is_show && !this.holdon){
 			this.is_show = true;
 			this.BSoverElement.classList.add('cocoBottomSheet_fadein');
 			if(this.ismobile){
-				this.BSElement.style.transform = 'translate(0px, -'+this.min+'px)';
+				if(percent === false){
+					this.BSElement.style.transform = 'translate(0px, -'+parseInt(percent.replace('%',''))/100 * document.body.scrollHeight+'px)';
+				}else{
+					this.BSElement.style.transform = 'translate(0px, -'+this.min+'px)';
+				}
+				
 			}else{
 				this.BSElement.style.transform = 'translate(0px, -100%)';
 			}
