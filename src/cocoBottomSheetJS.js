@@ -76,8 +76,13 @@ class cocoBottomSheetJS{
 				this.BSElement.innerHTML = this.code;
 				this.BSbuttonElement.style.display = 'none';
 			}
-			this.hide();
-			this.show();
+			if(this.is_show){
+				this.hide();
+				this.show();
+			}else{
+				this.hide();
+			}
+			
 		});
 		
 		if(this.ismobile){
