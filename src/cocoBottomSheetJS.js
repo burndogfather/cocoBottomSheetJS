@@ -46,10 +46,7 @@ class cocoBottomSheetJS{
 		
 		this.BSoverElement = document.createElement('article');
 		this.BSoverElement.classList.add('cocoBottomSheet_overlayer');
-		console.log(this.notclose);
-		console.log(this.holdon);
 		if(!this.notclose && !this.holdon){
-			console.log('canclose!');
 			this.BSoverElement.addEventListener('click', (e)=>{
 				//클릭시 닫음
 				this.hide();
@@ -326,6 +323,7 @@ class cocoBottomSheetJS{
 			this.BSoverElement.classList.add('cocoBottomSheet_fadein');
 			if(this.ismobile){
 				if(percent === false){
+					console.log(percent);
 					this.BSElement.style.transform = 'translate(0px, -'+parseInt(percent.replace('%',''))/100 * document.body.scrollHeight+'px)';
 				}else{
 					this.BSElement.style.transform = 'translate(0px, -'+this.min+'px)';
